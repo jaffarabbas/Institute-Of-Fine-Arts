@@ -1,0 +1,1601 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_Institute_Of_Fine_ArtsModelStoreContainer" CdmEntityContainer="DB_Institute_Of_Fine_ArtsEntities1">
+    <FunctionImportMapping FunctionImportName="SP_DELETE_FROM_EXIBITION_BY_MANAGER" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_DELETE_FROM_EXIBITION_BY_MANAGER" />
+    <FunctionImportMapping FunctionImportName="SP_DELETE_PROFILE_OF_STAFF_BY_ADMIN" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_DELETE_PROFILE_OF_STAFF_BY_ADMIN" />
+    <FunctionImportMapping FunctionImportName="SP_DELETE_PROFILE_OF_STUDENT_BY_ADMIN" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_DELETE_PROFILE_OF_STUDENT_BY_ADMIN" />
+    <FunctionImportMapping FunctionImportName="SP_DELETE_TABLES" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_DELETE_TABLES" />
+    <FunctionImportMapping FunctionImportName="SP_DROP_TABLES" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_DROP_TABLES" />
+    <FunctionImportMapping FunctionImportName="SP_INSERT_INTO_COMPITION_BY_STAFF" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_INSERT_INTO_COMPITION_BY_STAFF" />
+    <FunctionImportMapping FunctionImportName="SP_INSERT_INTO_COURCE_BY_ADMIN" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_INSERT_INTO_COURCE_BY_ADMIN" />
+    <FunctionImportMapping FunctionImportName="SP_INSERT_INTO_EXIBITION_BY_MANAGER" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_INSERT_INTO_EXIBITION_BY_MANAGER" />
+    <FunctionImportMapping FunctionImportName="SP_INSERT_INTO_FEES_BY_ADMIN" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_INSERT_INTO_FEES_BY_ADMIN" />
+    <FunctionImportMapping FunctionImportName="SP_INSERT_INTO_PROGRAM_BY_ADMIN" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_INSERT_INTO_PROGRAM_BY_ADMIN" />
+    <FunctionImportMapping FunctionImportName="SP_INSERT_INTO_RESULT_BY_STAFF" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_INSERT_INTO_RESULT_BY_STAFF" />
+    <FunctionImportMapping FunctionImportName="SP_INSERT_INTO_STAFF_BY_ADMIN" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_INSERT_INTO_STAFF_BY_ADMIN" />
+    <FunctionImportMapping FunctionImportName="SP_INSERT_INTO_STUDENT_BY_ADMIN" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_INSERT_INTO_STUDENT_BY_ADMIN" />
+    <FunctionImportMapping FunctionImportName="SP_INSERT_INTO_WORK_COMPITION_BY_STUDENT" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_INSERT_INTO_WORK_COMPITION_BY_STUDENT" />
+    <FunctionImportMapping FunctionImportName="SP_UPDATE_ASSINED_AFTER_TRIGGER" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_UPDATE_ASSINED_AFTER_TRIGGER" />
+    <FunctionImportMapping FunctionImportName="SP_UPDATE_FEES" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_UPDATE_FEES" />
+    <FunctionImportMapping FunctionImportName="SP_UPDATE_INTO_EXIBITION_BY_MANAGER" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_UPDATE_INTO_EXIBITION_BY_MANAGER" />
+    <FunctionImportMapping FunctionImportName="SP_UPDATE_PROFILE_BY_MANAGER" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_UPDATE_PROFILE_BY_MANAGER" />
+    <FunctionImportMapping FunctionImportName="SP_UPDATE_PROFILE_BY_STAFF" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_UPDATE_PROFILE_BY_STAFF" />
+    <FunctionImportMapping FunctionImportName="SP_UPDATE_PROFILE_BY_STUDENT" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_UPDATE_PROFILE_BY_STUDENT" />
+    <FunctionImportMapping FunctionImportName="SP_UPDATE_PROFILE_OF_ADMIN_BY_ADMIN" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_UPDATE_PROFILE_OF_ADMIN_BY_ADMIN" />
+    <FunctionImportMapping FunctionImportName="SP_UPDATE_PROFILE_OF_STAFF_BY_ADMIN" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_UPDATE_PROFILE_OF_STAFF_BY_ADMIN" />
+    <FunctionImportMapping FunctionImportName="SP_UPDATE_PROFILE_OF_STUDENT_BTY_STAFF" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_UPDATE_PROFILE_OF_STUDENT_BTY_STAFF" />
+    <FunctionImportMapping FunctionImportName="SP_UPDATE_PROFILE_OF_STUDENT_BY_ADMIN" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_UPDATE_PROFILE_OF_STUDENT_BY_ADMIN" />
+    <FunctionImportMapping FunctionImportName="SP_UPDATE_REGISTRATION_AFTER_TRIGGER" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_UPDATE_REGISTRATION_AFTER_TRIGGER" />
+    <EntitySetMapping Name="ADMIN_LOGIN">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.ADMIN_LOGIN">
+        <MappingFragment StoreEntitySet="ADMIN_LOGIN">
+          <ScalarProperty Name="C_ADID" ColumnName="_ADID" />
+          <ScalarProperty Name="AD_ID" ColumnName="AD_ID" />
+          <ScalarProperty Name="AD_PROFILE" ColumnName="AD_PROFILE" />
+          <ScalarProperty Name="AD_PASSWORD" ColumnName="AD_PASSWORD" />
+          <ScalarProperty Name="AD_NAME" ColumnName="AD_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ASSIGNEDs">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.ASSIGNED">
+        <MappingFragment StoreEntitySet="ASSIGNED">
+          <ScalarProperty Name="C_ASIID" ColumnName="_ASIID" />
+          <ScalarProperty Name="ASI_ID" ColumnName="ASI_ID" />
+          <ScalarProperty Name="ASI_DATE" ColumnName="ASI_DATE" />
+          <ScalarProperty Name="ASI_CR_ID" ColumnName="ASI_CR_ID" />
+          <ScalarProperty Name="ASI_STFL_ID" ColumnName="ASI_STFL_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ATTENDENCEs">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.ATTENDENCE">
+        <MappingFragment StoreEntitySet="ATTENDENCE">
+          <ScalarProperty Name="C_ATTID" ColumnName="_ATTID" />
+          <ScalarProperty Name="ATD_ID" ColumnName="ATD_ID" />
+          <ScalarProperty Name="ATD_DATE" ColumnName="ATD_DATE" />
+          <ScalarProperty Name="ATD_PRECENCE" ColumnName="ATD_PRECENCE" />
+          <ScalarProperty Name="ATD_REG_ID" ColumnName="ATD_REG_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMPITITIONs">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.COMPITITION">
+        <MappingFragment StoreEntitySet="COMPITITION">
+          <ScalarProperty Name="C_COMID" ColumnName="_COMID" />
+          <ScalarProperty Name="COM_ID" ColumnName="COM_ID" />
+          <ScalarProperty Name="COM_FORMAT" ColumnName="COM_FORMAT" />
+          <ScalarProperty Name="COM_AWARD" ColumnName="COM_AWARD" />
+          <ScalarProperty Name="COM_STF_ID" ColumnName="COM_STF_ID" />
+          <ScalarProperty Name="COM_END_DATE" ColumnName="COM_END_DATE" />
+          <ScalarProperty Name="COM_START_DATE" ColumnName="COM_START_DATE" />
+          <ScalarProperty Name="COM_NAME" ColumnName="COM_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONTACTs">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.CONTACT">
+        <MappingFragment StoreEntitySet="CONTACT">
+          <ScalarProperty Name="C_CONID" ColumnName="_CONID" />
+          <ScalarProperty Name="CON_ID" ColumnName="CON_ID" />
+          <ScalarProperty Name="CON_REPLIED" ColumnName="CON_REPLIED" />
+          <ScalarProperty Name="CON_MESSAGE" ColumnName="CON_MESSAGE" />
+          <ScalarProperty Name="CON_EMAIL" ColumnName="CON_EMAIL" />
+          <ScalarProperty Name="CON_NAME" ColumnName="CON_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COURSES">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.COURS">
+        <MappingFragment StoreEntitySet="COURSES">
+          <ScalarProperty Name="C_COUID" ColumnName="_COUID" />
+          <ScalarProperty Name="CR_ID" ColumnName="CR_ID" />
+          <ScalarProperty Name="CR_PR_ID" ColumnName="CR_PR_ID" />
+          <ScalarProperty Name="CR_CREDITS" ColumnName="CR_CREDITS" />
+          <ScalarProperty Name="CR_NAME" ColumnName="CR_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EXIBITIONs">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.EXIBITION">
+        <MappingFragment StoreEntitySet="EXIBITION">
+          <ScalarProperty Name="C_EXIID" ColumnName="_EXIID" />
+          <ScalarProperty Name="EXB_ID" ColumnName="EXB_ID" />
+          <ScalarProperty Name="EXB_SCR_ID" ColumnName="EXB_SCR_ID" />
+          <ScalarProperty Name="EXB_TYPE" ColumnName="EXB_TYPE" />
+          <ScalarProperty Name="EXB_END_DATE" ColumnName="EXB_END_DATE" />
+          <ScalarProperty Name="EXB_START_DATE" ColumnName="EXB_START_DATE" />
+          <ScalarProperty Name="EXB_NAME" ColumnName="EXB_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FAILED_PROJECTS">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.FAILED_PROJECTS">
+        <MappingFragment StoreEntitySet="FAILED_PROJECTS">
+          <ScalarProperty Name="C_FAPID" ColumnName="_FAPID" />
+          <ScalarProperty Name="FP_ID" ColumnName="FP_ID" />
+          <ScalarProperty Name="FP_REMARK" ColumnName="FP_REMARK" />
+          <ScalarProperty Name="FP_RES_ID" ColumnName="FP_RES_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FEEDBACKs">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.FEEDBACK">
+        <MappingFragment StoreEntitySet="FEEDBACK">
+          <ScalarProperty Name="C_FEDID" ColumnName="_FEDID" />
+          <ScalarProperty Name="FDB_ID" ColumnName="FDB_ID" />
+          <ScalarProperty Name="FDB_REPLIED" ColumnName="FDB_REPLIED" />
+          <ScalarProperty Name="FDB_MESSAGE" ColumnName="FDB_MESSAGE" />
+          <ScalarProperty Name="FDB_QUESTION" ColumnName="FDB_QUESTION" />
+          <ScalarProperty Name="FDB_EMAIL" ColumnName="FDB_EMAIL" />
+          <ScalarProperty Name="FDB_NAME" ColumnName="FDB_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FEES">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.FEE">
+        <MappingFragment StoreEntitySet="FEES">
+          <ScalarProperty Name="C_FEEID" ColumnName="_FEEID" />
+          <ScalarProperty Name="FS_ID" ColumnName="FS_ID" />
+          <ScalarProperty Name="FS_LAST_DATE" ColumnName="FS_LAST_DATE" />
+          <ScalarProperty Name="FS_PAID" ColumnName="FS_PAID" />
+          <ScalarProperty Name="FS_AMOUNT" ColumnName="FS_AMOUNT" />
+          <ScalarProperty Name="FS_REG_ID" ColumnName="FS_REG_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MANAGER_LOGIN">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.MANAGER_LOGIN">
+        <MappingFragment StoreEntitySet="MANAGER_LOGIN">
+          <ScalarProperty Name="C_MALID" ColumnName="_MALID" />
+          <ScalarProperty Name="MG_ID" ColumnName="MG_ID" />
+          <ScalarProperty Name="MG_PROFILE" ColumnName="MG_PROFILE" />
+          <ScalarProperty Name="MG_PASSWORD" ColumnName="MG_PASSWORD" />
+          <ScalarProperty Name="MG_NAME" ColumnName="MG_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROGRAMs">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.PROGRAM">
+        <MappingFragment StoreEntitySet="PROGRAM">
+          <ScalarProperty Name="C_PROID" ColumnName="_PROID" />
+          <ScalarProperty Name="PR_ID" ColumnName="PR_ID" />
+          <ScalarProperty Name="PR_CREDITS" ColumnName="PR_CREDITS" />
+          <ScalarProperty Name="PR_NAME" ColumnName="PR_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REGISTRATIONs">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.REGISTRATION">
+        <MappingFragment StoreEntitySet="REGISTRATION">
+          <ScalarProperty Name="C_RESID" ColumnName="_RESID" />
+          <ScalarProperty Name="REG_ID" ColumnName="REG_ID" />
+          <ScalarProperty Name="REG_DATE" ColumnName="REG_DATE" />
+          <ScalarProperty Name="REG_CR_ID" ColumnName="REG_CR_ID" />
+          <ScalarProperty Name="REG_STDL_ID" ColumnName="REG_STDL_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RESULTs">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.RESULT">
+        <MappingFragment StoreEntitySet="RESULT">
+          <ScalarProperty Name="C_REUID" ColumnName="_REUID" />
+          <ScalarProperty Name="RES_ID" ColumnName="RES_ID" />
+          <ScalarProperty Name="RES_GRADE" ColumnName="RES_GRADE" />
+          <ScalarProperty Name="RES_DATE" ColumnName="RES_DATE" />
+          <ScalarProperty Name="RES_WORK_ID" ColumnName="RES_WORK_ID" />
+          <ScalarProperty Name="RES_PERCENTAGE" ColumnName="RES_PERCENTAGE" />
+          <ScalarProperty Name="RES_MARKS" ColumnName="RES_MARKS" />
+          <ScalarProperty Name="RES_RES_ID" ColumnName="RES_RES_ID" />
+          <ScalarProperty Name="RES_COM_ID" ColumnName="RES_COM_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SCHOLARSHIPs">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.SCHOLARSHIP">
+        <MappingFragment StoreEntitySet="SCHOLARSHIP">
+          <ScalarProperty Name="C_SCOID" ColumnName="_SCOID" />
+          <ScalarProperty Name="SCR_ID" ColumnName="SCR_ID" />
+          <ScalarProperty Name="SCR_AMMOUNT" ColumnName="SCR_AMMOUNT" />
+          <ScalarProperty Name="SCR_TYPE" ColumnName="SCR_TYPE" />
+          <ScalarProperty Name="SCR_RES_ID" ColumnName="SCR_RES_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STAFF_LOGIN">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.STAFF_LOGIN">
+        <MappingFragment StoreEntitySet="STAFF_LOGIN">
+          <ScalarProperty Name="C_STDID" ColumnName="_STDID" />
+          <ScalarProperty Name="STF_ID" ColumnName="STF_ID" />
+          <ScalarProperty Name="STF_PROFILE" ColumnName="STF_PROFILE" />
+          <ScalarProperty Name="STF_PASSWORD" ColumnName="STF_PASSWORD" />
+          <ScalarProperty Name="STF_NAME" ColumnName="STF_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STUDENT_LOGIN">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.STUDENT_LOGIN">
+        <MappingFragment StoreEntitySet="STUDENT_LOGIN">
+          <ScalarProperty Name="C_STLID" ColumnName="_STLID" />
+          <ScalarProperty Name="STDL_ID" ColumnName="STDL_ID" />
+          <ScalarProperty Name="STDL_PROFILE" ColumnName="STDL_PROFILE" />
+          <ScalarProperty Name="STDL_PASSWORD" ColumnName="STDL_PASSWORD" />
+          <ScalarProperty Name="STDL_NAME" ColumnName="STDL_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WORK_OF_COMPITITION">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.WORK_OF_COMPITITION">
+        <MappingFragment StoreEntitySet="WORK_OF_COMPITITION">
+          <ScalarProperty Name="C_WORID" ColumnName="_WORID" />
+          <ScalarProperty Name="WOC_ID" ColumnName="WOC_ID" />
+          <ScalarProperty Name="WOC_WORK" ColumnName="WOC_WORK" />
+          <ScalarProperty Name="WOC_COM_ID" ColumnName="WOC_COM_ID" />
+          <ScalarProperty Name="WOC_REG_ID" ColumnName="WOC_REG_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DEFAULTERs">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.DEFAULTER">
+        <MappingFragment StoreEntitySet="DEFAULTER">
+          <ScalarProperty Name="DEF_PLENTY" ColumnName="DEF_PLENTY" />
+          <ScalarProperty Name="DEF_FS_ID" ColumnName="DEF_FS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MANAGERs">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.MANAGER">
+        <MappingFragment StoreEntitySet="MANAGER">
+          <ScalarProperty Name="MG_FDB_ID" ColumnName="MG_FDB_ID" />
+          <ScalarProperty Name="MG_EXB_ID" ColumnName="MG_EXB_ID" />
+          <ScalarProperty Name="MG_MGL_ID" ColumnName="MG_MGL_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STAFF_DETAILS">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.STAFF_DETAILS">
+        <MappingFragment StoreEntitySet="STAFF_DETAILS">
+          <ScalarProperty Name="STFD_SALARY" ColumnName="STFD_SALARY" />
+          <ScalarProperty Name="STFD_DATE_OF_BIRTH" ColumnName="STFD_DATE_OF_BIRTH" />
+          <ScalarProperty Name="STFD_PHONE" ColumnName="STFD_PHONE" />
+          <ScalarProperty Name="STFD_EMAIL" ColumnName="STFD_EMAIL" />
+          <ScalarProperty Name="STFD_ADDRESS" ColumnName="STFD_ADDRESS" />
+          <ScalarProperty Name="STFD_EDUCATION" ColumnName="STFD_EDUCATION" />
+          <ScalarProperty Name="ST_STFD_ID" ColumnName="ST_STFD_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STUDENT_DETAILS">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.STUDENT_DETAILS">
+        <MappingFragment StoreEntitySet="STUDENT_DETAILS">
+          <ScalarProperty Name="STD_DATE_OF_BIRTH" ColumnName="STD_DATE_OF_BIRTH" />
+          <ScalarProperty Name="STD_PHONE" ColumnName="STD_PHONE" />
+          <ScalarProperty Name="STD_EMAIL" ColumnName="STD_EMAIL" />
+          <ScalarProperty Name="STD_ADDRESS" ColumnName="STD_ADDRESS" />
+          <ScalarProperty Name="SD_STDL_ID" ColumnName="SD_STDL_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_ADMIN_LOGIN">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.VW_ADMIN_LOGIN">
+        <MappingFragment StoreEntitySet="VW_ADMIN_LOGIN">
+          <ScalarProperty Name="C_ADID" ColumnName="_ADID" />
+          <ScalarProperty Name="AD_ID" ColumnName="AD_ID" />
+          <ScalarProperty Name="AD_PROFILE" ColumnName="AD_PROFILE" />
+          <ScalarProperty Name="AD_PASSWORD" ColumnName="AD_PASSWORD" />
+          <ScalarProperty Name="AD_NAME" ColumnName="AD_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_ASSIGNED">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.VW_ASSIGNED">
+        <MappingFragment StoreEntitySet="VW_ASSIGNED">
+          <ScalarProperty Name="C_ASIID" ColumnName="_ASIID" />
+          <ScalarProperty Name="ASI_ID" ColumnName="ASI_ID" />
+          <ScalarProperty Name="ASI_DATE" ColumnName="ASI_DATE" />
+          <ScalarProperty Name="ASI_CR_ID" ColumnName="ASI_CR_ID" />
+          <ScalarProperty Name="ASI_STFL_ID" ColumnName="ASI_STFL_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_ATTENDENCE">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.VW_ATTENDENCE">
+        <MappingFragment StoreEntitySet="VW_ATTENDENCE">
+          <ScalarProperty Name="C_ATTID" ColumnName="_ATTID" />
+          <ScalarProperty Name="ATD_ID" ColumnName="ATD_ID" />
+          <ScalarProperty Name="ATD_DATE" ColumnName="ATD_DATE" />
+          <ScalarProperty Name="ATD_PRECENCE" ColumnName="ATD_PRECENCE" />
+          <ScalarProperty Name="ATD_REG_ID" ColumnName="ATD_REG_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_COMPITITION">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.VW_COMPITITION">
+        <MappingFragment StoreEntitySet="VW_COMPITITION">
+          <ScalarProperty Name="C_COMID" ColumnName="_COMID" />
+          <ScalarProperty Name="COM_ID" ColumnName="COM_ID" />
+          <ScalarProperty Name="COM_FORMAT" ColumnName="COM_FORMAT" />
+          <ScalarProperty Name="COM_AWARD" ColumnName="COM_AWARD" />
+          <ScalarProperty Name="COM_STF_ID" ColumnName="COM_STF_ID" />
+          <ScalarProperty Name="COM_END_DATE" ColumnName="COM_END_DATE" />
+          <ScalarProperty Name="COM_START_DATE" ColumnName="COM_START_DATE" />
+          <ScalarProperty Name="COM_NAME" ColumnName="COM_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_CONTACT">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.VW_CONTACT">
+        <MappingFragment StoreEntitySet="VW_CONTACT">
+          <ScalarProperty Name="C_CONID" ColumnName="_CONID" />
+          <ScalarProperty Name="CON_ID" ColumnName="CON_ID" />
+          <ScalarProperty Name="CON_REPLIED" ColumnName="CON_REPLIED" />
+          <ScalarProperty Name="CON_MESSAGE" ColumnName="CON_MESSAGE" />
+          <ScalarProperty Name="CON_EMAIL" ColumnName="CON_EMAIL" />
+          <ScalarProperty Name="CON_NAME" ColumnName="CON_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_COURSES">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.VW_COURSES">
+        <MappingFragment StoreEntitySet="VW_COURSES">
+          <ScalarProperty Name="C_COUID" ColumnName="_COUID" />
+          <ScalarProperty Name="CR_ID" ColumnName="CR_ID" />
+          <ScalarProperty Name="CR_PR_ID" ColumnName="CR_PR_ID" />
+          <ScalarProperty Name="CR_CREDITS" ColumnName="CR_CREDITS" />
+          <ScalarProperty Name="CR_NAME" ColumnName="CR_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_DEFAULTER">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.VW_DEFAULTER">
+        <MappingFragment StoreEntitySet="VW_DEFAULTER">
+          <ScalarProperty Name="DEF_PLENTY" ColumnName="DEF_PLENTY" />
+          <ScalarProperty Name="DEF_FS_ID" ColumnName="DEF_FS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_EXIBITION">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.VW_EXIBITION">
+        <MappingFragment StoreEntitySet="VW_EXIBITION">
+          <ScalarProperty Name="C_EXIID" ColumnName="_EXIID" />
+          <ScalarProperty Name="EXB_ID" ColumnName="EXB_ID" />
+          <ScalarProperty Name="EXB_SCR_ID" ColumnName="EXB_SCR_ID" />
+          <ScalarProperty Name="EXB_TYPE" ColumnName="EXB_TYPE" />
+          <ScalarProperty Name="EXB_END_DATE" ColumnName="EXB_END_DATE" />
+          <ScalarProperty Name="EXB_START_DATE" ColumnName="EXB_START_DATE" />
+          <ScalarProperty Name="EXB_NAME" ColumnName="EXB_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_FAILED_PROJECTS">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.VW_FAILED_PROJECTS">
+        <MappingFragment StoreEntitySet="VW_FAILED_PROJECTS">
+          <ScalarProperty Name="C_FAPID" ColumnName="_FAPID" />
+          <ScalarProperty Name="FP_ID" ColumnName="FP_ID" />
+          <ScalarProperty Name="FP_REMARK" ColumnName="FP_REMARK" />
+          <ScalarProperty Name="FP_RES_ID" ColumnName="FP_RES_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_FEEDBACK">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.VW_FEEDBACK">
+        <MappingFragment StoreEntitySet="VW_FEEDBACK">
+          <ScalarProperty Name="C_FEDID" ColumnName="_FEDID" />
+          <ScalarProperty Name="FDB_ID" ColumnName="FDB_ID" />
+          <ScalarProperty Name="FDB_REPLIED" ColumnName="FDB_REPLIED" />
+          <ScalarProperty Name="FDB_MESSAGE" ColumnName="FDB_MESSAGE" />
+          <ScalarProperty Name="FDB_QUESTION" ColumnName="FDB_QUESTION" />
+          <ScalarProperty Name="FDB_EMAIL" ColumnName="FDB_EMAIL" />
+          <ScalarProperty Name="FDB_NAME" ColumnName="FDB_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_FEES">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.VW_FEES">
+        <MappingFragment StoreEntitySet="VW_FEES">
+          <ScalarProperty Name="C_FEEID" ColumnName="_FEEID" />
+          <ScalarProperty Name="FS_ID" ColumnName="FS_ID" />
+          <ScalarProperty Name="FS_LAST_DATE" ColumnName="FS_LAST_DATE" />
+          <ScalarProperty Name="FS_PAID" ColumnName="FS_PAID" />
+          <ScalarProperty Name="FS_AMOUNT" ColumnName="FS_AMOUNT" />
+          <ScalarProperty Name="FS_REG_ID" ColumnName="FS_REG_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_MANAGER">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.VW_MANAGER">
+        <MappingFragment StoreEntitySet="VW_MANAGER">
+          <ScalarProperty Name="MG_FDB_ID" ColumnName="MG_FDB_ID" />
+          <ScalarProperty Name="MG_EXB_ID" ColumnName="MG_EXB_ID" />
+          <ScalarProperty Name="MG_MGL_ID" ColumnName="MG_MGL_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_MANAGER_LOGIN">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.VW_MANAGER_LOGIN">
+        <MappingFragment StoreEntitySet="VW_MANAGER_LOGIN">
+          <ScalarProperty Name="C_MALID" ColumnName="_MALID" />
+          <ScalarProperty Name="MG_ID" ColumnName="MG_ID" />
+          <ScalarProperty Name="MG_PROFILE" ColumnName="MG_PROFILE" />
+          <ScalarProperty Name="MG_PASSWORD" ColumnName="MG_PASSWORD" />
+          <ScalarProperty Name="MG_NAME" ColumnName="MG_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_PROGRAM">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.VW_PROGRAM">
+        <MappingFragment StoreEntitySet="VW_PROGRAM">
+          <ScalarProperty Name="C_PROID" ColumnName="_PROID" />
+          <ScalarProperty Name="PR_ID" ColumnName="PR_ID" />
+          <ScalarProperty Name="PR_CREDITS" ColumnName="PR_CREDITS" />
+          <ScalarProperty Name="PR_NAME" ColumnName="PR_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_REGISTRATION">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.VW_REGISTRATION">
+        <MappingFragment StoreEntitySet="VW_REGISTRATION">
+          <ScalarProperty Name="C_RESID" ColumnName="_RESID" />
+          <ScalarProperty Name="REG_ID" ColumnName="REG_ID" />
+          <ScalarProperty Name="REG_DATE" ColumnName="REG_DATE" />
+          <ScalarProperty Name="REG_CR_ID" ColumnName="REG_CR_ID" />
+          <ScalarProperty Name="REG_STDL_ID" ColumnName="REG_STDL_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_RESULT">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.VW_RESULT">
+        <MappingFragment StoreEntitySet="VW_RESULT">
+          <ScalarProperty Name="C_REUID" ColumnName="_REUID" />
+          <ScalarProperty Name="RES_ID" ColumnName="RES_ID" />
+          <ScalarProperty Name="RES_GRADE" ColumnName="RES_GRADE" />
+          <ScalarProperty Name="RES_DATE" ColumnName="RES_DATE" />
+          <ScalarProperty Name="RES_WORK_ID" ColumnName="RES_WORK_ID" />
+          <ScalarProperty Name="RES_PERCENTAGE" ColumnName="RES_PERCENTAGE" />
+          <ScalarProperty Name="RES_MARKS" ColumnName="RES_MARKS" />
+          <ScalarProperty Name="RES_RES_ID" ColumnName="RES_RES_ID" />
+          <ScalarProperty Name="RES_COM_ID" ColumnName="RES_COM_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_SCHOLARSHIP">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.VW_SCHOLARSHIP">
+        <MappingFragment StoreEntitySet="VW_SCHOLARSHIP">
+          <ScalarProperty Name="C_SCOID" ColumnName="_SCOID" />
+          <ScalarProperty Name="SCR_ID" ColumnName="SCR_ID" />
+          <ScalarProperty Name="SCR_AMMOUNT" ColumnName="SCR_AMMOUNT" />
+          <ScalarProperty Name="SCR_TYPE" ColumnName="SCR_TYPE" />
+          <ScalarProperty Name="SCR_RES_ID" ColumnName="SCR_RES_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_SHOW_COMPITION_ALL_DATA_FROM_STUDENT_SIDE">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.VW_SHOW_COMPITION_ALL_DATA_FROM_STUDENT_SIDE">
+        <MappingFragment StoreEntitySet="VW_SHOW_COMPITION_ALL_DATA_FROM_STUDENT_SIDE">
+          <ScalarProperty Name="STF_PROFILE" ColumnName="STF_PROFILE" />
+          <ScalarProperty Name="STF_NAME" ColumnName="STF_NAME" />
+          <ScalarProperty Name="C_WORID" ColumnName="_WORID" />
+          <ScalarProperty Name="WOC_ID" ColumnName="WOC_ID" />
+          <ScalarProperty Name="WOC_WORK" ColumnName="WOC_WORK" />
+          <ScalarProperty Name="WOC_COM_ID" ColumnName="WOC_COM_ID" />
+          <ScalarProperty Name="WOC_REG_ID" ColumnName="WOC_REG_ID" />
+          <ScalarProperty Name="C_COMID" ColumnName="_COMID" />
+          <ScalarProperty Name="COM_ID" ColumnName="COM_ID" />
+          <ScalarProperty Name="COM_FORMAT" ColumnName="COM_FORMAT" />
+          <ScalarProperty Name="COM_AWARD" ColumnName="COM_AWARD" />
+          <ScalarProperty Name="COM_STF_ID" ColumnName="COM_STF_ID" />
+          <ScalarProperty Name="COM_END_DATE" ColumnName="COM_END_DATE" />
+          <ScalarProperty Name="COM_START_DATE" ColumnName="COM_START_DATE" />
+          <ScalarProperty Name="COM_NAME" ColumnName="COM_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_SHOW_COMPITITION_ALL_DATA">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.VW_SHOW_COMPITITION_ALL_DATA">
+        <MappingFragment StoreEntitySet="VW_SHOW_COMPITITION_ALL_DATA">
+          <ScalarProperty Name="ADMIN_COM_ID" ColumnName="ADMIN_COM_ID" />
+          <ScalarProperty Name="STF_PROFILE" ColumnName="STF_PROFILE" />
+          <ScalarProperty Name="STF_NAME" ColumnName="STF_NAME" />
+          <ScalarProperty Name="STF_ID" ColumnName="STF_ID" />
+          <ScalarProperty Name="C_WORID" ColumnName="_WORID" />
+          <ScalarProperty Name="WOC_ID" ColumnName="WOC_ID" />
+          <ScalarProperty Name="WOC_WORK" ColumnName="WOC_WORK" />
+          <ScalarProperty Name="WOC_COM_ID" ColumnName="WOC_COM_ID" />
+          <ScalarProperty Name="WOC_REG_ID" ColumnName="WOC_REG_ID" />
+          <ScalarProperty Name="C_COMID" ColumnName="_COMID" />
+          <ScalarProperty Name="COM_ID" ColumnName="COM_ID" />
+          <ScalarProperty Name="COM_FORMAT" ColumnName="COM_FORMAT" />
+          <ScalarProperty Name="COM_AWARD" ColumnName="COM_AWARD" />
+          <ScalarProperty Name="COM_STF_ID" ColumnName="COM_STF_ID" />
+          <ScalarProperty Name="COM_END_DATE" ColumnName="COM_END_DATE" />
+          <ScalarProperty Name="COM_START_DATE" ColumnName="COM_START_DATE" />
+          <ScalarProperty Name="COM_NAME" ColumnName="COM_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_SHOW_COMPITITION_ALL_DATA_FROM_STAFF">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.VW_SHOW_COMPITITION_ALL_DATA_FROM_STAFF">
+        <MappingFragment StoreEntitySet="VW_SHOW_COMPITITION_ALL_DATA_FROM_STAFF">
+          <ScalarProperty Name="STF_PROFILE" ColumnName="STF_PROFILE" />
+          <ScalarProperty Name="STF_NAME" ColumnName="STF_NAME" />
+          <ScalarProperty Name="STF_ID" ColumnName="STF_ID" />
+          <ScalarProperty Name="C_WORID" ColumnName="_WORID" />
+          <ScalarProperty Name="WOC_ID" ColumnName="WOC_ID" />
+          <ScalarProperty Name="WOC_WORK" ColumnName="WOC_WORK" />
+          <ScalarProperty Name="WOC_COM_ID" ColumnName="WOC_COM_ID" />
+          <ScalarProperty Name="WOC_REG_ID" ColumnName="WOC_REG_ID" />
+          <ScalarProperty Name="C_COMID" ColumnName="_COMID" />
+          <ScalarProperty Name="COM_ID" ColumnName="COM_ID" />
+          <ScalarProperty Name="COM_FORMAT" ColumnName="COM_FORMAT" />
+          <ScalarProperty Name="COM_AWARD" ColumnName="COM_AWARD" />
+          <ScalarProperty Name="COM_STF_ID" ColumnName="COM_STF_ID" />
+          <ScalarProperty Name="COM_END_DATE" ColumnName="COM_END_DATE" />
+          <ScalarProperty Name="COM_START_DATE" ColumnName="COM_START_DATE" />
+          <ScalarProperty Name="COM_NAME" ColumnName="COM_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_SHOW_CONTACT_ALL_DATA">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.VW_SHOW_CONTACT_ALL_DATA">
+        <MappingFragment StoreEntitySet="VW_SHOW_CONTACT_ALL_DATA">
+          <ScalarProperty Name="C_CONID" ColumnName="_CONID" />
+          <ScalarProperty Name="CON_ID" ColumnName="CON_ID" />
+          <ScalarProperty Name="CON_REPLIED" ColumnName="CON_REPLIED" />
+          <ScalarProperty Name="CON_MESSAGE" ColumnName="CON_MESSAGE" />
+          <ScalarProperty Name="CON_EMAIL" ColumnName="CON_EMAIL" />
+          <ScalarProperty Name="CON_NAME" ColumnName="CON_NAME" />
+          <ScalarProperty Name="ADMIN_CON_ID" ColumnName="ADMIN_CON_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_SHOW_EXIBITION_ALL_DATA_FROM_MANAGER_SIDE">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.VW_SHOW_EXIBITION_ALL_DATA_FROM_MANAGER_SIDE">
+        <MappingFragment StoreEntitySet="VW_SHOW_EXIBITION_ALL_DATA_FROM_MANAGER_SIDE">
+          <ScalarProperty Name="C_SCOID" ColumnName="_SCOID" />
+          <ScalarProperty Name="SCR_ID" ColumnName="SCR_ID" />
+          <ScalarProperty Name="SCR_AMMOUNT" ColumnName="SCR_AMMOUNT" />
+          <ScalarProperty Name="SCR_TYPE" ColumnName="SCR_TYPE" />
+          <ScalarProperty Name="SCR_RES_ID" ColumnName="SCR_RES_ID" />
+          <ScalarProperty Name="C_ATTID" ColumnName="_ATTID" />
+          <ScalarProperty Name="ATD_ID" ColumnName="ATD_ID" />
+          <ScalarProperty Name="ATD_DATE" ColumnName="ATD_DATE" />
+          <ScalarProperty Name="ATD_PRECENCE" ColumnName="ATD_PRECENCE" />
+          <ScalarProperty Name="ATD_REG_ID" ColumnName="ATD_REG_ID" />
+          <ScalarProperty Name="C_WORID" ColumnName="_WORID" />
+          <ScalarProperty Name="WOC_ID" ColumnName="WOC_ID" />
+          <ScalarProperty Name="WOC_WORK" ColumnName="WOC_WORK" />
+          <ScalarProperty Name="WOC_COM_ID" ColumnName="WOC_COM_ID" />
+          <ScalarProperty Name="WOC_REG_ID" ColumnName="WOC_REG_ID" />
+          <ScalarProperty Name="COM_FORMAT" ColumnName="COM_FORMAT" />
+          <ScalarProperty Name="COM_AWARD" ColumnName="COM_AWARD" />
+          <ScalarProperty Name="COM_NAME" ColumnName="COM_NAME" />
+          <ScalarProperty Name="COM_ID" ColumnName="COM_ID" />
+          <ScalarProperty Name="STDL_NAME" ColumnName="STDL_NAME" />
+          <ScalarProperty Name="STDL_ID" ColumnName="STDL_ID" />
+          <ScalarProperty Name="C_EXIID" ColumnName="_EXIID" />
+          <ScalarProperty Name="EXB_ID" ColumnName="EXB_ID" />
+          <ScalarProperty Name="EXB_SCR_ID" ColumnName="EXB_SCR_ID" />
+          <ScalarProperty Name="EXB_TYPE" ColumnName="EXB_TYPE" />
+          <ScalarProperty Name="EXB_END_DATE" ColumnName="EXB_END_DATE" />
+          <ScalarProperty Name="EXB_START_DATE" ColumnName="EXB_START_DATE" />
+          <ScalarProperty Name="EXB_NAME" ColumnName="EXB_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_SHOW_EXIBITION_ALL_DATA_FROM_STUDENT_SIDE">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.VW_SHOW_EXIBITION_ALL_DATA_FROM_STUDENT_SIDE">
+        <MappingFragment StoreEntitySet="VW_SHOW_EXIBITION_ALL_DATA_FROM_STUDENT_SIDE">
+          <ScalarProperty Name="C_SCOID" ColumnName="_SCOID" />
+          <ScalarProperty Name="SCR_ID" ColumnName="SCR_ID" />
+          <ScalarProperty Name="SCR_AMMOUNT" ColumnName="SCR_AMMOUNT" />
+          <ScalarProperty Name="SCR_TYPE" ColumnName="SCR_TYPE" />
+          <ScalarProperty Name="SCR_RES_ID" ColumnName="SCR_RES_ID" />
+          <ScalarProperty Name="C_ATTID" ColumnName="_ATTID" />
+          <ScalarProperty Name="ATD_ID" ColumnName="ATD_ID" />
+          <ScalarProperty Name="ATD_DATE" ColumnName="ATD_DATE" />
+          <ScalarProperty Name="ATD_PRECENCE" ColumnName="ATD_PRECENCE" />
+          <ScalarProperty Name="ATD_REG_ID" ColumnName="ATD_REG_ID" />
+          <ScalarProperty Name="C_WORID" ColumnName="_WORID" />
+          <ScalarProperty Name="WOC_ID" ColumnName="WOC_ID" />
+          <ScalarProperty Name="WOC_WORK" ColumnName="WOC_WORK" />
+          <ScalarProperty Name="WOC_COM_ID" ColumnName="WOC_COM_ID" />
+          <ScalarProperty Name="WOC_REG_ID" ColumnName="WOC_REG_ID" />
+          <ScalarProperty Name="COM_FORMAT" ColumnName="COM_FORMAT" />
+          <ScalarProperty Name="COM_AWARD" ColumnName="COM_AWARD" />
+          <ScalarProperty Name="COM_NAME" ColumnName="COM_NAME" />
+          <ScalarProperty Name="COM_ID" ColumnName="COM_ID" />
+          <ScalarProperty Name="STDL_NAME" ColumnName="STDL_NAME" />
+          <ScalarProperty Name="STDL_ID" ColumnName="STDL_ID" />
+          <ScalarProperty Name="C_EXIID" ColumnName="_EXIID" />
+          <ScalarProperty Name="EXB_ID" ColumnName="EXB_ID" />
+          <ScalarProperty Name="EXB_SCR_ID" ColumnName="EXB_SCR_ID" />
+          <ScalarProperty Name="EXB_TYPE" ColumnName="EXB_TYPE" />
+          <ScalarProperty Name="EXB_END_DATE" ColumnName="EXB_END_DATE" />
+          <ScalarProperty Name="EXB_START_DATE" ColumnName="EXB_START_DATE" />
+          <ScalarProperty Name="EXB_NAME" ColumnName="EXB_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_SHOW_FEEDBACK_ALL_DATA">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.VW_SHOW_FEEDBACK_ALL_DATA">
+        <MappingFragment StoreEntitySet="VW_SHOW_FEEDBACK_ALL_DATA">
+          <ScalarProperty Name="C_FEDID" ColumnName="_FEDID" />
+          <ScalarProperty Name="FDB_ID" ColumnName="FDB_ID" />
+          <ScalarProperty Name="FDB_REPLIED" ColumnName="FDB_REPLIED" />
+          <ScalarProperty Name="FDB_MESSAGE" ColumnName="FDB_MESSAGE" />
+          <ScalarProperty Name="FDB_QUESTION" ColumnName="FDB_QUESTION" />
+          <ScalarProperty Name="FDB_EMAIL" ColumnName="FDB_EMAIL" />
+          <ScalarProperty Name="FDB_NAME" ColumnName="FDB_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_SHOW_FEES_ALL_DATA">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.VW_SHOW_FEES_ALL_DATA">
+        <MappingFragment StoreEntitySet="VW_SHOW_FEES_ALL_DATA">
+          <ScalarProperty Name="C_RESID" ColumnName="_RESID" />
+          <ScalarProperty Name="REG_ID" ColumnName="REG_ID" />
+          <ScalarProperty Name="REG_DATE" ColumnName="REG_DATE" />
+          <ScalarProperty Name="REG_CR_ID" ColumnName="REG_CR_ID" />
+          <ScalarProperty Name="REG_STDL_ID" ColumnName="REG_STDL_ID" />
+          <ScalarProperty Name="STDL_PROFILE" ColumnName="STDL_PROFILE" />
+          <ScalarProperty Name="STDL_NAME" ColumnName="STDL_NAME" />
+          <ScalarProperty Name="STDL_ID" ColumnName="STDL_ID" />
+          <ScalarProperty Name="C_FEEID" ColumnName="_FEEID" />
+          <ScalarProperty Name="FS_ID" ColumnName="FS_ID" />
+          <ScalarProperty Name="FS_LAST_DATE" ColumnName="FS_LAST_DATE" />
+          <ScalarProperty Name="FS_PAID" ColumnName="FS_PAID" />
+          <ScalarProperty Name="FS_AMOUNT" ColumnName="FS_AMOUNT" />
+          <ScalarProperty Name="FS_REG_ID" ColumnName="FS_REG_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_SHOW_FEES_ALL_DATA_STUDENT_SIDE">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.VW_SHOW_FEES_ALL_DATA_STUDENT_SIDE">
+        <MappingFragment StoreEntitySet="VW_SHOW_FEES_ALL_DATA_STUDENT_SIDE">
+          <ScalarProperty Name="STDL_PROFILE" ColumnName="STDL_PROFILE" />
+          <ScalarProperty Name="STDL_NAME" ColumnName="STDL_NAME" />
+          <ScalarProperty Name="STDL_ID" ColumnName="STDL_ID" />
+          <ScalarProperty Name="C_FEEID" ColumnName="_FEEID" />
+          <ScalarProperty Name="FS_ID" ColumnName="FS_ID" />
+          <ScalarProperty Name="FS_LAST_DATE" ColumnName="FS_LAST_DATE" />
+          <ScalarProperty Name="FS_PAID" ColumnName="FS_PAID" />
+          <ScalarProperty Name="FS_AMOUNT" ColumnName="FS_AMOUNT" />
+          <ScalarProperty Name="FS_REG_ID" ColumnName="FS_REG_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_SHOW_FEES_DEFAULTER_ALL_DATA">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.VW_SHOW_FEES_DEFAULTER_ALL_DATA">
+        <MappingFragment StoreEntitySet="VW_SHOW_FEES_DEFAULTER_ALL_DATA">
+          <ScalarProperty Name="STD_DATE_OF_BIRTH" ColumnName="STD_DATE_OF_BIRTH" />
+          <ScalarProperty Name="STD_PHONE" ColumnName="STD_PHONE" />
+          <ScalarProperty Name="STD_EMAIL" ColumnName="STD_EMAIL" />
+          <ScalarProperty Name="STD_ADDRESS" ColumnName="STD_ADDRESS" />
+          <ScalarProperty Name="SD_STDL_ID" ColumnName="SD_STDL_ID" />
+          <ScalarProperty Name="C_STLID" ColumnName="_STLID" />
+          <ScalarProperty Name="STDL_ID" ColumnName="STDL_ID" />
+          <ScalarProperty Name="STDL_PROFILE" ColumnName="STDL_PROFILE" />
+          <ScalarProperty Name="STDL_PASSWORD" ColumnName="STDL_PASSWORD" />
+          <ScalarProperty Name="STDL_NAME" ColumnName="STDL_NAME" />
+          <ScalarProperty Name="C_RESID" ColumnName="_RESID" />
+          <ScalarProperty Name="REG_ID" ColumnName="REG_ID" />
+          <ScalarProperty Name="REG_DATE" ColumnName="REG_DATE" />
+          <ScalarProperty Name="REG_CR_ID" ColumnName="REG_CR_ID" />
+          <ScalarProperty Name="REG_STDL_ID" ColumnName="REG_STDL_ID" />
+          <ScalarProperty Name="DEF_PLENTY" ColumnName="DEF_PLENTY" />
+          <ScalarProperty Name="DEF_FS_ID" ColumnName="DEF_FS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_SHOW_RESULT_ALL_DATA">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.VW_SHOW_RESULT_ALL_DATA">
+        <MappingFragment StoreEntitySet="VW_SHOW_RESULT_ALL_DATA">
+          <ScalarProperty Name="C_REUID" ColumnName="_REUID" />
+          <ScalarProperty Name="RES_ID" ColumnName="RES_ID" />
+          <ScalarProperty Name="RES_GRADE" ColumnName="RES_GRADE" />
+          <ScalarProperty Name="RES_DATE" ColumnName="RES_DATE" />
+          <ScalarProperty Name="RES_WORK_ID" ColumnName="RES_WORK_ID" />
+          <ScalarProperty Name="RES_PERCENTAGE" ColumnName="RES_PERCENTAGE" />
+          <ScalarProperty Name="RES_MARKS" ColumnName="RES_MARKS" />
+          <ScalarProperty Name="RES_RES_ID" ColumnName="RES_RES_ID" />
+          <ScalarProperty Name="RES_COM_ID" ColumnName="RES_COM_ID" />
+          <ScalarProperty Name="WOC_WORK" ColumnName="WOC_WORK" />
+          <ScalarProperty Name="COM_NAME" ColumnName="COM_NAME" />
+          <ScalarProperty Name="STDL_NAME" ColumnName="STDL_NAME" />
+          <ScalarProperty Name="STDL_ID" ColumnName="STDL_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_SHOW_RESULT_ALL_DATA_FROM_STAFF">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.VW_SHOW_RESULT_ALL_DATA_FROM_STAFF">
+        <MappingFragment StoreEntitySet="VW_SHOW_RESULT_ALL_DATA_FROM_STAFF">
+          <ScalarProperty Name="C_COUID" ColumnName="_COUID" />
+          <ScalarProperty Name="CR_ID" ColumnName="CR_ID" />
+          <ScalarProperty Name="CR_PR_ID" ColumnName="CR_PR_ID" />
+          <ScalarProperty Name="CR_CREDITS" ColumnName="CR_CREDITS" />
+          <ScalarProperty Name="CR_NAME" ColumnName="CR_NAME" />
+          <ScalarProperty Name="C_REUID" ColumnName="_REUID" />
+          <ScalarProperty Name="RES_ID" ColumnName="RES_ID" />
+          <ScalarProperty Name="RES_GRADE" ColumnName="RES_GRADE" />
+          <ScalarProperty Name="RES_DATE" ColumnName="RES_DATE" />
+          <ScalarProperty Name="RES_WORK_ID" ColumnName="RES_WORK_ID" />
+          <ScalarProperty Name="RES_PERCENTAGE" ColumnName="RES_PERCENTAGE" />
+          <ScalarProperty Name="RES_MARKS" ColumnName="RES_MARKS" />
+          <ScalarProperty Name="RES_RES_ID" ColumnName="RES_RES_ID" />
+          <ScalarProperty Name="RES_COM_ID" ColumnName="RES_COM_ID" />
+          <ScalarProperty Name="WOC_WORK" ColumnName="WOC_WORK" />
+          <ScalarProperty Name="COM_NAME" ColumnName="COM_NAME" />
+          <ScalarProperty Name="STDL_NAME" ColumnName="STDL_NAME" />
+          <ScalarProperty Name="STDL_ID" ColumnName="STDL_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_SHOW_RESULT_ALL_DATA_FROM_STUDENT_SIDE">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.VW_SHOW_RESULT_ALL_DATA_FROM_STUDENT_SIDE">
+        <MappingFragment StoreEntitySet="VW_SHOW_RESULT_ALL_DATA_FROM_STUDENT_SIDE">
+          <ScalarProperty Name="C_REUID" ColumnName="_REUID" />
+          <ScalarProperty Name="RES_ID" ColumnName="RES_ID" />
+          <ScalarProperty Name="RES_GRADE" ColumnName="RES_GRADE" />
+          <ScalarProperty Name="RES_DATE" ColumnName="RES_DATE" />
+          <ScalarProperty Name="RES_WORK_ID" ColumnName="RES_WORK_ID" />
+          <ScalarProperty Name="RES_PERCENTAGE" ColumnName="RES_PERCENTAGE" />
+          <ScalarProperty Name="RES_MARKS" ColumnName="RES_MARKS" />
+          <ScalarProperty Name="RES_RES_ID" ColumnName="RES_RES_ID" />
+          <ScalarProperty Name="RES_COM_ID" ColumnName="RES_COM_ID" />
+          <ScalarProperty Name="WOC_WORK" ColumnName="WOC_WORK" />
+          <ScalarProperty Name="COM_NAME" ColumnName="COM_NAME" />
+          <ScalarProperty Name="STDL_NAME" ColumnName="STDL_NAME" />
+          <ScalarProperty Name="STDL_ID" ColumnName="STDL_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_SHOW_STAFF_ALL_DATA">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.VW_SHOW_STAFF_ALL_DATA">
+        <MappingFragment StoreEntitySet="VW_SHOW_STAFF_ALL_DATA">
+          <ScalarProperty Name="ADMIN_ASI_ID" ColumnName="ADMIN_ASI_ID" />
+          <ScalarProperty Name="C_ASIID" ColumnName="_ASIID" />
+          <ScalarProperty Name="ASI_ID" ColumnName="ASI_ID" />
+          <ScalarProperty Name="ASI_DATE" ColumnName="ASI_DATE" />
+          <ScalarProperty Name="ASI_CR_ID" ColumnName="ASI_CR_ID" />
+          <ScalarProperty Name="ASI_STFL_ID" ColumnName="ASI_STFL_ID" />
+          <ScalarProperty Name="STFD_SALARY" ColumnName="STFD_SALARY" />
+          <ScalarProperty Name="STFD_DATE_OF_BIRTH" ColumnName="STFD_DATE_OF_BIRTH" />
+          <ScalarProperty Name="STFD_PHONE" ColumnName="STFD_PHONE" />
+          <ScalarProperty Name="STFD_EMAIL" ColumnName="STFD_EMAIL" />
+          <ScalarProperty Name="STFD_ADDRESS" ColumnName="STFD_ADDRESS" />
+          <ScalarProperty Name="STFD_EDUCATION" ColumnName="STFD_EDUCATION" />
+          <ScalarProperty Name="ST_STFD_ID" ColumnName="ST_STFD_ID" />
+          <ScalarProperty Name="C_STDID" ColumnName="_STDID" />
+          <ScalarProperty Name="STF_ID" ColumnName="STF_ID" />
+          <ScalarProperty Name="STF_PROFILE" ColumnName="STF_PROFILE" />
+          <ScalarProperty Name="STF_PASSWORD" ColumnName="STF_PASSWORD" />
+          <ScalarProperty Name="STF_NAME" ColumnName="STF_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_SHOW_STAFF_ALL_DATA_FROM_STAFF">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.VW_SHOW_STAFF_ALL_DATA_FROM_STAFF">
+        <MappingFragment StoreEntitySet="VW_SHOW_STAFF_ALL_DATA_FROM_STAFF">
+          <ScalarProperty Name="C_ASIID" ColumnName="_ASIID" />
+          <ScalarProperty Name="ASI_ID" ColumnName="ASI_ID" />
+          <ScalarProperty Name="ASI_DATE" ColumnName="ASI_DATE" />
+          <ScalarProperty Name="ASI_CR_ID" ColumnName="ASI_CR_ID" />
+          <ScalarProperty Name="ASI_STFL_ID" ColumnName="ASI_STFL_ID" />
+          <ScalarProperty Name="STFD_SALARY" ColumnName="STFD_SALARY" />
+          <ScalarProperty Name="STFD_DATE_OF_BIRTH" ColumnName="STFD_DATE_OF_BIRTH" />
+          <ScalarProperty Name="STFD_PHONE" ColumnName="STFD_PHONE" />
+          <ScalarProperty Name="STFD_EMAIL" ColumnName="STFD_EMAIL" />
+          <ScalarProperty Name="STFD_ADDRESS" ColumnName="STFD_ADDRESS" />
+          <ScalarProperty Name="STFD_EDUCATION" ColumnName="STFD_EDUCATION" />
+          <ScalarProperty Name="ST_STFD_ID" ColumnName="ST_STFD_ID" />
+          <ScalarProperty Name="C_STDID" ColumnName="_STDID" />
+          <ScalarProperty Name="STF_ID" ColumnName="STF_ID" />
+          <ScalarProperty Name="STF_PROFILE" ColumnName="STF_PROFILE" />
+          <ScalarProperty Name="STF_PASSWORD" ColumnName="STF_PASSWORD" />
+          <ScalarProperty Name="STF_NAME" ColumnName="STF_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_SHOW_STUDENT_ALL_DATA_FROM_SUDENT_SIDE">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.VW_SHOW_STUDENT_ALL_DATA_FROM_SUDENT_SIDE">
+        <MappingFragment StoreEntitySet="VW_SHOW_STUDENT_ALL_DATA_FROM_SUDENT_SIDE">
+          <ScalarProperty Name="C_RESID" ColumnName="_RESID" />
+          <ScalarProperty Name="REG_ID" ColumnName="REG_ID" />
+          <ScalarProperty Name="REG_DATE" ColumnName="REG_DATE" />
+          <ScalarProperty Name="REG_CR_ID" ColumnName="REG_CR_ID" />
+          <ScalarProperty Name="REG_STDL_ID" ColumnName="REG_STDL_ID" />
+          <ScalarProperty Name="STD_DATE_OF_BIRTH" ColumnName="STD_DATE_OF_BIRTH" />
+          <ScalarProperty Name="STD_PHONE" ColumnName="STD_PHONE" />
+          <ScalarProperty Name="STD_EMAIL" ColumnName="STD_EMAIL" />
+          <ScalarProperty Name="STD_ADDRESS" ColumnName="STD_ADDRESS" />
+          <ScalarProperty Name="SD_STDL_ID" ColumnName="SD_STDL_ID" />
+          <ScalarProperty Name="C_STLID" ColumnName="_STLID" />
+          <ScalarProperty Name="STDL_ID" ColumnName="STDL_ID" />
+          <ScalarProperty Name="STDL_PROFILE" ColumnName="STDL_PROFILE" />
+          <ScalarProperty Name="STDL_PASSWORD" ColumnName="STDL_PASSWORD" />
+          <ScalarProperty Name="STDL_NAME" ColumnName="STDL_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_SHOW_STUDENTS_ALL_DATA">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.VW_SHOW_STUDENTS_ALL_DATA">
+        <MappingFragment StoreEntitySet="VW_SHOW_STUDENTS_ALL_DATA">
+          <ScalarProperty Name="ADMIN_REG_ID" ColumnName="ADMIN_REG_ID" />
+          <ScalarProperty Name="C_RESID" ColumnName="_RESID" />
+          <ScalarProperty Name="REG_ID" ColumnName="REG_ID" />
+          <ScalarProperty Name="REG_DATE" ColumnName="REG_DATE" />
+          <ScalarProperty Name="REG_CR_ID" ColumnName="REG_CR_ID" />
+          <ScalarProperty Name="REG_STDL_ID" ColumnName="REG_STDL_ID" />
+          <ScalarProperty Name="STD_DATE_OF_BIRTH" ColumnName="STD_DATE_OF_BIRTH" />
+          <ScalarProperty Name="STD_PHONE" ColumnName="STD_PHONE" />
+          <ScalarProperty Name="STD_EMAIL" ColumnName="STD_EMAIL" />
+          <ScalarProperty Name="STD_ADDRESS" ColumnName="STD_ADDRESS" />
+          <ScalarProperty Name="SD_STDL_ID" ColumnName="SD_STDL_ID" />
+          <ScalarProperty Name="C_STLID" ColumnName="_STLID" />
+          <ScalarProperty Name="STDL_ID" ColumnName="STDL_ID" />
+          <ScalarProperty Name="STDL_PROFILE" ColumnName="STDL_PROFILE" />
+          <ScalarProperty Name="STDL_PASSWORD" ColumnName="STDL_PASSWORD" />
+          <ScalarProperty Name="STDL_NAME" ColumnName="STDL_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_SHOW_STUDENTS_ALL_DATA_FROM_STAFF">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.VW_SHOW_STUDENTS_ALL_DATA_FROM_STAFF">
+        <MappingFragment StoreEntitySet="VW_SHOW_STUDENTS_ALL_DATA_FROM_STAFF">
+          <ScalarProperty Name="C_COUID" ColumnName="_COUID" />
+          <ScalarProperty Name="CR_ID" ColumnName="CR_ID" />
+          <ScalarProperty Name="CR_PR_ID" ColumnName="CR_PR_ID" />
+          <ScalarProperty Name="CR_CREDITS" ColumnName="CR_CREDITS" />
+          <ScalarProperty Name="CR_NAME" ColumnName="CR_NAME" />
+          <ScalarProperty Name="C_RESID" ColumnName="_RESID" />
+          <ScalarProperty Name="REG_ID" ColumnName="REG_ID" />
+          <ScalarProperty Name="REG_DATE" ColumnName="REG_DATE" />
+          <ScalarProperty Name="REG_CR_ID" ColumnName="REG_CR_ID" />
+          <ScalarProperty Name="REG_STDL_ID" ColumnName="REG_STDL_ID" />
+          <ScalarProperty Name="STD_DATE_OF_BIRTH" ColumnName="STD_DATE_OF_BIRTH" />
+          <ScalarProperty Name="STD_PHONE" ColumnName="STD_PHONE" />
+          <ScalarProperty Name="STD_EMAIL" ColumnName="STD_EMAIL" />
+          <ScalarProperty Name="STD_ADDRESS" ColumnName="STD_ADDRESS" />
+          <ScalarProperty Name="SD_STDL_ID" ColumnName="SD_STDL_ID" />
+          <ScalarProperty Name="C_STLID" ColumnName="_STLID" />
+          <ScalarProperty Name="STDL_ID" ColumnName="STDL_ID" />
+          <ScalarProperty Name="STDL_PROFILE" ColumnName="STDL_PROFILE" />
+          <ScalarProperty Name="STDL_PASSWORD" ColumnName="STDL_PASSWORD" />
+          <ScalarProperty Name="STDL_NAME" ColumnName="STDL_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_STAFF_DETAILS">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.VW_STAFF_DETAILS">
+        <MappingFragment StoreEntitySet="VW_STAFF_DETAILS">
+          <ScalarProperty Name="STFD_SALARY" ColumnName="STFD_SALARY" />
+          <ScalarProperty Name="STFD_DATE_OF_BIRTH" ColumnName="STFD_DATE_OF_BIRTH" />
+          <ScalarProperty Name="STFD_PHONE" ColumnName="STFD_PHONE" />
+          <ScalarProperty Name="STFD_EMAIL" ColumnName="STFD_EMAIL" />
+          <ScalarProperty Name="STFD_ADDRESS" ColumnName="STFD_ADDRESS" />
+          <ScalarProperty Name="STFD_EDUCATION" ColumnName="STFD_EDUCATION" />
+          <ScalarProperty Name="ST_STFD_ID" ColumnName="ST_STFD_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_STAFF_LOGIN">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.VW_STAFF_LOGIN">
+        <MappingFragment StoreEntitySet="VW_STAFF_LOGIN">
+          <ScalarProperty Name="C_STDID" ColumnName="_STDID" />
+          <ScalarProperty Name="STF_ID" ColumnName="STF_ID" />
+          <ScalarProperty Name="STF_PROFILE" ColumnName="STF_PROFILE" />
+          <ScalarProperty Name="STF_PASSWORD" ColumnName="STF_PASSWORD" />
+          <ScalarProperty Name="STF_NAME" ColumnName="STF_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_STUDENT_DETAILS">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.VW_STUDENT_DETAILS">
+        <MappingFragment StoreEntitySet="VW_STUDENT_DETAILS">
+          <ScalarProperty Name="STD_DATE_OF_BIRTH" ColumnName="STD_DATE_OF_BIRTH" />
+          <ScalarProperty Name="STD_PHONE" ColumnName="STD_PHONE" />
+          <ScalarProperty Name="STD_EMAIL" ColumnName="STD_EMAIL" />
+          <ScalarProperty Name="STD_ADDRESS" ColumnName="STD_ADDRESS" />
+          <ScalarProperty Name="SD_STDL_ID" ColumnName="SD_STDL_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_STUDENT_LOGIN">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.VW_STUDENT_LOGIN">
+        <MappingFragment StoreEntitySet="VW_STUDENT_LOGIN">
+          <ScalarProperty Name="C_STLID" ColumnName="_STLID" />
+          <ScalarProperty Name="STDL_ID" ColumnName="STDL_ID" />
+          <ScalarProperty Name="STDL_PROFILE" ColumnName="STDL_PROFILE" />
+          <ScalarProperty Name="STDL_PASSWORD" ColumnName="STDL_PASSWORD" />
+          <ScalarProperty Name="STDL_NAME" ColumnName="STDL_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_WORK_OF_COMPITITION">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.VW_WORK_OF_COMPITITION">
+        <MappingFragment StoreEntitySet="VW_WORK_OF_COMPITITION">
+          <ScalarProperty Name="C_WORID" ColumnName="_WORID" />
+          <ScalarProperty Name="WOC_ID" ColumnName="WOC_ID" />
+          <ScalarProperty Name="WOC_WORK" ColumnName="WOC_WORK" />
+          <ScalarProperty Name="WOC_COM_ID" ColumnName="WOC_COM_ID" />
+          <ScalarProperty Name="WOC_REG_ID" ColumnName="WOC_REG_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SP_ADMIN_LOGIN" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_ADMIN_LOGIN">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.SP_ADMIN_LOGIN_Result">
+          <ScalarProperty Name="AD_NAME" ColumnName="AD_NAME" />
+          <ScalarProperty Name="AD_PASSWORD" ColumnName="AD_PASSWORD" />
+          <ScalarProperty Name="AD_PROFILE" ColumnName="AD_PROFILE" />
+          <ScalarProperty Name="AD_ID" ColumnName="AD_ID" />
+          <ScalarProperty Name="C_ADID" ColumnName="_ADID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_ADMINISTRATION" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_ADMINISTRATION">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.SP_ADMINISTRATION_Result">
+          <ScalarProperty Name="ADMIN_AD_ID" ColumnName="ADMIN_AD_ID" />
+          <ScalarProperty Name="ADMIN_REG_ID" ColumnName="ADMIN_REG_ID" />
+          <ScalarProperty Name="ADMIN_ASI_ID" ColumnName="ADMIN_ASI_ID" />
+          <ScalarProperty Name="ADMIN_COM_ID" ColumnName="ADMIN_COM_ID" />
+          <ScalarProperty Name="ADMIN_CON_ID" ColumnName="ADMIN_CON_ID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="SP_ASSIGNED" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_ASSIGNED">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.SP_ASSIGNED_Result">
+          <ScalarProperty Name="ASI_STFL_ID" ColumnName="ASI_STFL_ID" />
+          <ScalarProperty Name="ASI_CR_ID" ColumnName="ASI_CR_ID" />
+          <ScalarProperty Name="ASI_DATE" ColumnName="ASI_DATE" />
+          <ScalarProperty Name="ASI_ID" ColumnName="ASI_ID" />
+          <ScalarProperty Name="C_ASIID" ColumnName="_ASIID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_ATTENDENCE" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_ATTENDENCE">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.SP_ATTENDENCE_Result">
+          <ScalarProperty Name="ATD_REG_ID" ColumnName="ATD_REG_ID" />
+          <ScalarProperty Name="ATD_PRECENCE" ColumnName="ATD_PRECENCE" />
+          <ScalarProperty Name="ATD_DATE" ColumnName="ATD_DATE" />
+          <ScalarProperty Name="ATD_ID" ColumnName="ATD_ID" />
+          <ScalarProperty Name="C_ATTID" ColumnName="_ATTID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_COMPITITION" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_COMPITITION">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.SP_COMPITITION_Result">
+          <ScalarProperty Name="COM_NAME" ColumnName="COM_NAME" />
+          <ScalarProperty Name="COM_START_DATE" ColumnName="COM_START_DATE" />
+          <ScalarProperty Name="COM_END_DATE" ColumnName="COM_END_DATE" />
+          <ScalarProperty Name="COM_STF_ID" ColumnName="COM_STF_ID" />
+          <ScalarProperty Name="COM_AWARD" ColumnName="COM_AWARD" />
+          <ScalarProperty Name="COM_FORMAT" ColumnName="COM_FORMAT" />
+          <ScalarProperty Name="COM_ID" ColumnName="COM_ID" />
+          <ScalarProperty Name="C_COMID" ColumnName="_COMID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_CONTACT" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_CONTACT">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.SP_CONTACT_Result">
+          <ScalarProperty Name="CON_NAME" ColumnName="CON_NAME" />
+          <ScalarProperty Name="CON_EMAIL" ColumnName="CON_EMAIL" />
+          <ScalarProperty Name="CON_MESSAGE" ColumnName="CON_MESSAGE" />
+          <ScalarProperty Name="CON_REPLIED" ColumnName="CON_REPLIED" />
+          <ScalarProperty Name="CON_ID" ColumnName="CON_ID" />
+          <ScalarProperty Name="C_CONID" ColumnName="_CONID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_COUNT_TABLE_LENGTH" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_COUNT_TABLE_LENGTH" />
+    <FunctionImportMapping FunctionImportName="SP_COURSES" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_COURSES">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.SP_COURSES_Result">
+          <ScalarProperty Name="CR_NAME" ColumnName="CR_NAME" />
+          <ScalarProperty Name="CR_CREDITS" ColumnName="CR_CREDITS" />
+          <ScalarProperty Name="CR_PR_ID" ColumnName="CR_PR_ID" />
+          <ScalarProperty Name="CR_ID" ColumnName="CR_ID" />
+          <ScalarProperty Name="C_COUID" ColumnName="_COUID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="SP_DEFAULTER" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_DEFAULTER">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.SP_DEFAULTER_Result">
+          <ScalarProperty Name="DEF_FS_ID" ColumnName="DEF_FS_ID" />
+          <ScalarProperty Name="DEF_PLENTY" ColumnName="DEF_PLENTY" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="SP_EXIBITION" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_EXIBITION">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.SP_EXIBITION_Result">
+          <ScalarProperty Name="EXB_NAME" ColumnName="EXB_NAME" />
+          <ScalarProperty Name="EXB_START_DATE" ColumnName="EXB_START_DATE" />
+          <ScalarProperty Name="EXB_END_DATE" ColumnName="EXB_END_DATE" />
+          <ScalarProperty Name="EXB_TYPE" ColumnName="EXB_TYPE" />
+          <ScalarProperty Name="EXB_SCR_ID" ColumnName="EXB_SCR_ID" />
+          <ScalarProperty Name="EXB_ID" ColumnName="EXB_ID" />
+          <ScalarProperty Name="C_EXIID" ColumnName="_EXIID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_FAILED_PROJECTS" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_FAILED_PROJECTS">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.SP_FAILED_PROJECTS_Result">
+          <ScalarProperty Name="FP_RES_ID" ColumnName="FP_RES_ID" />
+          <ScalarProperty Name="FP_REMARK" ColumnName="FP_REMARK" />
+          <ScalarProperty Name="FP_ID" ColumnName="FP_ID" />
+          <ScalarProperty Name="C_FAPID" ColumnName="_FAPID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_FEEDBACK" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_FEEDBACK">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.SP_FEEDBACK_Result">
+          <ScalarProperty Name="FDB_NAME" ColumnName="FDB_NAME" />
+          <ScalarProperty Name="FDB_EMAIL" ColumnName="FDB_EMAIL" />
+          <ScalarProperty Name="FDB_QUESTION" ColumnName="FDB_QUESTION" />
+          <ScalarProperty Name="FDB_MESSAGE" ColumnName="FDB_MESSAGE" />
+          <ScalarProperty Name="FDB_REPLIED" ColumnName="FDB_REPLIED" />
+          <ScalarProperty Name="FDB_ID" ColumnName="FDB_ID" />
+          <ScalarProperty Name="C_FEDID" ColumnName="_FEDID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_FEES" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_FEES">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.SP_FEES_Result">
+          <ScalarProperty Name="FS_REG_ID" ColumnName="FS_REG_ID" />
+          <ScalarProperty Name="FS_AMOUNT" ColumnName="FS_AMOUNT" />
+          <ScalarProperty Name="FS_PAID" ColumnName="FS_PAID" />
+          <ScalarProperty Name="FS_LAST_DATE" ColumnName="FS_LAST_DATE" />
+          <ScalarProperty Name="FS_ID" ColumnName="FS_ID" />
+          <ScalarProperty Name="C_FEEID" ColumnName="_FEEID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GLOBAL_DELETE_FROM_TABLE" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_GLOBAL_DELETE_FROM_TABLE" />
+    <FunctionImportMapping FunctionImportName="SP_GLOBAL_SELECT_FROM_TABLE" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_GLOBAL_SELECT_FROM_TABLE" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_MANAGER" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_MANAGER">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.SP_MANAGER_Result">
+          <ScalarProperty Name="MG_MGL_ID" ColumnName="MG_MGL_ID" />
+          <ScalarProperty Name="MG_EXB_ID" ColumnName="MG_EXB_ID" />
+          <ScalarProperty Name="MG_FDB_ID" ColumnName="MG_FDB_ID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_MANAGER_LOGIN" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_MANAGER_LOGIN">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.SP_MANAGER_LOGIN_Result">
+          <ScalarProperty Name="MG_NAME" ColumnName="MG_NAME" />
+          <ScalarProperty Name="MG_PASSWORD" ColumnName="MG_PASSWORD" />
+          <ScalarProperty Name="MG_PROFILE" ColumnName="MG_PROFILE" />
+          <ScalarProperty Name="MG_ID" ColumnName="MG_ID" />
+          <ScalarProperty Name="C_MALID" ColumnName="_MALID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_PROGRAM" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_PROGRAM">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.SP_PROGRAM_Result">
+          <ScalarProperty Name="PR_NAME" ColumnName="PR_NAME" />
+          <ScalarProperty Name="PR_CREDITS" ColumnName="PR_CREDITS" />
+          <ScalarProperty Name="PR_ID" ColumnName="PR_ID" />
+          <ScalarProperty Name="C_PROID" ColumnName="_PROID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_REGISTRATION" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_REGISTRATION">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.SP_REGISTRATION_Result">
+          <ScalarProperty Name="REG_STDL_ID" ColumnName="REG_STDL_ID" />
+          <ScalarProperty Name="REG_CR_ID" ColumnName="REG_CR_ID" />
+          <ScalarProperty Name="REG_DATE" ColumnName="REG_DATE" />
+          <ScalarProperty Name="REG_ID" ColumnName="REG_ID" />
+          <ScalarProperty Name="C_RESID" ColumnName="_RESID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="SP_RESULT" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_RESULT">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.SP_RESULT_Result">
+          <ScalarProperty Name="RES_COM_ID" ColumnName="RES_COM_ID" />
+          <ScalarProperty Name="RES_RES_ID" ColumnName="RES_RES_ID" />
+          <ScalarProperty Name="RES_MARKS" ColumnName="RES_MARKS" />
+          <ScalarProperty Name="RES_PERCENTAGE" ColumnName="RES_PERCENTAGE" />
+          <ScalarProperty Name="RES_WORK_ID" ColumnName="RES_WORK_ID" />
+          <ScalarProperty Name="RES_DATE" ColumnName="RES_DATE" />
+          <ScalarProperty Name="RES_GRADE" ColumnName="RES_GRADE" />
+          <ScalarProperty Name="RES_ID" ColumnName="RES_ID" />
+          <ScalarProperty Name="C_REUID" ColumnName="_REUID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_SCHOLARSHIP" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_SCHOLARSHIP">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.SP_SCHOLARSHIP_Result">
+          <ScalarProperty Name="SCR_RES_ID" ColumnName="SCR_RES_ID" />
+          <ScalarProperty Name="SCR_TYPE" ColumnName="SCR_TYPE" />
+          <ScalarProperty Name="SCR_AMMOUNT" ColumnName="SCR_AMMOUNT" />
+          <ScalarProperty Name="SCR_ID" ColumnName="SCR_ID" />
+          <ScalarProperty Name="C_SCOID" ColumnName="_SCOID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_SEARCH_INTO_TABLES" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_SEARCH_INTO_TABLES" />
+    <FunctionImportMapping FunctionImportName="SP_SET_DEFAULTER_FROM_FEES" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_SET_DEFAULTER_FROM_FEES" />
+    <FunctionImportMapping FunctionImportName="SP_SHOW_COMPITION_ALL_DATA_FROM_STUDENT_SIDE" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_SHOW_COMPITION_ALL_DATA_FROM_STUDENT_SIDE">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.SP_SHOW_COMPITION_ALL_DATA_FROM_STUDENT_SIDE_Result">
+          <ScalarProperty Name="COM_NAME" ColumnName="COM_NAME" />
+          <ScalarProperty Name="COM_START_DATE" ColumnName="COM_START_DATE" />
+          <ScalarProperty Name="COM_END_DATE" ColumnName="COM_END_DATE" />
+          <ScalarProperty Name="COM_STF_ID" ColumnName="COM_STF_ID" />
+          <ScalarProperty Name="COM_AWARD" ColumnName="COM_AWARD" />
+          <ScalarProperty Name="COM_FORMAT" ColumnName="COM_FORMAT" />
+          <ScalarProperty Name="COM_ID" ColumnName="COM_ID" />
+          <ScalarProperty Name="C_COMID" ColumnName="_COMID" />
+          <ScalarProperty Name="WOC_REG_ID" ColumnName="WOC_REG_ID" />
+          <ScalarProperty Name="WOC_COM_ID" ColumnName="WOC_COM_ID" />
+          <ScalarProperty Name="WOC_WORK" ColumnName="WOC_WORK" />
+          <ScalarProperty Name="WOC_ID" ColumnName="WOC_ID" />
+          <ScalarProperty Name="C_WORID" ColumnName="_WORID" />
+          <ScalarProperty Name="STF_NAME" ColumnName="STF_NAME" />
+          <ScalarProperty Name="STF_PROFILE" ColumnName="STF_PROFILE" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_SHOW_COMPITITION_ALL_DATA" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_SHOW_COMPITITION_ALL_DATA">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.SP_SHOW_COMPITITION_ALL_DATA_Result">
+          <ScalarProperty Name="COM_NAME" ColumnName="COM_NAME" />
+          <ScalarProperty Name="COM_START_DATE" ColumnName="COM_START_DATE" />
+          <ScalarProperty Name="COM_END_DATE" ColumnName="COM_END_DATE" />
+          <ScalarProperty Name="COM_STF_ID" ColumnName="COM_STF_ID" />
+          <ScalarProperty Name="COM_AWARD" ColumnName="COM_AWARD" />
+          <ScalarProperty Name="COM_FORMAT" ColumnName="COM_FORMAT" />
+          <ScalarProperty Name="COM_ID" ColumnName="COM_ID" />
+          <ScalarProperty Name="C_COMID" ColumnName="_COMID" />
+          <ScalarProperty Name="WOC_REG_ID" ColumnName="WOC_REG_ID" />
+          <ScalarProperty Name="WOC_COM_ID" ColumnName="WOC_COM_ID" />
+          <ScalarProperty Name="WOC_WORK" ColumnName="WOC_WORK" />
+          <ScalarProperty Name="WOC_ID" ColumnName="WOC_ID" />
+          <ScalarProperty Name="C_WORID" ColumnName="_WORID" />
+          <ScalarProperty Name="STF_ID" ColumnName="STF_ID" />
+          <ScalarProperty Name="STF_NAME" ColumnName="STF_NAME" />
+          <ScalarProperty Name="STF_PROFILE" ColumnName="STF_PROFILE" />
+          <ScalarProperty Name="ADMIN_COM_ID" ColumnName="ADMIN_COM_ID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_SHOW_COMPITITION_ALL_DATA_FROM_STAFF" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_SHOW_COMPITITION_ALL_DATA_FROM_STAFF">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.SP_SHOW_COMPITITION_ALL_DATA_FROM_STAFF_Result">
+          <ScalarProperty Name="COM_NAME" ColumnName="COM_NAME" />
+          <ScalarProperty Name="COM_START_DATE" ColumnName="COM_START_DATE" />
+          <ScalarProperty Name="COM_END_DATE" ColumnName="COM_END_DATE" />
+          <ScalarProperty Name="COM_STF_ID" ColumnName="COM_STF_ID" />
+          <ScalarProperty Name="COM_AWARD" ColumnName="COM_AWARD" />
+          <ScalarProperty Name="COM_FORMAT" ColumnName="COM_FORMAT" />
+          <ScalarProperty Name="COM_ID" ColumnName="COM_ID" />
+          <ScalarProperty Name="C_COMID" ColumnName="_COMID" />
+          <ScalarProperty Name="WOC_REG_ID" ColumnName="WOC_REG_ID" />
+          <ScalarProperty Name="WOC_COM_ID" ColumnName="WOC_COM_ID" />
+          <ScalarProperty Name="WOC_WORK" ColumnName="WOC_WORK" />
+          <ScalarProperty Name="WOC_ID" ColumnName="WOC_ID" />
+          <ScalarProperty Name="C_WORID" ColumnName="_WORID" />
+          <ScalarProperty Name="STF_ID" ColumnName="STF_ID" />
+          <ScalarProperty Name="STF_NAME" ColumnName="STF_NAME" />
+          <ScalarProperty Name="STF_PROFILE" ColumnName="STF_PROFILE" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_SHOW_CONTACT_ALL_DATA" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_SHOW_CONTACT_ALL_DATA">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.SP_SHOW_CONTACT_ALL_DATA_Result">
+          <ScalarProperty Name="ADMIN_CON_ID" ColumnName="ADMIN_CON_ID" />
+          <ScalarProperty Name="CON_NAME" ColumnName="CON_NAME" />
+          <ScalarProperty Name="CON_EMAIL" ColumnName="CON_EMAIL" />
+          <ScalarProperty Name="CON_MESSAGE" ColumnName="CON_MESSAGE" />
+          <ScalarProperty Name="CON_REPLIED" ColumnName="CON_REPLIED" />
+          <ScalarProperty Name="CON_ID" ColumnName="CON_ID" />
+          <ScalarProperty Name="C_CONID" ColumnName="_CONID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_SHOW_EXIBITION_ALL_DATA_FROM_MANAGER_SIDE" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_SHOW_EXIBITION_ALL_DATA_FROM_MANAGER_SIDE">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.SP_SHOW_EXIBITION_ALL_DATA_FROM_MANAGER_SIDE_Result">
+          <ScalarProperty Name="EXB_NAME" ColumnName="EXB_NAME" />
+          <ScalarProperty Name="EXB_START_DATE" ColumnName="EXB_START_DATE" />
+          <ScalarProperty Name="EXB_END_DATE" ColumnName="EXB_END_DATE" />
+          <ScalarProperty Name="EXB_TYPE" ColumnName="EXB_TYPE" />
+          <ScalarProperty Name="EXB_SCR_ID" ColumnName="EXB_SCR_ID" />
+          <ScalarProperty Name="EXB_ID" ColumnName="EXB_ID" />
+          <ScalarProperty Name="C_EXIID" ColumnName="_EXIID" />
+          <ScalarProperty Name="STDL_ID" ColumnName="STDL_ID" />
+          <ScalarProperty Name="STDL_NAME" ColumnName="STDL_NAME" />
+          <ScalarProperty Name="COM_ID" ColumnName="COM_ID" />
+          <ScalarProperty Name="COM_NAME" ColumnName="COM_NAME" />
+          <ScalarProperty Name="COM_AWARD" ColumnName="COM_AWARD" />
+          <ScalarProperty Name="COM_FORMAT" ColumnName="COM_FORMAT" />
+          <ScalarProperty Name="WOC_REG_ID" ColumnName="WOC_REG_ID" />
+          <ScalarProperty Name="WOC_COM_ID" ColumnName="WOC_COM_ID" />
+          <ScalarProperty Name="WOC_WORK" ColumnName="WOC_WORK" />
+          <ScalarProperty Name="WOC_ID" ColumnName="WOC_ID" />
+          <ScalarProperty Name="C_WORID" ColumnName="_WORID" />
+          <ScalarProperty Name="ATD_REG_ID" ColumnName="ATD_REG_ID" />
+          <ScalarProperty Name="ATD_PRECENCE" ColumnName="ATD_PRECENCE" />
+          <ScalarProperty Name="ATD_DATE" ColumnName="ATD_DATE" />
+          <ScalarProperty Name="ATD_ID" ColumnName="ATD_ID" />
+          <ScalarProperty Name="C_ATTID" ColumnName="_ATTID" />
+          <ScalarProperty Name="SCR_RES_ID" ColumnName="SCR_RES_ID" />
+          <ScalarProperty Name="SCR_TYPE" ColumnName="SCR_TYPE" />
+          <ScalarProperty Name="SCR_AMMOUNT" ColumnName="SCR_AMMOUNT" />
+          <ScalarProperty Name="SCR_ID" ColumnName="SCR_ID" />
+          <ScalarProperty Name="C_SCOID" ColumnName="_SCOID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_SHOW_EXIBITION_ALL_DATA_FROM_STUDENT_SIDE" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_SHOW_EXIBITION_ALL_DATA_FROM_STUDENT_SIDE">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.SP_SHOW_EXIBITION_ALL_DATA_FROM_STUDENT_SIDE_Result">
+          <ScalarProperty Name="EXB_NAME" ColumnName="EXB_NAME" />
+          <ScalarProperty Name="EXB_START_DATE" ColumnName="EXB_START_DATE" />
+          <ScalarProperty Name="EXB_END_DATE" ColumnName="EXB_END_DATE" />
+          <ScalarProperty Name="EXB_TYPE" ColumnName="EXB_TYPE" />
+          <ScalarProperty Name="EXB_SCR_ID" ColumnName="EXB_SCR_ID" />
+          <ScalarProperty Name="EXB_ID" ColumnName="EXB_ID" />
+          <ScalarProperty Name="C_EXIID" ColumnName="_EXIID" />
+          <ScalarProperty Name="STDL_ID" ColumnName="STDL_ID" />
+          <ScalarProperty Name="STDL_NAME" ColumnName="STDL_NAME" />
+          <ScalarProperty Name="COM_ID" ColumnName="COM_ID" />
+          <ScalarProperty Name="COM_NAME" ColumnName="COM_NAME" />
+          <ScalarProperty Name="COM_AWARD" ColumnName="COM_AWARD" />
+          <ScalarProperty Name="COM_FORMAT" ColumnName="COM_FORMAT" />
+          <ScalarProperty Name="WOC_REG_ID" ColumnName="WOC_REG_ID" />
+          <ScalarProperty Name="WOC_COM_ID" ColumnName="WOC_COM_ID" />
+          <ScalarProperty Name="WOC_WORK" ColumnName="WOC_WORK" />
+          <ScalarProperty Name="WOC_ID" ColumnName="WOC_ID" />
+          <ScalarProperty Name="C_WORID" ColumnName="_WORID" />
+          <ScalarProperty Name="ATD_REG_ID" ColumnName="ATD_REG_ID" />
+          <ScalarProperty Name="ATD_PRECENCE" ColumnName="ATD_PRECENCE" />
+          <ScalarProperty Name="ATD_DATE" ColumnName="ATD_DATE" />
+          <ScalarProperty Name="ATD_ID" ColumnName="ATD_ID" />
+          <ScalarProperty Name="C_ATTID" ColumnName="_ATTID" />
+          <ScalarProperty Name="SCR_RES_ID" ColumnName="SCR_RES_ID" />
+          <ScalarProperty Name="SCR_TYPE" ColumnName="SCR_TYPE" />
+          <ScalarProperty Name="SCR_AMMOUNT" ColumnName="SCR_AMMOUNT" />
+          <ScalarProperty Name="SCR_ID" ColumnName="SCR_ID" />
+          <ScalarProperty Name="C_SCOID" ColumnName="_SCOID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_SHOW_FEEDBACK_ALL_DATA" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_SHOW_FEEDBACK_ALL_DATA">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.SP_SHOW_FEEDBACK_ALL_DATA_Result">
+          <ScalarProperty Name="FDB_NAME" ColumnName="FDB_NAME" />
+          <ScalarProperty Name="FDB_EMAIL" ColumnName="FDB_EMAIL" />
+          <ScalarProperty Name="FDB_QUESTION" ColumnName="FDB_QUESTION" />
+          <ScalarProperty Name="FDB_MESSAGE" ColumnName="FDB_MESSAGE" />
+          <ScalarProperty Name="FDB_REPLIED" ColumnName="FDB_REPLIED" />
+          <ScalarProperty Name="FDB_ID" ColumnName="FDB_ID" />
+          <ScalarProperty Name="C_FEDID" ColumnName="_FEDID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_SHOW_FEES_ALL_DATA" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_SHOW_FEES_ALL_DATA">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.SP_SHOW_FEES_ALL_DATA_Result">
+          <ScalarProperty Name="FS_REG_ID" ColumnName="FS_REG_ID" />
+          <ScalarProperty Name="FS_AMOUNT" ColumnName="FS_AMOUNT" />
+          <ScalarProperty Name="FS_PAID" ColumnName="FS_PAID" />
+          <ScalarProperty Name="FS_LAST_DATE" ColumnName="FS_LAST_DATE" />
+          <ScalarProperty Name="FS_ID" ColumnName="FS_ID" />
+          <ScalarProperty Name="C_FEEID" ColumnName="_FEEID" />
+          <ScalarProperty Name="STDL_ID" ColumnName="STDL_ID" />
+          <ScalarProperty Name="STDL_NAME" ColumnName="STDL_NAME" />
+          <ScalarProperty Name="STDL_PROFILE" ColumnName="STDL_PROFILE" />
+          <ScalarProperty Name="REG_STDL_ID" ColumnName="REG_STDL_ID" />
+          <ScalarProperty Name="REG_CR_ID" ColumnName="REG_CR_ID" />
+          <ScalarProperty Name="REG_DATE" ColumnName="REG_DATE" />
+          <ScalarProperty Name="REG_ID" ColumnName="REG_ID" />
+          <ScalarProperty Name="C_RESID" ColumnName="_RESID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_SHOW_FEES_ALL_DATA_STUDENT_SIDE" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_SHOW_FEES_ALL_DATA_STUDENT_SIDE">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.SP_SHOW_FEES_ALL_DATA_STUDENT_SIDE_Result">
+          <ScalarProperty Name="FS_REG_ID" ColumnName="FS_REG_ID" />
+          <ScalarProperty Name="FS_AMOUNT" ColumnName="FS_AMOUNT" />
+          <ScalarProperty Name="FS_PAID" ColumnName="FS_PAID" />
+          <ScalarProperty Name="FS_LAST_DATE" ColumnName="FS_LAST_DATE" />
+          <ScalarProperty Name="FS_ID" ColumnName="FS_ID" />
+          <ScalarProperty Name="C_FEEID" ColumnName="_FEEID" />
+          <ScalarProperty Name="STDL_ID" ColumnName="STDL_ID" />
+          <ScalarProperty Name="STDL_NAME" ColumnName="STDL_NAME" />
+          <ScalarProperty Name="STDL_PROFILE" ColumnName="STDL_PROFILE" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_SHOW_RESULT_ALL_DATA" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_SHOW_RESULT_ALL_DATA">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.SP_SHOW_RESULT_ALL_DATA_Result">
+          <ScalarProperty Name="STDL_ID" ColumnName="STDL_ID" />
+          <ScalarProperty Name="STDL_NAME" ColumnName="STDL_NAME" />
+          <ScalarProperty Name="COM_NAME" ColumnName="COM_NAME" />
+          <ScalarProperty Name="WOC_WORK" ColumnName="WOC_WORK" />
+          <ScalarProperty Name="RES_COM_ID" ColumnName="RES_COM_ID" />
+          <ScalarProperty Name="RES_RES_ID" ColumnName="RES_RES_ID" />
+          <ScalarProperty Name="RES_MARKS" ColumnName="RES_MARKS" />
+          <ScalarProperty Name="RES_PERCENTAGE" ColumnName="RES_PERCENTAGE" />
+          <ScalarProperty Name="RES_WORK_ID" ColumnName="RES_WORK_ID" />
+          <ScalarProperty Name="RES_DATE" ColumnName="RES_DATE" />
+          <ScalarProperty Name="RES_GRADE" ColumnName="RES_GRADE" />
+          <ScalarProperty Name="RES_ID" ColumnName="RES_ID" />
+          <ScalarProperty Name="C_REUID" ColumnName="_REUID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_SHOW_RESULT_ALL_DATA_FROM_STAFF" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_SHOW_RESULT_ALL_DATA_FROM_STAFF">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.SP_SHOW_RESULT_ALL_DATA_FROM_STAFF_Result">
+          <ScalarProperty Name="STDL_ID" ColumnName="STDL_ID" />
+          <ScalarProperty Name="STDL_NAME" ColumnName="STDL_NAME" />
+          <ScalarProperty Name="COM_NAME" ColumnName="COM_NAME" />
+          <ScalarProperty Name="WOC_WORK" ColumnName="WOC_WORK" />
+          <ScalarProperty Name="RES_COM_ID" ColumnName="RES_COM_ID" />
+          <ScalarProperty Name="RES_RES_ID" ColumnName="RES_RES_ID" />
+          <ScalarProperty Name="RES_MARKS" ColumnName="RES_MARKS" />
+          <ScalarProperty Name="RES_PERCENTAGE" ColumnName="RES_PERCENTAGE" />
+          <ScalarProperty Name="RES_WORK_ID" ColumnName="RES_WORK_ID" />
+          <ScalarProperty Name="RES_DATE" ColumnName="RES_DATE" />
+          <ScalarProperty Name="RES_GRADE" ColumnName="RES_GRADE" />
+          <ScalarProperty Name="RES_ID" ColumnName="RES_ID" />
+          <ScalarProperty Name="C_REUID" ColumnName="_REUID" />
+          <ScalarProperty Name="CR_NAME" ColumnName="CR_NAME" />
+          <ScalarProperty Name="CR_CREDITS" ColumnName="CR_CREDITS" />
+          <ScalarProperty Name="CR_PR_ID" ColumnName="CR_PR_ID" />
+          <ScalarProperty Name="CR_ID" ColumnName="CR_ID" />
+          <ScalarProperty Name="C_COUID" ColumnName="_COUID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_SHOW_RESULT_ALL_DATA_FROM_STUDENT_SIDE" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_SHOW_RESULT_ALL_DATA_FROM_STUDENT_SIDE">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.SP_SHOW_RESULT_ALL_DATA_FROM_STUDENT_SIDE_Result">
+          <ScalarProperty Name="STDL_ID" ColumnName="STDL_ID" />
+          <ScalarProperty Name="STDL_NAME" ColumnName="STDL_NAME" />
+          <ScalarProperty Name="COM_NAME" ColumnName="COM_NAME" />
+          <ScalarProperty Name="WOC_WORK" ColumnName="WOC_WORK" />
+          <ScalarProperty Name="RES_COM_ID" ColumnName="RES_COM_ID" />
+          <ScalarProperty Name="RES_RES_ID" ColumnName="RES_RES_ID" />
+          <ScalarProperty Name="RES_MARKS" ColumnName="RES_MARKS" />
+          <ScalarProperty Name="RES_PERCENTAGE" ColumnName="RES_PERCENTAGE" />
+          <ScalarProperty Name="RES_WORK_ID" ColumnName="RES_WORK_ID" />
+          <ScalarProperty Name="RES_DATE" ColumnName="RES_DATE" />
+          <ScalarProperty Name="RES_GRADE" ColumnName="RES_GRADE" />
+          <ScalarProperty Name="RES_ID" ColumnName="RES_ID" />
+          <ScalarProperty Name="C_REUID" ColumnName="_REUID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_SHOW_STAFF_ALL_DATA" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_SHOW_STAFF_ALL_DATA">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.SP_SHOW_STAFF_ALL_DATA_Result">
+          <ScalarProperty Name="STF_NAME" ColumnName="STF_NAME" />
+          <ScalarProperty Name="STF_PASSWORD" ColumnName="STF_PASSWORD" />
+          <ScalarProperty Name="STF_PROFILE" ColumnName="STF_PROFILE" />
+          <ScalarProperty Name="STF_ID" ColumnName="STF_ID" />
+          <ScalarProperty Name="C_STDID" ColumnName="_STDID" />
+          <ScalarProperty Name="ST_STFD_ID" ColumnName="ST_STFD_ID" />
+          <ScalarProperty Name="STFD_EDUCATION" ColumnName="STFD_EDUCATION" />
+          <ScalarProperty Name="STFD_ADDRESS" ColumnName="STFD_ADDRESS" />
+          <ScalarProperty Name="STFD_EMAIL" ColumnName="STFD_EMAIL" />
+          <ScalarProperty Name="STFD_PHONE" ColumnName="STFD_PHONE" />
+          <ScalarProperty Name="STFD_DATE_OF_BIRTH" ColumnName="STFD_DATE_OF_BIRTH" />
+          <ScalarProperty Name="STFD_SALARY" ColumnName="STFD_SALARY" />
+          <ScalarProperty Name="ASI_STFL_ID" ColumnName="ASI_STFL_ID" />
+          <ScalarProperty Name="ASI_CR_ID" ColumnName="ASI_CR_ID" />
+          <ScalarProperty Name="ASI_DATE" ColumnName="ASI_DATE" />
+          <ScalarProperty Name="ASI_ID" ColumnName="ASI_ID" />
+          <ScalarProperty Name="C_ASIID" ColumnName="_ASIID" />
+          <ScalarProperty Name="ADMIN_ASI_ID" ColumnName="ADMIN_ASI_ID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_SHOW_STAFF_ALL_DATA_FROM_STAFF" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_SHOW_STAFF_ALL_DATA_FROM_STAFF">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.SP_SHOW_STAFF_ALL_DATA_FROM_STAFF_Result">
+          <ScalarProperty Name="STF_NAME" ColumnName="STF_NAME" />
+          <ScalarProperty Name="STF_PASSWORD" ColumnName="STF_PASSWORD" />
+          <ScalarProperty Name="STF_PROFILE" ColumnName="STF_PROFILE" />
+          <ScalarProperty Name="STF_ID" ColumnName="STF_ID" />
+          <ScalarProperty Name="C_STDID" ColumnName="_STDID" />
+          <ScalarProperty Name="ST_STFD_ID" ColumnName="ST_STFD_ID" />
+          <ScalarProperty Name="STFD_EDUCATION" ColumnName="STFD_EDUCATION" />
+          <ScalarProperty Name="STFD_ADDRESS" ColumnName="STFD_ADDRESS" />
+          <ScalarProperty Name="STFD_EMAIL" ColumnName="STFD_EMAIL" />
+          <ScalarProperty Name="STFD_PHONE" ColumnName="STFD_PHONE" />
+          <ScalarProperty Name="STFD_DATE_OF_BIRTH" ColumnName="STFD_DATE_OF_BIRTH" />
+          <ScalarProperty Name="STFD_SALARY" ColumnName="STFD_SALARY" />
+          <ScalarProperty Name="ASI_STFL_ID" ColumnName="ASI_STFL_ID" />
+          <ScalarProperty Name="ASI_CR_ID" ColumnName="ASI_CR_ID" />
+          <ScalarProperty Name="ASI_DATE" ColumnName="ASI_DATE" />
+          <ScalarProperty Name="ASI_ID" ColumnName="ASI_ID" />
+          <ScalarProperty Name="C_ASIID" ColumnName="_ASIID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_SHOW_STUDENT_ALL_DATA_FROM_SUDENT_SIDE" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_SHOW_STUDENT_ALL_DATA_FROM_SUDENT_SIDE">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.SP_SHOW_STUDENT_ALL_DATA_FROM_SUDENT_SIDE_Result">
+          <ScalarProperty Name="STDL_NAME" ColumnName="STDL_NAME" />
+          <ScalarProperty Name="STDL_PASSWORD" ColumnName="STDL_PASSWORD" />
+          <ScalarProperty Name="STDL_PROFILE" ColumnName="STDL_PROFILE" />
+          <ScalarProperty Name="STDL_ID" ColumnName="STDL_ID" />
+          <ScalarProperty Name="C_STLID" ColumnName="_STLID" />
+          <ScalarProperty Name="SD_STDL_ID" ColumnName="SD_STDL_ID" />
+          <ScalarProperty Name="STD_ADDRESS" ColumnName="STD_ADDRESS" />
+          <ScalarProperty Name="STD_EMAIL" ColumnName="STD_EMAIL" />
+          <ScalarProperty Name="STD_PHONE" ColumnName="STD_PHONE" />
+          <ScalarProperty Name="STD_DATE_OF_BIRTH" ColumnName="STD_DATE_OF_BIRTH" />
+          <ScalarProperty Name="REG_STDL_ID" ColumnName="REG_STDL_ID" />
+          <ScalarProperty Name="REG_CR_ID" ColumnName="REG_CR_ID" />
+          <ScalarProperty Name="REG_DATE" ColumnName="REG_DATE" />
+          <ScalarProperty Name="REG_ID" ColumnName="REG_ID" />
+          <ScalarProperty Name="C_RESID" ColumnName="_RESID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_SHOW_STUDENTS_ALL_DATA" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_SHOW_STUDENTS_ALL_DATA">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.SP_SHOW_STUDENTS_ALL_DATA_Result">
+          <ScalarProperty Name="STDL_NAME" ColumnName="STDL_NAME" />
+          <ScalarProperty Name="STDL_PASSWORD" ColumnName="STDL_PASSWORD" />
+          <ScalarProperty Name="STDL_PROFILE" ColumnName="STDL_PROFILE" />
+          <ScalarProperty Name="STDL_ID" ColumnName="STDL_ID" />
+          <ScalarProperty Name="C_STLID" ColumnName="_STLID" />
+          <ScalarProperty Name="SD_STDL_ID" ColumnName="SD_STDL_ID" />
+          <ScalarProperty Name="STD_ADDRESS" ColumnName="STD_ADDRESS" />
+          <ScalarProperty Name="STD_EMAIL" ColumnName="STD_EMAIL" />
+          <ScalarProperty Name="STD_PHONE" ColumnName="STD_PHONE" />
+          <ScalarProperty Name="STD_DATE_OF_BIRTH" ColumnName="STD_DATE_OF_BIRTH" />
+          <ScalarProperty Name="REG_STDL_ID" ColumnName="REG_STDL_ID" />
+          <ScalarProperty Name="REG_CR_ID" ColumnName="REG_CR_ID" />
+          <ScalarProperty Name="REG_DATE" ColumnName="REG_DATE" />
+          <ScalarProperty Name="REG_ID" ColumnName="REG_ID" />
+          <ScalarProperty Name="C_RESID" ColumnName="_RESID" />
+          <ScalarProperty Name="ADMIN_REG_ID" ColumnName="ADMIN_REG_ID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_SHOW_STUDENTS_ALL_DATA_FROM_STAFF" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_SHOW_STUDENTS_ALL_DATA_FROM_STAFF">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.SP_SHOW_STUDENTS_ALL_DATA_FROM_STAFF_Result">
+          <ScalarProperty Name="STDL_NAME" ColumnName="STDL_NAME" />
+          <ScalarProperty Name="STDL_PASSWORD" ColumnName="STDL_PASSWORD" />
+          <ScalarProperty Name="STDL_PROFILE" ColumnName="STDL_PROFILE" />
+          <ScalarProperty Name="STDL_ID" ColumnName="STDL_ID" />
+          <ScalarProperty Name="C_STLID" ColumnName="_STLID" />
+          <ScalarProperty Name="SD_STDL_ID" ColumnName="SD_STDL_ID" />
+          <ScalarProperty Name="STD_ADDRESS" ColumnName="STD_ADDRESS" />
+          <ScalarProperty Name="STD_EMAIL" ColumnName="STD_EMAIL" />
+          <ScalarProperty Name="STD_PHONE" ColumnName="STD_PHONE" />
+          <ScalarProperty Name="STD_DATE_OF_BIRTH" ColumnName="STD_DATE_OF_BIRTH" />
+          <ScalarProperty Name="REG_STDL_ID" ColumnName="REG_STDL_ID" />
+          <ScalarProperty Name="REG_CR_ID" ColumnName="REG_CR_ID" />
+          <ScalarProperty Name="REG_DATE" ColumnName="REG_DATE" />
+          <ScalarProperty Name="REG_ID" ColumnName="REG_ID" />
+          <ScalarProperty Name="C_RESID" ColumnName="_RESID" />
+          <ScalarProperty Name="CR_NAME" ColumnName="CR_NAME" />
+          <ScalarProperty Name="CR_CREDITS" ColumnName="CR_CREDITS" />
+          <ScalarProperty Name="CR_PR_ID" ColumnName="CR_PR_ID" />
+          <ScalarProperty Name="CR_ID" ColumnName="CR_ID" />
+          <ScalarProperty Name="C_COUID" ColumnName="_COUID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_STAFF_DETAILS" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_STAFF_DETAILS">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.SP_STAFF_DETAILS_Result">
+          <ScalarProperty Name="ST_STFD_ID" ColumnName="ST_STFD_ID" />
+          <ScalarProperty Name="STFD_EDUCATION" ColumnName="STFD_EDUCATION" />
+          <ScalarProperty Name="STFD_ADDRESS" ColumnName="STFD_ADDRESS" />
+          <ScalarProperty Name="STFD_EMAIL" ColumnName="STFD_EMAIL" />
+          <ScalarProperty Name="STFD_PHONE" ColumnName="STFD_PHONE" />
+          <ScalarProperty Name="STFD_DATE_OF_BIRTH" ColumnName="STFD_DATE_OF_BIRTH" />
+          <ScalarProperty Name="STFD_SALARY" ColumnName="STFD_SALARY" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_STAFF_LOGIN" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_STAFF_LOGIN">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.SP_STAFF_LOGIN_Result">
+          <ScalarProperty Name="STF_NAME" ColumnName="STF_NAME" />
+          <ScalarProperty Name="STF_PASSWORD" ColumnName="STF_PASSWORD" />
+          <ScalarProperty Name="STF_PROFILE" ColumnName="STF_PROFILE" />
+          <ScalarProperty Name="STF_ID" ColumnName="STF_ID" />
+          <ScalarProperty Name="C_STDID" ColumnName="_STDID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_STUDENT_DETAILS" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_STUDENT_DETAILS">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.SP_STUDENT_DETAILS_Result">
+          <ScalarProperty Name="SD_STDL_ID" ColumnName="SD_STDL_ID" />
+          <ScalarProperty Name="STD_ADDRESS" ColumnName="STD_ADDRESS" />
+          <ScalarProperty Name="STD_EMAIL" ColumnName="STD_EMAIL" />
+          <ScalarProperty Name="STD_PHONE" ColumnName="STD_PHONE" />
+          <ScalarProperty Name="STD_DATE_OF_BIRTH" ColumnName="STD_DATE_OF_BIRTH" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_STUDENT_LOGIN" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_STUDENT_LOGIN">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.SP_STUDENT_LOGIN_Result">
+          <ScalarProperty Name="STDL_NAME" ColumnName="STDL_NAME" />
+          <ScalarProperty Name="STDL_PASSWORD" ColumnName="STDL_PASSWORD" />
+          <ScalarProperty Name="STDL_PROFILE" ColumnName="STDL_PROFILE" />
+          <ScalarProperty Name="STDL_ID" ColumnName="STDL_ID" />
+          <ScalarProperty Name="C_STLID" ColumnName="_STLID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_TRUNCATE_TABLES" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_TRUNCATE_TABLES" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="SP_WORK_OF_COMPITITION" FunctionName="DB_Institute_Of_Fine_ArtsModel.Store.SP_WORK_OF_COMPITITION">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.SP_WORK_OF_COMPITITION_Result">
+          <ScalarProperty Name="WOC_REG_ID" ColumnName="WOC_REG_ID" />
+          <ScalarProperty Name="WOC_COM_ID" ColumnName="WOC_COM_ID" />
+          <ScalarProperty Name="WOC_WORK" ColumnName="WOC_WORK" />
+          <ScalarProperty Name="WOC_ID" ColumnName="WOC_ID" />
+          <ScalarProperty Name="C_WORID" ColumnName="_WORID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "ExibitionList";
+    Layout = "~/Views/Shared/Admin_Master_Layout/Admin_Layout.cshtml";
+}
+@Html.Raw(TempData["InsertMessage"]);
+<h2>ExibitionList</h2>
+
+
+<div class="container">
+    <div class="compCardRow row">
+        @{
+            Html.RenderAction("ExibitionCard", "Admin");
+        }
+    </div>
+</div>
+
+

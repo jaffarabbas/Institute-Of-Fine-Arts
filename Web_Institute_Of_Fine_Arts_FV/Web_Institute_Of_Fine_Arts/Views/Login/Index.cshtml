@@ -1,0 +1,168 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="~/Content/assets/css/custom.css" />
+    <link href="~/Content/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic">
+    <link href="~/Content/assets/fonts/simple-line-icons.min.css" rel="stylesheet" />
+    <link href="~/Content/assets/fonts/font-awesome.min.css" rel="stylesheet" />
+    <title>Institute Of Fine Arts</title>
+
+</head>
+
+<body style="background-color: #f5b907;">
+    <section class="sec animated lightSpeedIn">
+        <div class="main card animated lightSpeedIn" id="card">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <div id="ind">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active" style="top: 120px;"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1" style="top: 120px;"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2" style="top: 120px;"></li>
+                    </ol>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="img"><img src="~/Content/images/admin.png" id="img2" class="panel-student animated lightSpeedIn"> </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="head">
+                                        <h1 class="head-admin animated fadeInRight" id="head-log2"><b>Admin</b></h1>
+                                        <div class="into-admin"><button class="btn-admin animated fadeInRight" id="btn-man2" onclick="mypop2()">Click</button></div>
+                                    </div>
+                                    <div id="form2">
+                                        @{
+                                            Html.RenderPartial("AdminLogin");
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="img"><img src="~/Content/images/student.png" class="panel-student animated lightSpeedIn"> </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="head">
+                                        <h1 class="head-admin animated fadeInRight" id="head-log3"><b>Student</b></h1>
+                                        <div class="into-admin"><button class="btn-admin animated fadeInRight" id="btn-man3" onclick="mypop3()">Click</button></div>
+                                    </div>
+                                    <div id="form3">
+                                        @{
+                                            Html.RenderPartial("StudentLogin");
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="img"><img src="~/Content/images/slider4.png" class="panel-student animated lightSpeedIn"> </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="head">
+                                        <h1 class="head-admin animated fadeInRight" id="head-log4"><b>Staff</b></h1>
+                                        <div class="into-admin"><button class="btn-admin animated fadeInRight" id="btn-man4" onclick="mypop4()">Click</button></div>
+                                    </div>
+                                    <div id="form4">
+                                        @{
+                                            Html.RenderPartial("FacultyLogin");
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="~/Content/assets/bootstrap/js/bootstrap.min.js"></script>
+@*<script src="~/Content/assets/bootstrap/js/bootstrap.min.js"></script>*@
+<script>
+    function mypop2() {
+        var x = document.getElementById("form2");
+        var y = document.getElementById("cros2");
+        var z = document.getElementById("btn-man2");
+        var m = document.getElementById("head-log2");
+        if (x.style.display === "none" || y.style.display === "none" || z.style.display === "inline" || m.style.display === "block") {
+            x.style.display = "block";
+            y.style.display = "block";
+            z.style.display = "none";
+            m.style.display = "none";
+        } else {
+            x.style.display = "none";
+            y.style.display = "none";
+            z.style.display = "inline";
+            m.style.display = "block";
+        }
+    }
+    function mypop3() {
+        var x = document.getElementById("form3");
+        var y = document.getElementById("cros3");
+        var z = document.getElementById("btn-man3");
+        var m = document.getElementById("head-log3");
+        if (x.style.display === "none" || y.style.display === "none" || z.style.display === "inline" || m.style.display === "block") {
+            x.style.display = "block";
+            y.style.display = "block";
+            z.style.display = "none";
+            m.style.display = "none";
+        } else {
+            x.style.display = "none";
+            y.style.display = "none";
+            z.style.display = "inline";
+            m.style.display = "block";
+        }
+    }
+    function mypop4() {
+        var x = document.getElementById("form4");
+        var y = document.getElementById("cros4");
+        var z = document.getElementById("btn-man4");
+        var m = document.getElementById("head-log4");
+        if (x.style.display === "none" || y.style.display === "none" || z.style.display === "inline" || m.style.display === "block") {
+            x.style.display = "block";
+            y.style.display = "block";
+            z.style.display = "none";
+            m.style.display = "none";
+        } else {
+            x.style.display = "none";
+            y.style.display = "none";
+            z.style.display = "inline";
+            m.style.display = "block";
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Exibition_Master_Layout/Exibition_Master_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="compCardRow row">
+        @{
+            Html.RenderAction("ExibitionCard", "Exibition");
+        }
+    </div>
+</div>
+

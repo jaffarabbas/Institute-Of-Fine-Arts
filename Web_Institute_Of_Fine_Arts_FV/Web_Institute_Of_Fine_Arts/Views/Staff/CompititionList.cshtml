@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Web_Institute_Of_Fine_Arts_Database_Models.COMPITITION_MODEL>
+
+@{
+    ViewBag.Title = "CompititionList";
+    Layout = "~/Views/Shared/Staff_Master_Layout/Staff_Master.cshtml";
+}
+
+@Html.Raw(TempData["InsertMessage"])
+
+<h2 class="text-center">CompititionList</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.COM_NAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COM_START_DATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COM_END_DATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COM_STF_ID)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.COM_NAME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.COM_START_DATE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.COM_END_DATE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.COM_STF_ID)
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Web_Institute_Of_Fine_Arts_Database_Models.VW_SHOW_COMPITITION_DETAILS_TO_STUDENTS_MODEL>
+
+@{
+    ViewBag.Title = "CompititionList";
+    Layout = "~/Views/Shared/Student_Master_Layout/Students_Master.cshtml";
+}
+
+<h2 class="text-center">Compitition List</h2>
+@Html.Raw(TempData["datamessage"])
+
+<div class="container">
+    <div class="compCardRow row">
+        @{
+            Html.RenderAction("CompititionCard", "Students");
+        }
+    </div>
+</div>

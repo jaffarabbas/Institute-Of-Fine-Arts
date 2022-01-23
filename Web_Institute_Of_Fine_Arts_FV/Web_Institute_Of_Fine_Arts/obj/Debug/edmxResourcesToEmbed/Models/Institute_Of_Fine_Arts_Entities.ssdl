@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_Institute_Of_Fine_ArtsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'DB_Institute_Of_Fine_Arts.dbo.ADMINISTRATION' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="ADMINISTRATION">
+          <Property Name="ADMIN_AD_ID" Type="nvarchar" MaxLength="20" />
+          <Property Name="ADMIN_REG_ID" Type="nvarchar" MaxLength="20" />
+          <Property Name="ADMIN_ASI_ID" Type="nvarchar" MaxLength="20" />
+          <Property Name="ADMIN_COM_ID" Type="nvarchar" MaxLength="20" />
+          <Property Name="ADMIN_CON_ID" Type="nvarchar" MaxLength="20" />
+        </EntityType>-->
+  <EntityType Name="ASSIGNED">
+    <Key>
+      <PropertyRef Name="ASI_ID" />
+    </Key>
+    <Property Name="ASI_STFL_ID" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="ASI_CR_ID" Type="nvarchar" MaxLength="20" />
+    <Property Name="ASI_DATE" Type="date" Nullable="false" />
+    <Property Name="ASI_ID" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="_ASIID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="COMPITITION">
+    <Key>
+      <PropertyRef Name="COM_ID" />
+    </Key>
+    <Property Name="COM_NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="COM_START_DATE" Type="datetime" Nullable="false" />
+    <Property Name="COM_END_DATE" Type="datetime" Nullable="false" />
+    <Property Name="COM_STF_ID" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="COM_AWARD" Type="nvarchar" MaxLength="50" />
+    <Property Name="COM_FORMAT" Type="nvarchar" MaxLength="50" />
+    <Property Name="COM_ID" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="_COMID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CONTACT">
+    <Key>
+      <PropertyRef Name="CON_ID" />
+    </Key>
+    <Property Name="CON_NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CON_EMAIL" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="CON_MESSAGE" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="CON_REPLIED" Type="bit" Nullable="false" />
+    <Property Name="CON_ID" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="_CONID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="REGISTRATION">
+    <Key>
+      <PropertyRef Name="REG_ID" />
+    </Key>
+    <Property Name="REG_STDL_ID" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="REG_CR_ID" Type="nvarchar" MaxLength="20" />
+    <Property Name="REG_DATE" Type="date" Nullable="false" />
+    <Property Name="REG_ID" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="_RESID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'DB_Institute_Of_Fine_Arts.dbo.VW_ADMINISTRATION' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="VW_ADMINISTRATION">
+          <Property Name="ADMIN_AD_ID" Type="nvarchar" MaxLength="20" />
+          <Property Name="ADMIN_REG_ID" Type="nvarchar" MaxLength="20" />
+          <Property Name="ADMIN_ASI_ID" Type="nvarchar" MaxLength="20" />
+          <Property Name="ADMIN_COM_ID" Type="nvarchar" MaxLength="20" />
+          <Property Name="ADMIN_CON_ID" Type="nvarchar" MaxLength="20" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+error 6004: The table 'DB_Institute_Of_Fine_Arts.dbo.ADMINISTRATION' is referenced by a relationship, but cannot be found.
+        <Association Name="FK_ADMINISTRATION_TO_COMPITITION" />-->
+  <!--Errors Found During Generation:
+error 6004: The table 'DB_Institute_Of_Fine_Arts.dbo.ADMINISTRATION' is referenced by a relationship, but cannot be found.
+        <Association Name="FK_ADMINISTRATION_TO_CONTACT" />-->
+  <!--Errors Found During Generation:
+error 6004: The table 'DB_Institute_Of_Fine_Arts.dbo.ADMINISTRATION' is referenced by a relationship, but cannot be found.
+        <Association Name="FK_ADMINISTRATION_TO_REGISTRATION" />-->
+  <EntityContainer Name="DB_Institute_Of_Fine_ArtsModelStoreContainer">
+    <EntitySet Name="ASSIGNED" EntityType="Self.ASSIGNED" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="COMPITITION" EntityType="Self.COMPITITION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CONTACT" EntityType="Self.CONTACT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="REGISTRATION" EntityType="Self.REGISTRATION" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

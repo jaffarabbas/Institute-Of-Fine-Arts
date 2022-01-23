@@ -1,0 +1,94 @@
+﻿@model IEnumerable<Web_Institute_Of_Fine_Arts_Database_Models.VW_SHOW_STUDENTS_ALL_DATA_MODEL>
+
+@{
+    ViewBag.Title = "RegisterStudentList";
+    Layout = "~/Views/Shared/Admin_Master_Layout/Admin_Layout.cshtml";
+}
+
+<h2>RegisterStudentList</h2>
+@Html.Raw(TempData["datamessage"])
+@Html.Raw(TempData["errormessage"])
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.STDL_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.REG_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.REG_CR_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.REG_DATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STDL_PROFILE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STDL_NAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STDL_PASSWORD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STD_ADDRESS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STD_EMAIL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STD_PHONE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STD_DATE_OF_BIRTH)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.STDL_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REG_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REG_CR_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REG_DATE)
+            </td>
+            <td>
+                <img src="@Url.Content(item.STDL_PROFILE)" height="80px" width="80px" alt="Not found" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.STDL_NAME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.STDL_PASSWORD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.STD_ADDRESS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.STD_EMAIL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.STD_PHONE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.STD_DATE_OF_BIRTH)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+    }
+
+</table>

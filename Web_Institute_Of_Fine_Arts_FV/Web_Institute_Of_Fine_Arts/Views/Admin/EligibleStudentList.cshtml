@@ -1,0 +1,123 @@
+﻿@model IEnumerable<Web_Institute_Of_Fine_Arts_Database_Models.VW_SHOW_RESULT_ALL_DATA_MODEL>
+
+@{
+    ViewBag.Title = "EligibleStudentList";
+    Layout = "~/Views/Shared/Admin_Master_Layout/Admin_Layout.cshtml";
+}
+
+<h2>EligibleStudentList</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RES_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STDL_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STDL_NAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COM_NAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WOC_WORK)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RES_MARKS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RES_DATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RES_GRADE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RES_IS_ELIGIBLE)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.RES_ID)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.STDL_ID)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.STDL_NAME)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.COM_NAME)
+    </td>
+    <td>
+        <a type="button" data-toggle="modal" data-target="#exampleModal">
+            <img src="@Url.Content(item.WOC_WORK)" height="80px" width="80px" alt="Not found" />
+        </a>
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.RES_MARKS)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.RES_DATE)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.RES_GRADE)
+    </td>
+    <td>
+        @if (Convert.ToBoolean(item.RES_IS_ELIGIBLE))
+        {
+            <i class="fa fa-check-circle text-success fa-2x"></i>
+        }
+        else
+        {
+            <i class="fa fa-times-circle text-warning fa-2x"></i>
+        }
+    </td>
+    <td>
+        @Html.ActionLink("Add in Exibition", "CreateExibitionEntries", new { id = item.STDL_ID }, new { @class = "btn btn-warning" })
+    </td>
+</tr>
+
+        <!--Bootstrap modal -->
+        <div class="modal fade"
+             id="exampleModal"
+             tabindex="-1"
+             role="dialog"
+             aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
+
+            <div class="modal-dialog"
+                 role="document">
+                <div class="modal-content">
+                    <!-- Modal heading -->
+                    <div class="modal-header">
+                        <h5 class="modal-title"
+                            id="exampleModalLabel">
+                            Display Compitition Submission
+                        </h5>
+                        <button type="button"
+                                class="close"
+                                data-dismiss="modal"
+                                aria-label="Close">
+                            <span aria-hidden="true">
+                                ×
+                            </span>
+                        </button>
+                    </div>
+
+                    <!-- Modal body with image -->
+                    <div class="modal-body text-center">
+                        <img src="@Url.Content(item.WOC_WORK)" height="500px" width="500px" alt="Not found" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+</table>
+
+

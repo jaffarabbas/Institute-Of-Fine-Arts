@@ -1,0 +1,79 @@
+﻿@model IEnumerable<Web_Institute_Of_Fine_Arts_Database_Models.VW_SHOW_STAFF_ALL_DETIALS_MODEL>
+
+@{
+    ViewBag.Title = "Staff_List";
+    Layout = "~/Views/Shared/Admin_Master_Layout/Admin_Layout.cshtml";
+}
+
+<h2>Staff_List</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.STF_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STF_PROFILE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STF_NAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STF_PASSWORD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STFD_EMAIL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STFD_ADDRESS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STFD_SALARY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STFD_EDUCATION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STFD_DATE_OF_BIRTH)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.STF_ID)
+    </td>
+    <td>
+        <img src="@Url.Content(item.STF_PROFILE)" height="80px" width="80px" alt="Not found" />
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.STF_NAME)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.STF_PASSWORD)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.STFD_EMAIL)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.STFD_ADDRESS)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.STFD_SALARY)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.STFD_EDUCATION)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.STFD_DATE_OF_BIRTH)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+    </td>
+</tr>
+}
+
+</table>

@@ -1,0 +1,1056 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_INSTITUTE_OF_FINE_ARTSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ADMIN_LOGIN">
+    <Key>
+      <PropertyRef Name="AD_ID" />
+    </Key>
+    <Property Name="AD_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AD_NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="AD_PASSWORD" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="AD_PROFILE" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ASSIGNED">
+    <Key>
+      <PropertyRef Name="ASI_ID" />
+    </Key>
+    <Property Name="ASI_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ASI_STFL_ID" Type="int" Nullable="false" />
+    <Property Name="ASI_CR_ID" Type="int" />
+    <Property Name="ASI_DATE" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="COMPITITION">
+    <Key>
+      <PropertyRef Name="COM_ID" />
+    </Key>
+    <Property Name="COM_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="COM_NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="COM_START_DATE" Type="datetime" Nullable="false" />
+    <Property Name="COM_END_DATE" Type="datetime" Nullable="false" />
+    <Property Name="COM_STF_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="COURSES">
+    <Key>
+      <PropertyRef Name="CR_ID" />
+    </Key>
+    <Property Name="CR_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CR_NAME" Type="nvarchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EXIBITION">
+    <Key>
+      <PropertyRef Name="EXB_ID" />
+    </Key>
+    <Property Name="EXB_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EXB_NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="EXB_START_DATE" Type="datetime" Nullable="false" />
+    <Property Name="EXB_END_DATE" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DB_INSTITUTE_OF_FINE_ARTS.dbo.EXIBITION_ENTRIES' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="EXIBITION_ENTRIES">
+    <Key>
+      <PropertyRef Name="EXB_EN_EXB_ID" />
+      <PropertyRef Name="EXB_EN_RES_ID" />
+      <PropertyRef Name="PRICE" />
+    </Key>
+    <Property Name="EXB_EN_EXB_ID" Type="int" Nullable="false" />
+    <Property Name="EXB_EN_RES_ID" Type="int" Nullable="false" />
+    <Property Name="PRICE" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="REGISTRATION">
+    <Key>
+      <PropertyRef Name="REG_ID" />
+    </Key>
+    <Property Name="REG_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="REG_STDL_ID" Type="int" Nullable="false" />
+    <Property Name="REG_CR_ID" Type="int" />
+    <Property Name="REG_DATE" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RESULT">
+    <Key>
+      <PropertyRef Name="RES_ID" />
+    </Key>
+    <Property Name="RES_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RES_COM_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DB_INSTITUTE_OF_FINE_ARTS.dbo.RESULT_ENTRIES' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="RESULT_ENTRIES">
+    <Key>
+      <PropertyRef Name="RES_ID" />
+      <PropertyRef Name="RES_WORK_ID" />
+      <PropertyRef Name="RES_MARKS" />
+      <PropertyRef Name="RES_DATE" />
+      <PropertyRef Name="RES_GRADE" />
+    </Key>
+    <Property Name="RES_ID" Type="int" Nullable="false" />
+    <Property Name="RES_WORK_ID" Type="int" Nullable="false" />
+    <Property Name="RES_MARKS" Type="decimal" Precision="3" Scale="2" Nullable="false" />
+    <Property Name="RES_DATE" Type="datetime" Nullable="false" />
+    <Property Name="RES_GRADE" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="RES_IS_ELIGIBLE" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DB_INSTITUTE_OF_FINE_ARTS.dbo.STAFF_DETAILS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="STAFF_DETAILS">
+    <Key>
+      <PropertyRef Name="STFD_ID" />
+      <PropertyRef Name="STFD_EDUCATION" />
+      <PropertyRef Name="STFD_PHONE" />
+      <PropertyRef Name="STFD_DATE_OF_BIRTH" />
+    </Key>
+    <Property Name="STFD_ID" Type="int" Nullable="false" />
+    <Property Name="STFD_EDUCATION" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="STFD_ADDRESS" Type="nvarchar" MaxLength="200" />
+    <Property Name="STFD_EMAIL" Type="nvarchar" MaxLength="100" />
+    <Property Name="STFD_PHONE" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="STFD_DATE_OF_BIRTH" Type="date" Nullable="false" />
+    <Property Name="STFD_SALARY" Type="decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="STAFF_LOGIN">
+    <Key>
+      <PropertyRef Name="STF_ID" />
+    </Key>
+    <Property Name="STF_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="STF_NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="STF_PASSWORD" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="STF_PROFILE" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DB_INSTITUTE_OF_FINE_ARTS.dbo.STUDENT_DETAILS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="STUDENT_DETAILS">
+    <Key>
+      <PropertyRef Name="SD_STDL_ID" />
+      <PropertyRef Name="STD_PHONE" />
+      <PropertyRef Name="STD_DATE_OF_BIRTH" />
+    </Key>
+    <Property Name="SD_STDL_ID" Type="int" Nullable="false" />
+    <Property Name="STD_ADDRESS" Type="nvarchar" MaxLength="200" />
+    <Property Name="STD_EMAIL" Type="nvarchar" MaxLength="100" />
+    <Property Name="STD_PHONE" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="STD_DATE_OF_BIRTH" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="STUDENT_LOGIN">
+    <Key>
+      <PropertyRef Name="STDL_ID" />
+    </Key>
+    <Property Name="STDL_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="STDL_NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="STDL_PASSWORD" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="STDL_PROFILE" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WORK_OF_COMPITITION">
+    <Key>
+      <PropertyRef Name="WOC_ID" />
+    </Key>
+    <Property Name="WOC_ID" Type="int" Nullable="false" />
+    <Property Name="WOC_REG_ID" Type="int" Nullable="false" />
+    <Property Name="WOC_COM_ID" Type="int" Nullable="false" />
+    <Property Name="WOC_WORK" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DB_INSTITUTE_OF_FINE_ARTS.dbo.VW_ADMIN_LOGIN' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VW_ADMIN_LOGIN">
+    <Key>
+      <PropertyRef Name="AD_ID" />
+      <PropertyRef Name="AD_NAME" />
+      <PropertyRef Name="AD_PASSWORD" />
+      <PropertyRef Name="AD_PROFILE" />
+    </Key>
+    <Property Name="AD_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AD_NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="AD_PASSWORD" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="AD_PROFILE" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DB_INSTITUTE_OF_FINE_ARTS.dbo.VW_ASSIGNED' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VW_ASSIGNED">
+    <Key>
+      <PropertyRef Name="ASI_ID" />
+      <PropertyRef Name="ASI_STFL_ID" />
+      <PropertyRef Name="ASI_DATE" />
+    </Key>
+    <Property Name="ASI_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ASI_STFL_ID" Type="int" Nullable="false" />
+    <Property Name="ASI_CR_ID" Type="int" />
+    <Property Name="ASI_DATE" Type="date" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DB_INSTITUTE_OF_FINE_ARTS.dbo.VW_COMPITITION' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VW_COMPITITION">
+    <Key>
+      <PropertyRef Name="COM_ID" />
+      <PropertyRef Name="COM_NAME" />
+      <PropertyRef Name="COM_START_DATE" />
+      <PropertyRef Name="COM_END_DATE" />
+      <PropertyRef Name="COM_STF_ID" />
+    </Key>
+    <Property Name="COM_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="COM_NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="COM_START_DATE" Type="datetime" Nullable="false" />
+    <Property Name="COM_END_DATE" Type="datetime" Nullable="false" />
+    <Property Name="COM_STF_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DB_INSTITUTE_OF_FINE_ARTS.dbo.VW_COURSES' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VW_COURSES">
+    <Key>
+      <PropertyRef Name="CR_ID" />
+      <PropertyRef Name="CR_NAME" />
+    </Key>
+    <Property Name="CR_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CR_NAME" Type="nvarchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DB_INSTITUTE_OF_FINE_ARTS.dbo.VW_EXIBITION' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VW_EXIBITION">
+    <Key>
+      <PropertyRef Name="EXB_ID" />
+      <PropertyRef Name="EXB_NAME" />
+      <PropertyRef Name="EXB_START_DATE" />
+      <PropertyRef Name="EXB_END_DATE" />
+    </Key>
+    <Property Name="EXB_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EXB_NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="EXB_START_DATE" Type="datetime" Nullable="false" />
+    <Property Name="EXB_END_DATE" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DB_INSTITUTE_OF_FINE_ARTS.dbo.VW_REGISTRATION' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VW_REGISTRATION">
+    <Key>
+      <PropertyRef Name="REG_ID" />
+      <PropertyRef Name="REG_STDL_ID" />
+      <PropertyRef Name="REG_DATE" />
+    </Key>
+    <Property Name="REG_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="REG_STDL_ID" Type="int" Nullable="false" />
+    <Property Name="REG_CR_ID" Type="int" />
+    <Property Name="REG_DATE" Type="date" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DB_INSTITUTE_OF_FINE_ARTS.dbo.VW_RESULT' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VW_RESULT">
+    <Key>
+      <PropertyRef Name="RES_ID" />
+      <PropertyRef Name="RES_COM_ID" />
+    </Key>
+    <Property Name="RES_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RES_COM_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DB_INSTITUTE_OF_FINE_ARTS.dbo.VW_RESULT_ENTRIES' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VW_RESULT_ENTRIES">
+    <Key>
+      <PropertyRef Name="RES_ID" />
+      <PropertyRef Name="RES_WORK_ID" />
+      <PropertyRef Name="RES_MARKS" />
+      <PropertyRef Name="RES_DATE" />
+      <PropertyRef Name="RES_GRADE" />
+    </Key>
+    <Property Name="RES_ID" Type="int" Nullable="false" />
+    <Property Name="RES_WORK_ID" Type="int" Nullable="false" />
+    <Property Name="RES_MARKS" Type="decimal" Precision="3" Scale="2" Nullable="false" />
+    <Property Name="RES_DATE" Type="datetime" Nullable="false" />
+    <Property Name="RES_GRADE" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="RES_IS_ELIGIBLE" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DB_INSTITUTE_OF_FINE_ARTS.dbo.VW_SHOW_COMPITION_ALL_DATA_FROM_STUDENT_SIDE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VW_SHOW_COMPITION_ALL_DATA_FROM_STUDENT_SIDE">
+    <Key>
+      <PropertyRef Name="COM_ID" />
+      <PropertyRef Name="COM_NAME" />
+      <PropertyRef Name="COM_START_DATE" />
+      <PropertyRef Name="COM_END_DATE" />
+      <PropertyRef Name="COM_STF_ID" />
+      <PropertyRef Name="WOC_ID" />
+      <PropertyRef Name="WOC_REG_ID" />
+      <PropertyRef Name="WOC_COM_ID" />
+      <PropertyRef Name="WOC_WORK" />
+      <PropertyRef Name="STF_NAME" />
+      <PropertyRef Name="STF_PROFILE" />
+    </Key>
+    <Property Name="COM_ID" Type="int" Nullable="false" />
+    <Property Name="COM_NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="COM_START_DATE" Type="datetime" Nullable="false" />
+    <Property Name="COM_END_DATE" Type="datetime" Nullable="false" />
+    <Property Name="COM_STF_ID" Type="int" Nullable="false" />
+    <Property Name="WOC_ID" Type="int" Nullable="false" />
+    <Property Name="WOC_REG_ID" Type="int" Nullable="false" />
+    <Property Name="WOC_COM_ID" Type="int" Nullable="false" />
+    <Property Name="WOC_WORK" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="STF_NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="STF_PROFILE" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DB_INSTITUTE_OF_FINE_ARTS.dbo.VW_SHOW_COMPITITION_ALL_DATA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VW_SHOW_COMPITITION_ALL_DATA">
+    <Key>
+      <PropertyRef Name="COM_ID" />
+      <PropertyRef Name="COM_NAME" />
+      <PropertyRef Name="COM_START_DATE" />
+      <PropertyRef Name="COM_END_DATE" />
+      <PropertyRef Name="COM_STF_ID" />
+      <PropertyRef Name="WOC_ID" />
+      <PropertyRef Name="WOC_REG_ID" />
+      <PropertyRef Name="WOC_COM_ID" />
+      <PropertyRef Name="WOC_WORK" />
+      <PropertyRef Name="STF_ID" />
+      <PropertyRef Name="STF_NAME" />
+      <PropertyRef Name="STF_PROFILE" />
+    </Key>
+    <Property Name="COM_ID" Type="int" Nullable="false" />
+    <Property Name="COM_NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="COM_START_DATE" Type="datetime" Nullable="false" />
+    <Property Name="COM_END_DATE" Type="datetime" Nullable="false" />
+    <Property Name="COM_STF_ID" Type="int" Nullable="false" />
+    <Property Name="WOC_ID" Type="int" Nullable="false" />
+    <Property Name="WOC_REG_ID" Type="int" Nullable="false" />
+    <Property Name="WOC_COM_ID" Type="int" Nullable="false" />
+    <Property Name="WOC_WORK" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="STF_ID" Type="int" Nullable="false" />
+    <Property Name="STF_NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="STF_PROFILE" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DB_INSTITUTE_OF_FINE_ARTS.dbo.VW_SHOW_RESULT_ALL_DATA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VW_SHOW_RESULT_ALL_DATA">
+    <Key>
+      <PropertyRef Name="STDL_ID" />
+      <PropertyRef Name="STDL_NAME" />
+      <PropertyRef Name="COM_NAME" />
+      <PropertyRef Name="WOC_WORK" />
+      <PropertyRef Name="RES_ID" />
+      <PropertyRef Name="RES_WORK_ID" />
+      <PropertyRef Name="RES_MARKS" />
+      <PropertyRef Name="RES_DATE" />
+      <PropertyRef Name="RES_GRADE" />
+    </Key>
+    <Property Name="STDL_ID" Type="int" Nullable="false" />
+    <Property Name="STDL_NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="COM_NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="WOC_WORK" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="RES_ID" Type="int" Nullable="false" />
+    <Property Name="RES_WORK_ID" Type="int" Nullable="false" />
+    <Property Name="RES_MARKS" Type="decimal" Precision="3" Scale="2" Nullable="false" />
+    <Property Name="RES_DATE" Type="datetime" Nullable="false" />
+    <Property Name="RES_GRADE" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="RES_IS_ELIGIBLE" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DB_INSTITUTE_OF_FINE_ARTS.dbo.VW_SHOW_STAFF_ALL_DATA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VW_SHOW_STAFF_ALL_DATA">
+    <Key>
+      <PropertyRef Name="STF_ID" />
+      <PropertyRef Name="STF_NAME" />
+      <PropertyRef Name="STF_PASSWORD" />
+      <PropertyRef Name="STF_PROFILE" />
+      <PropertyRef Name="STFD_ID" />
+      <PropertyRef Name="STFD_EDUCATION" />
+      <PropertyRef Name="STFD_PHONE" />
+      <PropertyRef Name="STFD_DATE_OF_BIRTH" />
+      <PropertyRef Name="ASI_ID" />
+      <PropertyRef Name="ASI_STFL_ID" />
+      <PropertyRef Name="ASI_DATE" />
+    </Key>
+    <Property Name="STF_ID" Type="int" Nullable="false" />
+    <Property Name="STF_NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="STF_PASSWORD" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="STF_PROFILE" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="STFD_ID" Type="int" Nullable="false" />
+    <Property Name="STFD_EDUCATION" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="STFD_ADDRESS" Type="nvarchar" MaxLength="200" />
+    <Property Name="STFD_EMAIL" Type="nvarchar" MaxLength="100" />
+    <Property Name="STFD_PHONE" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="STFD_DATE_OF_BIRTH" Type="date" Nullable="false" />
+    <Property Name="STFD_SALARY" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="ASI_ID" Type="int" Nullable="false" />
+    <Property Name="ASI_STFL_ID" Type="int" Nullable="false" />
+    <Property Name="ASI_CR_ID" Type="int" />
+    <Property Name="ASI_DATE" Type="date" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DB_INSTITUTE_OF_FINE_ARTS.dbo.VW_SHOW_STAFF_ALL_DETIALS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VW_SHOW_STAFF_ALL_DETIALS">
+    <Key>
+      <PropertyRef Name="STF_ID" />
+      <PropertyRef Name="STF_NAME" />
+      <PropertyRef Name="STF_PASSWORD" />
+      <PropertyRef Name="STF_PROFILE" />
+      <PropertyRef Name="STFD_ID" />
+      <PropertyRef Name="STFD_EDUCATION" />
+      <PropertyRef Name="STFD_PHONE" />
+      <PropertyRef Name="STFD_DATE_OF_BIRTH" />
+    </Key>
+    <Property Name="STF_ID" Type="int" Nullable="false" />
+    <Property Name="STF_NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="STF_PASSWORD" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="STF_PROFILE" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="STFD_ID" Type="int" Nullable="false" />
+    <Property Name="STFD_EDUCATION" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="STFD_ADDRESS" Type="nvarchar" MaxLength="200" />
+    <Property Name="STFD_EMAIL" Type="nvarchar" MaxLength="100" />
+    <Property Name="STFD_PHONE" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="STFD_DATE_OF_BIRTH" Type="date" Nullable="false" />
+    <Property Name="STFD_SALARY" Type="decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DB_INSTITUTE_OF_FINE_ARTS.dbo.VW_SHOW_STUDENT_ALL_DATA_FROM_SUDENT_SIDE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VW_SHOW_STUDENT_ALL_DATA_FROM_SUDENT_SIDE">
+    <Key>
+      <PropertyRef Name="STDL_ID" />
+      <PropertyRef Name="STDL_NAME" />
+      <PropertyRef Name="STDL_PASSWORD" />
+      <PropertyRef Name="STDL_PROFILE" />
+      <PropertyRef Name="SD_STDL_ID" />
+      <PropertyRef Name="STD_PHONE" />
+      <PropertyRef Name="STD_DATE_OF_BIRTH" />
+      <PropertyRef Name="REG_ID" />
+      <PropertyRef Name="REG_STDL_ID" />
+      <PropertyRef Name="REG_DATE" />
+    </Key>
+    <Property Name="STDL_ID" Type="int" Nullable="false" />
+    <Property Name="STDL_NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="STDL_PASSWORD" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="STDL_PROFILE" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SD_STDL_ID" Type="int" Nullable="false" />
+    <Property Name="STD_ADDRESS" Type="nvarchar" MaxLength="200" />
+    <Property Name="STD_EMAIL" Type="nvarchar" MaxLength="100" />
+    <Property Name="STD_PHONE" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="STD_DATE_OF_BIRTH" Type="date" Nullable="false" />
+    <Property Name="REG_ID" Type="int" Nullable="false" />
+    <Property Name="REG_STDL_ID" Type="int" Nullable="false" />
+    <Property Name="REG_CR_ID" Type="int" />
+    <Property Name="REG_DATE" Type="date" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DB_INSTITUTE_OF_FINE_ARTS.dbo.VW_SHOW_STUDENTS_ALL_DATA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VW_SHOW_STUDENTS_ALL_DATA">
+    <Key>
+      <PropertyRef Name="STDL_ID" />
+      <PropertyRef Name="STDL_NAME" />
+      <PropertyRef Name="STDL_PASSWORD" />
+      <PropertyRef Name="STDL_PROFILE" />
+      <PropertyRef Name="SD_STDL_ID" />
+      <PropertyRef Name="STD_PHONE" />
+      <PropertyRef Name="STD_DATE_OF_BIRTH" />
+      <PropertyRef Name="REG_ID" />
+      <PropertyRef Name="REG_STDL_ID" />
+      <PropertyRef Name="REG_DATE" />
+    </Key>
+    <Property Name="STDL_ID" Type="int" Nullable="false" />
+    <Property Name="STDL_NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="STDL_PASSWORD" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="STDL_PROFILE" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SD_STDL_ID" Type="int" Nullable="false" />
+    <Property Name="STD_ADDRESS" Type="nvarchar" MaxLength="200" />
+    <Property Name="STD_EMAIL" Type="nvarchar" MaxLength="100" />
+    <Property Name="STD_PHONE" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="STD_DATE_OF_BIRTH" Type="date" Nullable="false" />
+    <Property Name="REG_ID" Type="int" Nullable="false" />
+    <Property Name="REG_STDL_ID" Type="int" Nullable="false" />
+    <Property Name="REG_CR_ID" Type="int" />
+    <Property Name="REG_DATE" Type="date" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DB_INSTITUTE_OF_FINE_ARTS.dbo.VW_SHOW_STUDENTS_ALL_DETIALS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VW_SHOW_STUDENTS_ALL_DETIALS">
+    <Key>
+      <PropertyRef Name="STDL_ID" />
+      <PropertyRef Name="STDL_NAME" />
+      <PropertyRef Name="STDL_PASSWORD" />
+      <PropertyRef Name="STDL_PROFILE" />
+      <PropertyRef Name="SD_STDL_ID" />
+      <PropertyRef Name="STD_PHONE" />
+      <PropertyRef Name="STD_DATE_OF_BIRTH" />
+    </Key>
+    <Property Name="STDL_ID" Type="int" Nullable="false" />
+    <Property Name="STDL_NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="STDL_PASSWORD" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="STDL_PROFILE" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SD_STDL_ID" Type="int" Nullable="false" />
+    <Property Name="STD_ADDRESS" Type="nvarchar" MaxLength="200" />
+    <Property Name="STD_EMAIL" Type="nvarchar" MaxLength="100" />
+    <Property Name="STD_PHONE" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="STD_DATE_OF_BIRTH" Type="date" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DB_INSTITUTE_OF_FINE_ARTS.dbo.VW_STAFF_DETAILS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VW_STAFF_DETAILS">
+    <Key>
+      <PropertyRef Name="STFD_ID" />
+      <PropertyRef Name="STFD_EDUCATION" />
+      <PropertyRef Name="STFD_PHONE" />
+      <PropertyRef Name="STFD_DATE_OF_BIRTH" />
+    </Key>
+    <Property Name="STFD_ID" Type="int" Nullable="false" />
+    <Property Name="STFD_EDUCATION" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="STFD_ADDRESS" Type="nvarchar" MaxLength="200" />
+    <Property Name="STFD_EMAIL" Type="nvarchar" MaxLength="100" />
+    <Property Name="STFD_PHONE" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="STFD_DATE_OF_BIRTH" Type="date" Nullable="false" />
+    <Property Name="STFD_SALARY" Type="decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DB_INSTITUTE_OF_FINE_ARTS.dbo.VW_STAFF_LOGIN' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VW_STAFF_LOGIN">
+    <Key>
+      <PropertyRef Name="STF_ID" />
+      <PropertyRef Name="STF_NAME" />
+      <PropertyRef Name="STF_PASSWORD" />
+      <PropertyRef Name="STF_PROFILE" />
+    </Key>
+    <Property Name="STF_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="STF_NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="STF_PASSWORD" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="STF_PROFILE" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DB_INSTITUTE_OF_FINE_ARTS.dbo.VW_STUDENT_DETAILS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VW_STUDENT_DETAILS">
+    <Key>
+      <PropertyRef Name="SD_STDL_ID" />
+      <PropertyRef Name="STD_PHONE" />
+      <PropertyRef Name="STD_DATE_OF_BIRTH" />
+    </Key>
+    <Property Name="SD_STDL_ID" Type="int" Nullable="false" />
+    <Property Name="STD_ADDRESS" Type="nvarchar" MaxLength="200" />
+    <Property Name="STD_EMAIL" Type="nvarchar" MaxLength="100" />
+    <Property Name="STD_PHONE" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="STD_DATE_OF_BIRTH" Type="date" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DB_INSTITUTE_OF_FINE_ARTS.dbo.VW_STUDENT_LOGIN' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VW_STUDENT_LOGIN">
+    <Key>
+      <PropertyRef Name="STDL_ID" />
+      <PropertyRef Name="STDL_NAME" />
+      <PropertyRef Name="STDL_PASSWORD" />
+      <PropertyRef Name="STDL_PROFILE" />
+    </Key>
+    <Property Name="STDL_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="STDL_NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="STDL_PASSWORD" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="STDL_PROFILE" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DB_INSTITUTE_OF_FINE_ARTS.dbo.VW_WORK_OF_COMPITITION' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VW_WORK_OF_COMPITITION">
+    <Key>
+      <PropertyRef Name="WOC_ID" />
+      <PropertyRef Name="WOC_REG_ID" />
+      <PropertyRef Name="WOC_COM_ID" />
+      <PropertyRef Name="WOC_WORK" />
+    </Key>
+    <Property Name="WOC_ID" Type="int" Nullable="false" />
+    <Property Name="WOC_REG_ID" Type="int" Nullable="false" />
+    <Property Name="WOC_COM_ID" Type="int" Nullable="false" />
+    <Property Name="WOC_WORK" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_ASSIGNED_TO_COURSES">
+    <End Role="COURSES" Type="Self.COURSES" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ASSIGNED" Type="Self.ASSIGNED" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COURSES">
+        <PropertyRef Name="CR_ID" />
+      </Principal>
+      <Dependent Role="ASSIGNED">
+        <PropertyRef Name="ASI_CR_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ASSIGNED_TO_STAFF_LOGIN">
+    <End Role="STAFF_LOGIN" Type="Self.STAFF_LOGIN" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ASSIGNED" Type="Self.ASSIGNED" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="STAFF_LOGIN">
+        <PropertyRef Name="STF_ID" />
+      </Principal>
+      <Dependent Role="ASSIGNED">
+        <PropertyRef Name="ASI_STFL_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EXIBITION_TO_EXIBITION">
+    <End Role="EXIBITION" Type="Self.EXIBITION" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="EXIBITION_ENTRIES" Type="Self.EXIBITION_ENTRIES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EXIBITION">
+        <PropertyRef Name="EXB_ID" />
+      </Principal>
+      <Dependent Role="EXIBITION_ENTRIES">
+        <PropertyRef Name="EXB_EN_EXB_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EXIBITION_TO_REGISTRATION">
+    <End Role="REGISTRATION" Type="Self.REGISTRATION" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="EXIBITION_ENTRIES" Type="Self.EXIBITION_ENTRIES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REGISTRATION">
+        <PropertyRef Name="REG_ID" />
+      </Principal>
+      <Dependent Role="EXIBITION_ENTRIES">
+        <PropertyRef Name="EXB_EN_RES_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_REGISTRATION_TO_COURSES">
+    <End Role="COURSES" Type="Self.COURSES" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="REGISTRATION" Type="Self.REGISTRATION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COURSES">
+        <PropertyRef Name="CR_ID" />
+      </Principal>
+      <Dependent Role="REGISTRATION">
+        <PropertyRef Name="REG_CR_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_REGISTRATION_TO_STUDENT_LOGIN">
+    <End Role="STUDENT_LOGIN" Type="Self.STUDENT_LOGIN" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="REGISTRATION" Type="Self.REGISTRATION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="STUDENT_LOGIN">
+        <PropertyRef Name="STDL_ID" />
+      </Principal>
+      <Dependent Role="REGISTRATION">
+        <PropertyRef Name="REG_STDL_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RESULT_TO_COMPITITION">
+    <End Role="COMPITITION" Type="Self.COMPITITION" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="RESULT" Type="Self.RESULT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COMPITITION">
+        <PropertyRef Name="COM_ID" />
+      </Principal>
+      <Dependent Role="RESULT">
+        <PropertyRef Name="RES_COM_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RESULT_TO_WORK_OF_COMPITITION">
+    <End Role="WORK_OF_COMPITITION" Type="Self.WORK_OF_COMPITITION" Multiplicity="1" />
+    <End Role="RESULT_ENTRIES" Type="Self.RESULT_ENTRIES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WORK_OF_COMPITITION">
+        <PropertyRef Name="WOC_ID" />
+      </Principal>
+      <Dependent Role="RESULT_ENTRIES">
+        <PropertyRef Name="RES_WORK_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STAFF_DETIALS_TO_STAFF_LOGIN">
+    <End Role="STAFF_LOGIN" Type="Self.STAFF_LOGIN" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="STAFF_DETAILS" Type="Self.STAFF_DETAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="STAFF_LOGIN">
+        <PropertyRef Name="STF_ID" />
+      </Principal>
+      <Dependent Role="STAFF_DETAILS">
+        <PropertyRef Name="STFD_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STAFF_LOGIN_TO_COMPITITION">
+    <End Role="STAFF_LOGIN" Type="Self.STAFF_LOGIN" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="COMPITITION" Type="Self.COMPITITION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="STAFF_LOGIN">
+        <PropertyRef Name="STF_ID" />
+      </Principal>
+      <Dependent Role="COMPITITION">
+        <PropertyRef Name="COM_STF_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STUDENT_DETIALS_TO_STUDENT_LOGIN">
+    <End Role="STUDENT_LOGIN" Type="Self.STUDENT_LOGIN" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="STUDENT_DETAILS" Type="Self.STUDENT_DETAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="STUDENT_LOGIN">
+        <PropertyRef Name="STDL_ID" />
+      </Principal>
+      <Dependent Role="STUDENT_DETAILS">
+        <PropertyRef Name="SD_STDL_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WORK_OF_COMPITITION_TO_COMPITITION">
+    <End Role="COMPITITION" Type="Self.COMPITITION" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="WORK_OF_COMPITITION" Type="Self.WORK_OF_COMPITITION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COMPITITION">
+        <PropertyRef Name="COM_ID" />
+      </Principal>
+      <Dependent Role="WORK_OF_COMPITITION">
+        <PropertyRef Name="WOC_COM_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WORK_OF_COMPITITION_TO_REGISTRATION">
+    <End Role="REGISTRATION" Type="Self.REGISTRATION" Multiplicity="1" />
+    <End Role="WORK_OF_COMPITITION" Type="Self.WORK_OF_COMPITITION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REGISTRATION">
+        <PropertyRef Name="REG_ID" />
+      </Principal>
+      <Dependent Role="WORK_OF_COMPITITION">
+        <PropertyRef Name="WOC_REG_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="SP_INSERT_INTO_COURCE_BY_ADMIN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CR_NAME" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SP_INSERT_INTO_STUDENT_BY_ADMIN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="STDL_NAME" Type="nvarchar" Mode="In" />
+    <Parameter Name="STDL_PASSWORD" Type="nvarchar" Mode="In" />
+    <Parameter Name="STDL_PROFILE" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="STD_ADDRESS" Type="nvarchar" Mode="In" />
+    <Parameter Name="STD_EMAIL" Type="nvarchar" Mode="In" />
+    <Parameter Name="STD_PHONE" Type="nvarchar" Mode="In" />
+    <Parameter Name="STD_DATE_OF_BIRTH" Type="date" Mode="In" />
+  </Function>
+  <EntityContainer Name="DB_INSTITUTE_OF_FINE_ARTSModelStoreContainer">
+    <EntitySet Name="ADMIN_LOGIN" EntityType="Self.ADMIN_LOGIN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ASSIGNED" EntityType="Self.ASSIGNED" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="COMPITITION" EntityType="Self.COMPITITION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="COURSES" EntityType="Self.COURSES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EXIBITION" EntityType="Self.EXIBITION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="REGISTRATION" EntityType="Self.REGISTRATION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RESULT" EntityType="Self.RESULT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="STAFF_LOGIN" EntityType="Self.STAFF_LOGIN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="STUDENT_LOGIN" EntityType="Self.STUDENT_LOGIN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WORK_OF_COMPITITION" EntityType="Self.WORK_OF_COMPITITION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EXIBITION_ENTRIES" EntityType="Self.EXIBITION_ENTRIES" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [EXIBITION_ENTRIES].[EXB_EN_EXB_ID] AS [EXB_EN_EXB_ID], 
+    [EXIBITION_ENTRIES].[EXB_EN_RES_ID] AS [EXB_EN_RES_ID], 
+    [EXIBITION_ENTRIES].[PRICE] AS [PRICE]
+    FROM [dbo].[EXIBITION_ENTRIES] AS [EXIBITION_ENTRIES]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="RESULT_ENTRIES" EntityType="Self.RESULT_ENTRIES" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [RESULT_ENTRIES].[RES_ID] AS [RES_ID], 
+    [RESULT_ENTRIES].[RES_WORK_ID] AS [RES_WORK_ID], 
+    [RESULT_ENTRIES].[RES_MARKS] AS [RES_MARKS], 
+    [RESULT_ENTRIES].[RES_DATE] AS [RES_DATE], 
+    [RESULT_ENTRIES].[RES_GRADE] AS [RES_GRADE], 
+    [RESULT_ENTRIES].[RES_IS_ELIGIBLE] AS [RES_IS_ELIGIBLE]
+    FROM [dbo].[RESULT_ENTRIES] AS [RESULT_ENTRIES]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="STAFF_DETAILS" EntityType="Self.STAFF_DETAILS" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="STUDENT_DETAILS" EntityType="Self.STUDENT_DETAILS" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VW_ADMIN_LOGIN" EntityType="Self.VW_ADMIN_LOGIN" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VW_ADMIN_LOGIN].[AD_ID] AS [AD_ID], 
+    [VW_ADMIN_LOGIN].[AD_NAME] AS [AD_NAME], 
+    [VW_ADMIN_LOGIN].[AD_PASSWORD] AS [AD_PASSWORD], 
+    [VW_ADMIN_LOGIN].[AD_PROFILE] AS [AD_PROFILE]
+    FROM [dbo].[VW_ADMIN_LOGIN] AS [VW_ADMIN_LOGIN]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_ASSIGNED" EntityType="Self.VW_ASSIGNED" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VW_ASSIGNED].[ASI_ID] AS [ASI_ID], 
+    [VW_ASSIGNED].[ASI_STFL_ID] AS [ASI_STFL_ID], 
+    [VW_ASSIGNED].[ASI_CR_ID] AS [ASI_CR_ID], 
+    [VW_ASSIGNED].[ASI_DATE] AS [ASI_DATE]
+    FROM [dbo].[VW_ASSIGNED] AS [VW_ASSIGNED]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_COMPITITION" EntityType="Self.VW_COMPITITION" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VW_COMPITITION].[COM_ID] AS [COM_ID], 
+    [VW_COMPITITION].[COM_NAME] AS [COM_NAME], 
+    [VW_COMPITITION].[COM_START_DATE] AS [COM_START_DATE], 
+    [VW_COMPITITION].[COM_END_DATE] AS [COM_END_DATE], 
+    [VW_COMPITITION].[COM_STF_ID] AS [COM_STF_ID]
+    FROM [dbo].[VW_COMPITITION] AS [VW_COMPITITION]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_COURSES" EntityType="Self.VW_COURSES" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VW_COURSES].[CR_ID] AS [CR_ID], 
+    [VW_COURSES].[CR_NAME] AS [CR_NAME]
+    FROM [dbo].[VW_COURSES] AS [VW_COURSES]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_EXIBITION" EntityType="Self.VW_EXIBITION" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VW_EXIBITION].[EXB_ID] AS [EXB_ID], 
+    [VW_EXIBITION].[EXB_NAME] AS [EXB_NAME], 
+    [VW_EXIBITION].[EXB_START_DATE] AS [EXB_START_DATE], 
+    [VW_EXIBITION].[EXB_END_DATE] AS [EXB_END_DATE]
+    FROM [dbo].[VW_EXIBITION] AS [VW_EXIBITION]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_REGISTRATION" EntityType="Self.VW_REGISTRATION" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VW_REGISTRATION].[REG_ID] AS [REG_ID], 
+    [VW_REGISTRATION].[REG_STDL_ID] AS [REG_STDL_ID], 
+    [VW_REGISTRATION].[REG_CR_ID] AS [REG_CR_ID], 
+    [VW_REGISTRATION].[REG_DATE] AS [REG_DATE]
+    FROM [dbo].[VW_REGISTRATION] AS [VW_REGISTRATION]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_RESULT" EntityType="Self.VW_RESULT" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VW_RESULT].[RES_ID] AS [RES_ID], 
+    [VW_RESULT].[RES_COM_ID] AS [RES_COM_ID]
+    FROM [dbo].[VW_RESULT] AS [VW_RESULT]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_RESULT_ENTRIES" EntityType="Self.VW_RESULT_ENTRIES" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VW_RESULT_ENTRIES].[RES_ID] AS [RES_ID], 
+    [VW_RESULT_ENTRIES].[RES_WORK_ID] AS [RES_WORK_ID], 
+    [VW_RESULT_ENTRIES].[RES_MARKS] AS [RES_MARKS], 
+    [VW_RESULT_ENTRIES].[RES_DATE] AS [RES_DATE], 
+    [VW_RESULT_ENTRIES].[RES_GRADE] AS [RES_GRADE], 
+    [VW_RESULT_ENTRIES].[RES_IS_ELIGIBLE] AS [RES_IS_ELIGIBLE]
+    FROM [dbo].[VW_RESULT_ENTRIES] AS [VW_RESULT_ENTRIES]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_SHOW_COMPITION_ALL_DATA_FROM_STUDENT_SIDE" EntityType="Self.VW_SHOW_COMPITION_ALL_DATA_FROM_STUDENT_SIDE" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VW_SHOW_COMPITION_ALL_DATA_FROM_STUDENT_SIDE].[COM_ID] AS [COM_ID], 
+    [VW_SHOW_COMPITION_ALL_DATA_FROM_STUDENT_SIDE].[COM_NAME] AS [COM_NAME], 
+    [VW_SHOW_COMPITION_ALL_DATA_FROM_STUDENT_SIDE].[COM_START_DATE] AS [COM_START_DATE], 
+    [VW_SHOW_COMPITION_ALL_DATA_FROM_STUDENT_SIDE].[COM_END_DATE] AS [COM_END_DATE], 
+    [VW_SHOW_COMPITION_ALL_DATA_FROM_STUDENT_SIDE].[COM_STF_ID] AS [COM_STF_ID], 
+    [VW_SHOW_COMPITION_ALL_DATA_FROM_STUDENT_SIDE].[WOC_ID] AS [WOC_ID], 
+    [VW_SHOW_COMPITION_ALL_DATA_FROM_STUDENT_SIDE].[WOC_REG_ID] AS [WOC_REG_ID], 
+    [VW_SHOW_COMPITION_ALL_DATA_FROM_STUDENT_SIDE].[WOC_COM_ID] AS [WOC_COM_ID], 
+    [VW_SHOW_COMPITION_ALL_DATA_FROM_STUDENT_SIDE].[WOC_WORK] AS [WOC_WORK], 
+    [VW_SHOW_COMPITION_ALL_DATA_FROM_STUDENT_SIDE].[STF_NAME] AS [STF_NAME], 
+    [VW_SHOW_COMPITION_ALL_DATA_FROM_STUDENT_SIDE].[STF_PROFILE] AS [STF_PROFILE]
+    FROM [dbo].[VW_SHOW_COMPITION_ALL_DATA_FROM_STUDENT_SIDE] AS [VW_SHOW_COMPITION_ALL_DATA_FROM_STUDENT_SIDE]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_SHOW_COMPITITION_ALL_DATA" EntityType="Self.VW_SHOW_COMPITITION_ALL_DATA" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VW_SHOW_COMPITITION_ALL_DATA].[COM_ID] AS [COM_ID], 
+    [VW_SHOW_COMPITITION_ALL_DATA].[COM_NAME] AS [COM_NAME], 
+    [VW_SHOW_COMPITITION_ALL_DATA].[COM_START_DATE] AS [COM_START_DATE], 
+    [VW_SHOW_COMPITITION_ALL_DATA].[COM_END_DATE] AS [COM_END_DATE], 
+    [VW_SHOW_COMPITITION_ALL_DATA].[COM_STF_ID] AS [COM_STF_ID], 
+    [VW_SHOW_COMPITITION_ALL_DATA].[WOC_ID] AS [WOC_ID], 
+    [VW_SHOW_COMPITITION_ALL_DATA].[WOC_REG_ID] AS [WOC_REG_ID], 
+    [VW_SHOW_COMPITITION_ALL_DATA].[WOC_COM_ID] AS [WOC_COM_ID], 
+    [VW_SHOW_COMPITITION_ALL_DATA].[WOC_WORK] AS [WOC_WORK], 
+    [VW_SHOW_COMPITITION_ALL_DATA].[STF_ID] AS [STF_ID], 
+    [VW_SHOW_COMPITITION_ALL_DATA].[STF_NAME] AS [STF_NAME], 
+    [VW_SHOW_COMPITITION_ALL_DATA].[STF_PROFILE] AS [STF_PROFILE]
+    FROM [dbo].[VW_SHOW_COMPITITION_ALL_DATA] AS [VW_SHOW_COMPITITION_ALL_DATA]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_SHOW_RESULT_ALL_DATA" EntityType="Self.VW_SHOW_RESULT_ALL_DATA" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VW_SHOW_RESULT_ALL_DATA].[STDL_ID] AS [STDL_ID], 
+    [VW_SHOW_RESULT_ALL_DATA].[STDL_NAME] AS [STDL_NAME], 
+    [VW_SHOW_RESULT_ALL_DATA].[COM_NAME] AS [COM_NAME], 
+    [VW_SHOW_RESULT_ALL_DATA].[WOC_WORK] AS [WOC_WORK], 
+    [VW_SHOW_RESULT_ALL_DATA].[RES_ID] AS [RES_ID], 
+    [VW_SHOW_RESULT_ALL_DATA].[RES_WORK_ID] AS [RES_WORK_ID], 
+    [VW_SHOW_RESULT_ALL_DATA].[RES_MARKS] AS [RES_MARKS], 
+    [VW_SHOW_RESULT_ALL_DATA].[RES_DATE] AS [RES_DATE], 
+    [VW_SHOW_RESULT_ALL_DATA].[RES_GRADE] AS [RES_GRADE], 
+    [VW_SHOW_RESULT_ALL_DATA].[RES_IS_ELIGIBLE] AS [RES_IS_ELIGIBLE]
+    FROM [dbo].[VW_SHOW_RESULT_ALL_DATA] AS [VW_SHOW_RESULT_ALL_DATA]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_SHOW_STAFF_ALL_DATA" EntityType="Self.VW_SHOW_STAFF_ALL_DATA" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VW_SHOW_STAFF_ALL_DATA].[STF_ID] AS [STF_ID], 
+    [VW_SHOW_STAFF_ALL_DATA].[STF_NAME] AS [STF_NAME], 
+    [VW_SHOW_STAFF_ALL_DATA].[STF_PASSWORD] AS [STF_PASSWORD], 
+    [VW_SHOW_STAFF_ALL_DATA].[STF_PROFILE] AS [STF_PROFILE], 
+    [VW_SHOW_STAFF_ALL_DATA].[STFD_ID] AS [STFD_ID], 
+    [VW_SHOW_STAFF_ALL_DATA].[STFD_EDUCATION] AS [STFD_EDUCATION], 
+    [VW_SHOW_STAFF_ALL_DATA].[STFD_ADDRESS] AS [STFD_ADDRESS], 
+    [VW_SHOW_STAFF_ALL_DATA].[STFD_EMAIL] AS [STFD_EMAIL], 
+    [VW_SHOW_STAFF_ALL_DATA].[STFD_PHONE] AS [STFD_PHONE], 
+    [VW_SHOW_STAFF_ALL_DATA].[STFD_DATE_OF_BIRTH] AS [STFD_DATE_OF_BIRTH], 
+    [VW_SHOW_STAFF_ALL_DATA].[STFD_SALARY] AS [STFD_SALARY], 
+    [VW_SHOW_STAFF_ALL_DATA].[ASI_ID] AS [ASI_ID], 
+    [VW_SHOW_STAFF_ALL_DATA].[ASI_STFL_ID] AS [ASI_STFL_ID], 
+    [VW_SHOW_STAFF_ALL_DATA].[ASI_CR_ID] AS [ASI_CR_ID], 
+    [VW_SHOW_STAFF_ALL_DATA].[ASI_DATE] AS [ASI_DATE]
+    FROM [dbo].[VW_SHOW_STAFF_ALL_DATA] AS [VW_SHOW_STAFF_ALL_DATA]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_SHOW_STAFF_ALL_DETIALS" EntityType="Self.VW_SHOW_STAFF_ALL_DETIALS" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VW_SHOW_STAFF_ALL_DETIALS].[STF_ID] AS [STF_ID], 
+    [VW_SHOW_STAFF_ALL_DETIALS].[STF_NAME] AS [STF_NAME], 
+    [VW_SHOW_STAFF_ALL_DETIALS].[STF_PASSWORD] AS [STF_PASSWORD], 
+    [VW_SHOW_STAFF_ALL_DETIALS].[STF_PROFILE] AS [STF_PROFILE], 
+    [VW_SHOW_STAFF_ALL_DETIALS].[STFD_ID] AS [STFD_ID], 
+    [VW_SHOW_STAFF_ALL_DETIALS].[STFD_EDUCATION] AS [STFD_EDUCATION], 
+    [VW_SHOW_STAFF_ALL_DETIALS].[STFD_ADDRESS] AS [STFD_ADDRESS], 
+    [VW_SHOW_STAFF_ALL_DETIALS].[STFD_EMAIL] AS [STFD_EMAIL], 
+    [VW_SHOW_STAFF_ALL_DETIALS].[STFD_PHONE] AS [STFD_PHONE], 
+    [VW_SHOW_STAFF_ALL_DETIALS].[STFD_DATE_OF_BIRTH] AS [STFD_DATE_OF_BIRTH], 
+    [VW_SHOW_STAFF_ALL_DETIALS].[STFD_SALARY] AS [STFD_SALARY]
+    FROM [dbo].[VW_SHOW_STAFF_ALL_DETIALS] AS [VW_SHOW_STAFF_ALL_DETIALS]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_SHOW_STUDENT_ALL_DATA_FROM_SUDENT_SIDE" EntityType="Self.VW_SHOW_STUDENT_ALL_DATA_FROM_SUDENT_SIDE" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VW_SHOW_STUDENT_ALL_DATA_FROM_SUDENT_SIDE].[STDL_ID] AS [STDL_ID], 
+    [VW_SHOW_STUDENT_ALL_DATA_FROM_SUDENT_SIDE].[STDL_NAME] AS [STDL_NAME], 
+    [VW_SHOW_STUDENT_ALL_DATA_FROM_SUDENT_SIDE].[STDL_PASSWORD] AS [STDL_PASSWORD], 
+    [VW_SHOW_STUDENT_ALL_DATA_FROM_SUDENT_SIDE].[STDL_PROFILE] AS [STDL_PROFILE], 
+    [VW_SHOW_STUDENT_ALL_DATA_FROM_SUDENT_SIDE].[SD_STDL_ID] AS [SD_STDL_ID], 
+    [VW_SHOW_STUDENT_ALL_DATA_FROM_SUDENT_SIDE].[STD_ADDRESS] AS [STD_ADDRESS], 
+    [VW_SHOW_STUDENT_ALL_DATA_FROM_SUDENT_SIDE].[STD_EMAIL] AS [STD_EMAIL], 
+    [VW_SHOW_STUDENT_ALL_DATA_FROM_SUDENT_SIDE].[STD_PHONE] AS [STD_PHONE], 
+    [VW_SHOW_STUDENT_ALL_DATA_FROM_SUDENT_SIDE].[STD_DATE_OF_BIRTH] AS [STD_DATE_OF_BIRTH], 
+    [VW_SHOW_STUDENT_ALL_DATA_FROM_SUDENT_SIDE].[REG_ID] AS [REG_ID], 
+    [VW_SHOW_STUDENT_ALL_DATA_FROM_SUDENT_SIDE].[REG_STDL_ID] AS [REG_STDL_ID], 
+    [VW_SHOW_STUDENT_ALL_DATA_FROM_SUDENT_SIDE].[REG_CR_ID] AS [REG_CR_ID], 
+    [VW_SHOW_STUDENT_ALL_DATA_FROM_SUDENT_SIDE].[REG_DATE] AS [REG_DATE]
+    FROM [dbo].[VW_SHOW_STUDENT_ALL_DATA_FROM_SUDENT_SIDE] AS [VW_SHOW_STUDENT_ALL_DATA_FROM_SUDENT_SIDE]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_SHOW_STUDENTS_ALL_DATA" EntityType="Self.VW_SHOW_STUDENTS_ALL_DATA" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VW_SHOW_STUDENTS_ALL_DATA].[STDL_ID] AS [STDL_ID], 
+    [VW_SHOW_STUDENTS_ALL_DATA].[STDL_NAME] AS [STDL_NAME], 
+    [VW_SHOW_STUDENTS_ALL_DATA].[STDL_PASSWORD] AS [STDL_PASSWORD], 
+    [VW_SHOW_STUDENTS_ALL_DATA].[STDL_PROFILE] AS [STDL_PROFILE], 
+    [VW_SHOW_STUDENTS_ALL_DATA].[SD_STDL_ID] AS [SD_STDL_ID], 
+    [VW_SHOW_STUDENTS_ALL_DATA].[STD_ADDRESS] AS [STD_ADDRESS], 
+    [VW_SHOW_STUDENTS_ALL_DATA].[STD_EMAIL] AS [STD_EMAIL], 
+    [VW_SHOW_STUDENTS_ALL_DATA].[STD_PHONE] AS [STD_PHONE], 
+    [VW_SHOW_STUDENTS_ALL_DATA].[STD_DATE_OF_BIRTH] AS [STD_DATE_OF_BIRTH], 
+    [VW_SHOW_STUDENTS_ALL_DATA].[REG_ID] AS [REG_ID], 
+    [VW_SHOW_STUDENTS_ALL_DATA].[REG_STDL_ID] AS [REG_STDL_ID], 
+    [VW_SHOW_STUDENTS_ALL_DATA].[REG_CR_ID] AS [REG_CR_ID], 
+    [VW_SHOW_STUDENTS_ALL_DATA].[REG_DATE] AS [REG_DATE]
+    FROM [dbo].[VW_SHOW_STUDENTS_ALL_DATA] AS [VW_SHOW_STUDENTS_ALL_DATA]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_SHOW_STUDENTS_ALL_DETIALS" EntityType="Self.VW_SHOW_STUDENTS_ALL_DETIALS" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VW_SHOW_STUDENTS_ALL_DETIALS].[STDL_ID] AS [STDL_ID], 
+    [VW_SHOW_STUDENTS_ALL_DETIALS].[STDL_NAME] AS [STDL_NAME], 
+    [VW_SHOW_STUDENTS_ALL_DETIALS].[STDL_PASSWORD] AS [STDL_PASSWORD], 
+    [VW_SHOW_STUDENTS_ALL_DETIALS].[STDL_PROFILE] AS [STDL_PROFILE], 
+    [VW_SHOW_STUDENTS_ALL_DETIALS].[SD_STDL_ID] AS [SD_STDL_ID], 
+    [VW_SHOW_STUDENTS_ALL_DETIALS].[STD_ADDRESS] AS [STD_ADDRESS], 
+    [VW_SHOW_STUDENTS_ALL_DETIALS].[STD_EMAIL] AS [STD_EMAIL], 
+    [VW_SHOW_STUDENTS_ALL_DETIALS].[STD_PHONE] AS [STD_PHONE], 
+    [VW_SHOW_STUDENTS_ALL_DETIALS].[STD_DATE_OF_BIRTH] AS [STD_DATE_OF_BIRTH]
+    FROM [dbo].[VW_SHOW_STUDENTS_ALL_DETIALS] AS [VW_SHOW_STUDENTS_ALL_DETIALS]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_STAFF_DETAILS" EntityType="Self.VW_STAFF_DETAILS" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VW_STAFF_DETAILS].[STFD_ID] AS [STFD_ID], 
+    [VW_STAFF_DETAILS].[STFD_EDUCATION] AS [STFD_EDUCATION], 
+    [VW_STAFF_DETAILS].[STFD_ADDRESS] AS [STFD_ADDRESS], 
+    [VW_STAFF_DETAILS].[STFD_EMAIL] AS [STFD_EMAIL], 
+    [VW_STAFF_DETAILS].[STFD_PHONE] AS [STFD_PHONE], 
+    [VW_STAFF_DETAILS].[STFD_DATE_OF_BIRTH] AS [STFD_DATE_OF_BIRTH], 
+    [VW_STAFF_DETAILS].[STFD_SALARY] AS [STFD_SALARY]
+    FROM [dbo].[VW_STAFF_DETAILS] AS [VW_STAFF_DETAILS]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_STAFF_LOGIN" EntityType="Self.VW_STAFF_LOGIN" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VW_STAFF_LOGIN].[STF_ID] AS [STF_ID], 
+    [VW_STAFF_LOGIN].[STF_NAME] AS [STF_NAME], 
+    [VW_STAFF_LOGIN].[STF_PASSWORD] AS [STF_PASSWORD], 
+    [VW_STAFF_LOGIN].[STF_PROFILE] AS [STF_PROFILE]
+    FROM [dbo].[VW_STAFF_LOGIN] AS [VW_STAFF_LOGIN]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_STUDENT_DETAILS" EntityType="Self.VW_STUDENT_DETAILS" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VW_STUDENT_DETAILS].[SD_STDL_ID] AS [SD_STDL_ID], 
+    [VW_STUDENT_DETAILS].[STD_ADDRESS] AS [STD_ADDRESS], 
+    [VW_STUDENT_DETAILS].[STD_EMAIL] AS [STD_EMAIL], 
+    [VW_STUDENT_DETAILS].[STD_PHONE] AS [STD_PHONE], 
+    [VW_STUDENT_DETAILS].[STD_DATE_OF_BIRTH] AS [STD_DATE_OF_BIRTH]
+    FROM [dbo].[VW_STUDENT_DETAILS] AS [VW_STUDENT_DETAILS]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_STUDENT_LOGIN" EntityType="Self.VW_STUDENT_LOGIN" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VW_STUDENT_LOGIN].[STDL_ID] AS [STDL_ID], 
+    [VW_STUDENT_LOGIN].[STDL_NAME] AS [STDL_NAME], 
+    [VW_STUDENT_LOGIN].[STDL_PASSWORD] AS [STDL_PASSWORD], 
+    [VW_STUDENT_LOGIN].[STDL_PROFILE] AS [STDL_PROFILE]
+    FROM [dbo].[VW_STUDENT_LOGIN] AS [VW_STUDENT_LOGIN]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_WORK_OF_COMPITITION" EntityType="Self.VW_WORK_OF_COMPITITION" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VW_WORK_OF_COMPITITION].[WOC_ID] AS [WOC_ID], 
+    [VW_WORK_OF_COMPITITION].[WOC_REG_ID] AS [WOC_REG_ID], 
+    [VW_WORK_OF_COMPITITION].[WOC_COM_ID] AS [WOC_COM_ID], 
+    [VW_WORK_OF_COMPITITION].[WOC_WORK] AS [WOC_WORK]
+    FROM [dbo].[VW_WORK_OF_COMPITITION] AS [VW_WORK_OF_COMPITITION]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_ASSIGNED_TO_COURSES" Association="Self.FK_ASSIGNED_TO_COURSES">
+      <End Role="COURSES" EntitySet="COURSES" />
+      <End Role="ASSIGNED" EntitySet="ASSIGNED" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ASSIGNED_TO_STAFF_LOGIN" Association="Self.FK_ASSIGNED_TO_STAFF_LOGIN">
+      <End Role="STAFF_LOGIN" EntitySet="STAFF_LOGIN" />
+      <End Role="ASSIGNED" EntitySet="ASSIGNED" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EXIBITION_TO_EXIBITION" Association="Self.FK_EXIBITION_TO_EXIBITION">
+      <End Role="EXIBITION" EntitySet="EXIBITION" />
+      <End Role="EXIBITION_ENTRIES" EntitySet="EXIBITION_ENTRIES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EXIBITION_TO_REGISTRATION" Association="Self.FK_EXIBITION_TO_REGISTRATION">
+      <End Role="REGISTRATION" EntitySet="REGISTRATION" />
+      <End Role="EXIBITION_ENTRIES" EntitySet="EXIBITION_ENTRIES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_REGISTRATION_TO_COURSES" Association="Self.FK_REGISTRATION_TO_COURSES">
+      <End Role="COURSES" EntitySet="COURSES" />
+      <End Role="REGISTRATION" EntitySet="REGISTRATION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_REGISTRATION_TO_STUDENT_LOGIN" Association="Self.FK_REGISTRATION_TO_STUDENT_LOGIN">
+      <End Role="STUDENT_LOGIN" EntitySet="STUDENT_LOGIN" />
+      <End Role="REGISTRATION" EntitySet="REGISTRATION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RESULT_TO_COMPITITION" Association="Self.FK_RESULT_TO_COMPITITION">
+      <End Role="COMPITITION" EntitySet="COMPITITION" />
+      <End Role="RESULT" EntitySet="RESULT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RESULT_TO_WORK_OF_COMPITITION" Association="Self.FK_RESULT_TO_WORK_OF_COMPITITION">
+      <End Role="WORK_OF_COMPITITION" EntitySet="WORK_OF_COMPITITION" />
+      <End Role="RESULT_ENTRIES" EntitySet="RESULT_ENTRIES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STAFF_DETIALS_TO_STAFF_LOGIN" Association="Self.FK_STAFF_DETIALS_TO_STAFF_LOGIN">
+      <End Role="STAFF_LOGIN" EntitySet="STAFF_LOGIN" />
+      <End Role="STAFF_DETAILS" EntitySet="STAFF_DETAILS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STAFF_LOGIN_TO_COMPITITION" Association="Self.FK_STAFF_LOGIN_TO_COMPITITION">
+      <End Role="STAFF_LOGIN" EntitySet="STAFF_LOGIN" />
+      <End Role="COMPITITION" EntitySet="COMPITITION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STUDENT_DETIALS_TO_STUDENT_LOGIN" Association="Self.FK_STUDENT_DETIALS_TO_STUDENT_LOGIN">
+      <End Role="STUDENT_LOGIN" EntitySet="STUDENT_LOGIN" />
+      <End Role="STUDENT_DETAILS" EntitySet="STUDENT_DETAILS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WORK_OF_COMPITITION_TO_COMPITITION" Association="Self.FK_WORK_OF_COMPITITION_TO_COMPITITION">
+      <End Role="COMPITITION" EntitySet="COMPITITION" />
+      <End Role="WORK_OF_COMPITITION" EntitySet="WORK_OF_COMPITITION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WORK_OF_COMPITITION_TO_REGISTRATION" Association="Self.FK_WORK_OF_COMPITITION_TO_REGISTRATION">
+      <End Role="REGISTRATION" EntitySet="REGISTRATION" />
+      <End Role="WORK_OF_COMPITITION" EntitySet="WORK_OF_COMPITITION" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

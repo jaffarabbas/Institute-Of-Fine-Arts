@@ -1,0 +1,2427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_Institute_Of_Fine_ArtsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="DB_Institute_Of_Fine_ArtsEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ADMIN_LOGIN" EntityType="DB_Institute_Of_Fine_ArtsModel.ADMIN_LOGIN" />
+    <EntitySet Name="ASSIGNEDs" EntityType="DB_Institute_Of_Fine_ArtsModel.ASSIGNED" />
+    <EntitySet Name="ATTENDENCEs" EntityType="DB_Institute_Of_Fine_ArtsModel.ATTENDENCE" />
+    <EntitySet Name="COMPITITIONs" EntityType="DB_Institute_Of_Fine_ArtsModel.COMPITITION" />
+    <EntitySet Name="CONTACTs" EntityType="DB_Institute_Of_Fine_ArtsModel.CONTACT" />
+    <EntitySet Name="COURSES" EntityType="DB_Institute_Of_Fine_ArtsModel.COURS" />
+    <EntitySet Name="EXIBITIONs" EntityType="DB_Institute_Of_Fine_ArtsModel.EXIBITION" />
+    <EntitySet Name="FAILED_PROJECTS" EntityType="DB_Institute_Of_Fine_ArtsModel.FAILED_PROJECTS" />
+    <EntitySet Name="FEEDBACKs" EntityType="DB_Institute_Of_Fine_ArtsModel.FEEDBACK" />
+    <EntitySet Name="FEES" EntityType="DB_Institute_Of_Fine_ArtsModel.FEE" />
+    <EntitySet Name="MANAGER_LOGIN" EntityType="DB_Institute_Of_Fine_ArtsModel.MANAGER_LOGIN" />
+    <EntitySet Name="PROGRAMs" EntityType="DB_Institute_Of_Fine_ArtsModel.PROGRAM" />
+    <EntitySet Name="REGISTRATIONs" EntityType="DB_Institute_Of_Fine_ArtsModel.REGISTRATION" />
+    <EntitySet Name="RESULTs" EntityType="DB_Institute_Of_Fine_ArtsModel.RESULT" />
+    <EntitySet Name="SCHOLARSHIPs" EntityType="DB_Institute_Of_Fine_ArtsModel.SCHOLARSHIP" />
+    <EntitySet Name="STAFF_LOGIN" EntityType="DB_Institute_Of_Fine_ArtsModel.STAFF_LOGIN" />
+    <EntitySet Name="STUDENT_LOGIN" EntityType="DB_Institute_Of_Fine_ArtsModel.STUDENT_LOGIN" />
+    <EntitySet Name="sysdiagrams" EntityType="DB_Institute_Of_Fine_ArtsModel.sysdiagram" />
+    <EntitySet Name="WORK_OF_COMPITITION" EntityType="DB_Institute_Of_Fine_ArtsModel.WORK_OF_COMPITITION" />
+    <EntitySet Name="DEFAULTERs" EntityType="DB_Institute_Of_Fine_ArtsModel.DEFAULTER" />
+    <EntitySet Name="MANAGERs" EntityType="DB_Institute_Of_Fine_ArtsModel.MANAGER" />
+    <EntitySet Name="STAFF_DETAILS" EntityType="DB_Institute_Of_Fine_ArtsModel.STAFF_DETAILS" />
+    <EntitySet Name="STUDENT_DETAILS" EntityType="DB_Institute_Of_Fine_ArtsModel.STUDENT_DETAILS" />
+    <EntitySet Name="VW_ADMIN_LOGIN" EntityType="DB_Institute_Of_Fine_ArtsModel.VW_ADMIN_LOGIN" />
+    <EntitySet Name="VW_ASSIGNED" EntityType="DB_Institute_Of_Fine_ArtsModel.VW_ASSIGNED" />
+    <EntitySet Name="VW_ATTENDENCE" EntityType="DB_Institute_Of_Fine_ArtsModel.VW_ATTENDENCE" />
+    <EntitySet Name="VW_COMPITITION" EntityType="DB_Institute_Of_Fine_ArtsModel.VW_COMPITITION" />
+    <EntitySet Name="VW_CONTACT" EntityType="DB_Institute_Of_Fine_ArtsModel.VW_CONTACT" />
+    <EntitySet Name="VW_COURSES" EntityType="DB_Institute_Of_Fine_ArtsModel.VW_COURSES" />
+    <EntitySet Name="VW_DEFAULTER" EntityType="DB_Institute_Of_Fine_ArtsModel.VW_DEFAULTER" />
+    <EntitySet Name="VW_EXIBITION" EntityType="DB_Institute_Of_Fine_ArtsModel.VW_EXIBITION" />
+    <EntitySet Name="VW_FAILED_PROJECTS" EntityType="DB_Institute_Of_Fine_ArtsModel.VW_FAILED_PROJECTS" />
+    <EntitySet Name="VW_FEEDBACK" EntityType="DB_Institute_Of_Fine_ArtsModel.VW_FEEDBACK" />
+    <EntitySet Name="VW_FEES" EntityType="DB_Institute_Of_Fine_ArtsModel.VW_FEES" />
+    <EntitySet Name="VW_MANAGER" EntityType="DB_Institute_Of_Fine_ArtsModel.VW_MANAGER" />
+    <EntitySet Name="VW_MANAGER_LOGIN" EntityType="DB_Institute_Of_Fine_ArtsModel.VW_MANAGER_LOGIN" />
+    <EntitySet Name="VW_PROGRAM" EntityType="DB_Institute_Of_Fine_ArtsModel.VW_PROGRAM" />
+    <EntitySet Name="VW_REGISTRATION" EntityType="DB_Institute_Of_Fine_ArtsModel.VW_REGISTRATION" />
+    <EntitySet Name="VW_RESULT" EntityType="DB_Institute_Of_Fine_ArtsModel.VW_RESULT" />
+    <EntitySet Name="VW_SCHOLARSHIP" EntityType="DB_Institute_Of_Fine_ArtsModel.VW_SCHOLARSHIP" />
+    <EntitySet Name="VW_SHOW_COMPITION_ALL_DATA_FROM_STUDENT_SIDE" EntityType="DB_Institute_Of_Fine_ArtsModel.VW_SHOW_COMPITION_ALL_DATA_FROM_STUDENT_SIDE" />
+    <EntitySet Name="VW_SHOW_COMPITITION_ALL_DATA" EntityType="DB_Institute_Of_Fine_ArtsModel.VW_SHOW_COMPITITION_ALL_DATA" />
+    <EntitySet Name="VW_SHOW_COMPITITION_ALL_DATA_FROM_STAFF" EntityType="DB_Institute_Of_Fine_ArtsModel.VW_SHOW_COMPITITION_ALL_DATA_FROM_STAFF" />
+    <EntitySet Name="VW_SHOW_CONTACT_ALL_DATA" EntityType="DB_Institute_Of_Fine_ArtsModel.VW_SHOW_CONTACT_ALL_DATA" />
+    <EntitySet Name="VW_SHOW_EXIBITION_ALL_DATA_FROM_MANAGER_SIDE" EntityType="DB_Institute_Of_Fine_ArtsModel.VW_SHOW_EXIBITION_ALL_DATA_FROM_MANAGER_SIDE" />
+    <EntitySet Name="VW_SHOW_EXIBITION_ALL_DATA_FROM_STUDENT_SIDE" EntityType="DB_Institute_Of_Fine_ArtsModel.VW_SHOW_EXIBITION_ALL_DATA_FROM_STUDENT_SIDE" />
+    <EntitySet Name="VW_SHOW_FEEDBACK_ALL_DATA" EntityType="DB_Institute_Of_Fine_ArtsModel.VW_SHOW_FEEDBACK_ALL_DATA" />
+    <EntitySet Name="VW_SHOW_FEES_ALL_DATA" EntityType="DB_Institute_Of_Fine_ArtsModel.VW_SHOW_FEES_ALL_DATA" />
+    <EntitySet Name="VW_SHOW_FEES_ALL_DATA_STUDENT_SIDE" EntityType="DB_Institute_Of_Fine_ArtsModel.VW_SHOW_FEES_ALL_DATA_STUDENT_SIDE" />
+    <EntitySet Name="VW_SHOW_FEES_DEFAULTER_ALL_DATA" EntityType="DB_Institute_Of_Fine_ArtsModel.VW_SHOW_FEES_DEFAULTER_ALL_DATA" />
+    <EntitySet Name="VW_SHOW_RESULT_ALL_DATA" EntityType="DB_Institute_Of_Fine_ArtsModel.VW_SHOW_RESULT_ALL_DATA" />
+    <EntitySet Name="VW_SHOW_RESULT_ALL_DATA_FROM_STAFF" EntityType="DB_Institute_Of_Fine_ArtsModel.VW_SHOW_RESULT_ALL_DATA_FROM_STAFF" />
+    <EntitySet Name="VW_SHOW_RESULT_ALL_DATA_FROM_STUDENT_SIDE" EntityType="DB_Institute_Of_Fine_ArtsModel.VW_SHOW_RESULT_ALL_DATA_FROM_STUDENT_SIDE" />
+    <EntitySet Name="VW_SHOW_STAFF_ALL_DATA" EntityType="DB_Institute_Of_Fine_ArtsModel.VW_SHOW_STAFF_ALL_DATA" />
+    <EntitySet Name="VW_SHOW_STAFF_ALL_DATA_FROM_STAFF" EntityType="DB_Institute_Of_Fine_ArtsModel.VW_SHOW_STAFF_ALL_DATA_FROM_STAFF" />
+    <EntitySet Name="VW_SHOW_STUDENT_ALL_DATA_FROM_SUDENT_SIDE" EntityType="DB_Institute_Of_Fine_ArtsModel.VW_SHOW_STUDENT_ALL_DATA_FROM_SUDENT_SIDE" />
+    <EntitySet Name="VW_SHOW_STUDENTS_ALL_DATA" EntityType="DB_Institute_Of_Fine_ArtsModel.VW_SHOW_STUDENTS_ALL_DATA" />
+    <EntitySet Name="VW_SHOW_STUDENTS_ALL_DATA_FROM_STAFF" EntityType="DB_Institute_Of_Fine_ArtsModel.VW_SHOW_STUDENTS_ALL_DATA_FROM_STAFF" />
+    <EntitySet Name="VW_STAFF_DETAILS" EntityType="DB_Institute_Of_Fine_ArtsModel.VW_STAFF_DETAILS" />
+    <EntitySet Name="VW_STAFF_LOGIN" EntityType="DB_Institute_Of_Fine_ArtsModel.VW_STAFF_LOGIN" />
+    <EntitySet Name="VW_STUDENT_DETAILS" EntityType="DB_Institute_Of_Fine_ArtsModel.VW_STUDENT_DETAILS" />
+    <EntitySet Name="VW_STUDENT_LOGIN" EntityType="DB_Institute_Of_Fine_ArtsModel.VW_STUDENT_LOGIN" />
+    <EntitySet Name="VW_WORK_OF_COMPITITION" EntityType="DB_Institute_Of_Fine_ArtsModel.VW_WORK_OF_COMPITITION" />
+    <AssociationSet Name="FK_ASSIGNED_TO_COURSES" Association="DB_Institute_Of_Fine_ArtsModel.FK_ASSIGNED_TO_COURSES">
+      <End Role="COURS" EntitySet="COURSES" />
+      <End Role="ASSIGNED" EntitySet="ASSIGNEDs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ASSIGNED_TO_STAFF_LOGIN" Association="DB_Institute_Of_Fine_ArtsModel.FK_ASSIGNED_TO_STAFF_LOGIN">
+      <End Role="STAFF_LOGIN" EntitySet="STAFF_LOGIN" />
+      <End Role="ASSIGNED" EntitySet="ASSIGNEDs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ATTENDENCE_TO_REGISTRATION" Association="DB_Institute_Of_Fine_ArtsModel.FK_ATTENDENCE_TO_REGISTRATION">
+      <End Role="REGISTRATION" EntitySet="REGISTRATIONs" />
+      <End Role="ATTENDENCE" EntitySet="ATTENDENCEs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RESULT_TO_COMPITITION" Association="DB_Institute_Of_Fine_ArtsModel.FK_RESULT_TO_COMPITITION">
+      <End Role="COMPITITION" EntitySet="COMPITITIONs" />
+      <End Role="RESULT" EntitySet="RESULTs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STAFF_LOGIN_TO_COMPITITION" Association="DB_Institute_Of_Fine_ArtsModel.FK_STAFF_LOGIN_TO_COMPITITION">
+      <End Role="STAFF_LOGIN" EntitySet="STAFF_LOGIN" />
+      <End Role="COMPITITION" EntitySet="COMPITITIONs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WORK_OF_COMPITITION_TO_COMPITITION" Association="DB_Institute_Of_Fine_ArtsModel.FK_WORK_OF_COMPITITION_TO_COMPITITION">
+      <End Role="COMPITITION" EntitySet="COMPITITIONs" />
+      <End Role="WORK_OF_COMPITITION" EntitySet="WORK_OF_COMPITITION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COURSES_TO_PROGRAM" Association="DB_Institute_Of_Fine_ArtsModel.FK_COURSES_TO_PROGRAM">
+      <End Role="PROGRAM" EntitySet="PROGRAMs" />
+      <End Role="COURS" EntitySet="COURSES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_REGISTRATION_TO_COURSES" Association="DB_Institute_Of_Fine_ArtsModel.FK_REGISTRATION_TO_COURSES">
+      <End Role="COURS" EntitySet="COURSES" />
+      <End Role="REGISTRATION" EntitySet="REGISTRATIONs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EXIBITION_TO_SCHOLARSHIP" Association="DB_Institute_Of_Fine_ArtsModel.FK_EXIBITION_TO_SCHOLARSHIP">
+      <End Role="SCHOLARSHIP" EntitySet="SCHOLARSHIPs" />
+      <End Role="EXIBITION" EntitySet="EXIBITIONs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MANAGER_TO_EXIBITION" Association="DB_Institute_Of_Fine_ArtsModel.FK_MANAGER_TO_EXIBITION">
+      <End Role="EXIBITION" EntitySet="EXIBITIONs" />
+      <End Role="MANAGER" EntitySet="MANAGERs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FAILED_PROJECTS_TO_RESULT" Association="DB_Institute_Of_Fine_ArtsModel.FK_FAILED_PROJECTS_TO_RESULT">
+      <End Role="RESULT" EntitySet="RESULTs" />
+      <End Role="FAILED_PROJECTS" EntitySet="FAILED_PROJECTS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MANAGER_TO_FEEDBACK" Association="DB_Institute_Of_Fine_ArtsModel.FK_MANAGER_TO_FEEDBACK">
+      <End Role="FEEDBACK" EntitySet="FEEDBACKs" />
+      <End Role="MANAGER" EntitySet="MANAGERs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DEFAULTER_TO_FEES" Association="DB_Institute_Of_Fine_ArtsModel.FK_DEFAULTER_TO_FEES">
+      <End Role="FEE" EntitySet="FEES" />
+      <End Role="DEFAULTER" EntitySet="DEFAULTERs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FEES_TO_REGISTRATION" Association="DB_Institute_Of_Fine_ArtsModel.FK_FEES_TO_REGISTRATION">
+      <End Role="REGISTRATION" EntitySet="REGISTRATIONs" />
+      <End Role="FEE" EntitySet="FEES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MANAGER_TO_MANAGER_LOGIN" Association="DB_Institute_Of_Fine_ArtsModel.FK_MANAGER_TO_MANAGER_LOGIN">
+      <End Role="MANAGER_LOGIN" EntitySet="MANAGER_LOGIN" />
+      <End Role="MANAGER" EntitySet="MANAGERs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_REGISTRATION_TO_STUDENT_LOGIN" Association="DB_Institute_Of_Fine_ArtsModel.FK_REGISTRATION_TO_STUDENT_LOGIN">
+      <End Role="STUDENT_LOGIN" EntitySet="STUDENT_LOGIN" />
+      <End Role="REGISTRATION" EntitySet="REGISTRATIONs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RESULT_TO_REGISTRATION" Association="DB_Institute_Of_Fine_ArtsModel.FK_RESULT_TO_REGISTRATION">
+      <End Role="REGISTRATION" EntitySet="REGISTRATIONs" />
+      <End Role="RESULT" EntitySet="RESULTs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WORK_OF_COMPITITION_TO_REGISTRATION" Association="DB_Institute_Of_Fine_ArtsModel.FK_WORK_OF_COMPITITION_TO_REGISTRATION">
+      <End Role="REGISTRATION" EntitySet="REGISTRATIONs" />
+      <End Role="WORK_OF_COMPITITION" EntitySet="WORK_OF_COMPITITION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RESULT_TO_WORK_OF_COMPITITION" Association="DB_Institute_Of_Fine_ArtsModel.FK_RESULT_TO_WORK_OF_COMPITITION">
+      <End Role="WORK_OF_COMPITITION" EntitySet="WORK_OF_COMPITITION" />
+      <End Role="RESULT" EntitySet="RESULTs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SCHOLARSHIP_TO_RESULT" Association="DB_Institute_Of_Fine_ArtsModel.FK_SCHOLARSHIP_TO_RESULT">
+      <End Role="RESULT" EntitySet="RESULTs" />
+      <End Role="SCHOLARSHIP" EntitySet="SCHOLARSHIPs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STAFF_DETIALS_TO_STAFF_LOGIN" Association="DB_Institute_Of_Fine_ArtsModel.FK_STAFF_DETIALS_TO_STAFF_LOGIN">
+      <End Role="STAFF_LOGIN" EntitySet="STAFF_LOGIN" />
+      <End Role="STAFF_DETAILS" EntitySet="STAFF_DETAILS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STUDENT_DETIALS_TO_STUDENT_LOGIN" Association="DB_Institute_Of_Fine_ArtsModel.FK_STUDENT_DETIALS_TO_STUDENT_LOGIN">
+      <End Role="STUDENT_LOGIN" EntitySet="STUDENT_LOGIN" />
+      <End Role="STUDENT_DETAILS" EntitySet="STUDENT_DETAILS" />
+    </AssociationSet>
+    <FunctionImport Name="SP_ADMIN_LOGIN" ReturnType="Collection(DB_Institute_Of_Fine_ArtsModel.SP_ADMIN_LOGIN_Result)" />
+    <FunctionImport Name="SP_ADMINISTRATION" ReturnType="Collection(DB_Institute_Of_Fine_ArtsModel.SP_ADMINISTRATION_Result)" />
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="SP_ASSIGNED" ReturnType="Collection(DB_Institute_Of_Fine_ArtsModel.SP_ASSIGNED_Result)" />
+    <FunctionImport Name="SP_ATTENDENCE" ReturnType="Collection(DB_Institute_Of_Fine_ArtsModel.SP_ATTENDENCE_Result)" />
+    <FunctionImport Name="SP_COMPITITION" ReturnType="Collection(DB_Institute_Of_Fine_ArtsModel.SP_COMPITITION_Result)" />
+    <FunctionImport Name="SP_CONTACT" ReturnType="Collection(DB_Institute_Of_Fine_ArtsModel.SP_CONTACT_Result)" />
+    <FunctionImport Name="SP_COUNT_TABLE_LENGTH">
+      <Parameter Name="TABLE" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_COURSES" ReturnType="Collection(DB_Institute_Of_Fine_ArtsModel.SP_COURSES_Result)" />
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="SP_DEFAULTER" ReturnType="Collection(DB_Institute_Of_Fine_ArtsModel.SP_DEFAULTER_Result)" />
+    <FunctionImport Name="SP_DELETE_FROM_EXIBITION_BY_MANAGER">
+      <Parameter Name="EXB_ID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_DELETE_PROFILE_OF_STAFF_BY_ADMIN">
+      <Parameter Name="STF_ID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_DELETE_PROFILE_OF_STUDENT_BY_ADMIN">
+      <Parameter Name="STDL_ID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_DELETE_TABLES">
+      <Parameter Name="TABLE" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_DROP_TABLES">
+      <Parameter Name="TABLE" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_EXIBITION" ReturnType="Collection(DB_Institute_Of_Fine_ArtsModel.SP_EXIBITION_Result)" />
+    <FunctionImport Name="SP_FAILED_PROJECTS" ReturnType="Collection(DB_Institute_Of_Fine_ArtsModel.SP_FAILED_PROJECTS_Result)" />
+    <FunctionImport Name="SP_FEEDBACK" ReturnType="Collection(DB_Institute_Of_Fine_ArtsModel.SP_FEEDBACK_Result)" />
+    <FunctionImport Name="SP_FEES" ReturnType="Collection(DB_Institute_Of_Fine_ArtsModel.SP_FEES_Result)" />
+    <FunctionImport Name="SP_GLOBAL_DELETE_FROM_TABLE">
+      <Parameter Name="TABLE" Mode="In" Type="String" />
+      <Parameter Name="COL" Mode="In" Type="String" />
+      <Parameter Name="ID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_GLOBAL_SELECT_FROM_TABLE">
+      <Parameter Name="TABLE" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(DB_Institute_Of_Fine_ArtsModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(DB_Institute_Of_Fine_ArtsModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_INSERT_INTO_COMPITION_BY_STAFF">
+      <Parameter Name="COM_NAME" Mode="In" Type="String" />
+      <Parameter Name="COM_START_DATE" Mode="In" Type="DateTime" />
+      <Parameter Name="COM_END_DATE" Mode="In" Type="DateTime" />
+      <Parameter Name="COM_STF_ID" Mode="In" Type="String" />
+      <Parameter Name="COM_AWARD" Mode="In" Type="String" />
+      <Parameter Name="COM_FORMAT" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_INSERT_INTO_COURCE_BY_ADMIN">
+      <Parameter Name="CR_NAME" Mode="In" Type="String" />
+      <Parameter Name="CR_CREDITS" Mode="In" Type="Int32" />
+      <Parameter Name="CR_PR_ID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_INSERT_INTO_EXIBITION_BY_MANAGER">
+      <Parameter Name="EXB_NAME" Mode="In" Type="String" />
+      <Parameter Name="EXB_START_DATE" Mode="In" Type="DateTime" />
+      <Parameter Name="EXB_END_DATE" Mode="In" Type="DateTime" />
+      <Parameter Name="EXB_TYPE" Mode="In" Type="String" />
+      <Parameter Name="EXB_SCR_ID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_INSERT_INTO_FEES_BY_ADMIN">
+      <Parameter Name="FS_REG_ID" Mode="In" Type="String" />
+      <Parameter Name="FS_AMOUNT" Mode="In" Type="Decimal" />
+      <Parameter Name="FS_PAID" Mode="In" Type="Boolean" />
+      <Parameter Name="FS_LAST_DATE" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="SP_INSERT_INTO_PROGRAM_BY_ADMIN">
+      <Parameter Name="PR_NAME" Mode="In" Type="String" />
+      <Parameter Name="PR_CREDITS" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_INSERT_INTO_RESULT_BY_STAFF">
+      <Parameter Name="RES_COM_ID" Mode="In" Type="String" />
+      <Parameter Name="RES_RES_ID" Mode="In" Type="String" />
+      <Parameter Name="RES_MARKS" Mode="In" Type="Decimal" />
+      <Parameter Name="RES_WORK_ID" Mode="In" Type="String" />
+      <Parameter Name="RES_DATE" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="SP_INSERT_INTO_STAFF_BY_ADMIN">
+      <Parameter Name="STF_NAME" Mode="In" Type="String" />
+      <Parameter Name="STF_PASSWORD" Mode="In" Type="String" />
+      <Parameter Name="STF_PROFILE" Mode="In" Type="String" />
+      <Parameter Name="STFD_EDUCATION" Mode="In" Type="String" />
+      <Parameter Name="STFD_ADDRESS" Mode="In" Type="String" />
+      <Parameter Name="STFD_EMAIL" Mode="In" Type="String" />
+      <Parameter Name="STFD_PHONE" Mode="In" Type="String" />
+      <Parameter Name="STFD_DATE_OF_BIRTH" Mode="In" Type="DateTime" />
+      <Parameter Name="STFD_SALARY" Mode="In" Type="Decimal" />
+      <Parameter Name="ASI_COURCE_NAME" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_INSERT_INTO_STUDENT_BY_ADMIN">
+      <Parameter Name="STDL_NAME" Mode="In" Type="String" />
+      <Parameter Name="STDL_PASSWORD" Mode="In" Type="String" />
+      <Parameter Name="STDL_PROFILE" Mode="In" Type="String" />
+      <Parameter Name="STD_ADDRESS" Mode="In" Type="String" />
+      <Parameter Name="STD_EMAIL" Mode="In" Type="String" />
+      <Parameter Name="STD_PHONE" Mode="In" Type="String" />
+      <Parameter Name="STD_DATE_OF_BIRTH" Mode="In" Type="DateTime" />
+      <Parameter Name="REG_COURCE_NAME" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_INSERT_INTO_WORK_COMPITION_BY_STUDENT">
+      <Parameter Name="WOC_REG_ID" Mode="In" Type="String" />
+      <Parameter Name="WOC_COM_ID" Mode="In" Type="String" />
+      <Parameter Name="WOC_WORK" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_MANAGER" ReturnType="Collection(DB_Institute_Of_Fine_ArtsModel.SP_MANAGER_Result)" />
+    <FunctionImport Name="SP_MANAGER_LOGIN" ReturnType="Collection(DB_Institute_Of_Fine_ArtsModel.SP_MANAGER_LOGIN_Result)" />
+    <FunctionImport Name="SP_PROGRAM" ReturnType="Collection(DB_Institute_Of_Fine_ArtsModel.SP_PROGRAM_Result)" />
+    <FunctionImport Name="SP_REGISTRATION" ReturnType="Collection(DB_Institute_Of_Fine_ArtsModel.SP_REGISTRATION_Result)" />
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_RESULT" ReturnType="Collection(DB_Institute_Of_Fine_ArtsModel.SP_RESULT_Result)" />
+    <FunctionImport Name="SP_SCHOLARSHIP" ReturnType="Collection(DB_Institute_Of_Fine_ArtsModel.SP_SCHOLARSHIP_Result)" />
+    <FunctionImport Name="SP_SEARCH_INTO_TABLES">
+      <Parameter Name="INPUT" Mode="In" Type="String" />
+      <Parameter Name="SORTBY" Mode="In" Type="String" />
+      <Parameter Name="TABLE" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_SET_DEFAULTER_FROM_FEES" />
+    <FunctionImport Name="SP_SHOW_COMPITION_ALL_DATA_FROM_STUDENT_SIDE" ReturnType="Collection(DB_Institute_Of_Fine_ArtsModel.SP_SHOW_COMPITION_ALL_DATA_FROM_STUDENT_SIDE_Result)" />
+    <FunctionImport Name="SP_SHOW_COMPITITION_ALL_DATA" ReturnType="Collection(DB_Institute_Of_Fine_ArtsModel.SP_SHOW_COMPITITION_ALL_DATA_Result)" />
+    <FunctionImport Name="SP_SHOW_COMPITITION_ALL_DATA_FROM_STAFF" ReturnType="Collection(DB_Institute_Of_Fine_ArtsModel.SP_SHOW_COMPITITION_ALL_DATA_FROM_STAFF_Result)" />
+    <FunctionImport Name="SP_SHOW_CONTACT_ALL_DATA" ReturnType="Collection(DB_Institute_Of_Fine_ArtsModel.SP_SHOW_CONTACT_ALL_DATA_Result)" />
+    <FunctionImport Name="SP_SHOW_EXIBITION_ALL_DATA_FROM_MANAGER_SIDE" ReturnType="Collection(DB_Institute_Of_Fine_ArtsModel.SP_SHOW_EXIBITION_ALL_DATA_FROM_MANAGER_SIDE_Result)" />
+    <FunctionImport Name="SP_SHOW_EXIBITION_ALL_DATA_FROM_STUDENT_SIDE" ReturnType="Collection(DB_Institute_Of_Fine_ArtsModel.SP_SHOW_EXIBITION_ALL_DATA_FROM_STUDENT_SIDE_Result)" />
+    <FunctionImport Name="SP_SHOW_FEEDBACK_ALL_DATA" ReturnType="Collection(DB_Institute_Of_Fine_ArtsModel.SP_SHOW_FEEDBACK_ALL_DATA_Result)" />
+    <FunctionImport Name="SP_SHOW_FEES_ALL_DATA" ReturnType="Collection(DB_Institute_Of_Fine_ArtsModel.SP_SHOW_FEES_ALL_DATA_Result)" />
+    <FunctionImport Name="SP_SHOW_FEES_ALL_DATA_STUDENT_SIDE" ReturnType="Collection(DB_Institute_Of_Fine_ArtsModel.SP_SHOW_FEES_ALL_DATA_STUDENT_SIDE_Result)" />
+    <FunctionImport Name="SP_SHOW_RESULT_ALL_DATA" ReturnType="Collection(DB_Institute_Of_Fine_ArtsModel.SP_SHOW_RESULT_ALL_DATA_Result)" />
+    <FunctionImport Name="SP_SHOW_RESULT_ALL_DATA_FROM_STAFF" ReturnType="Collection(DB_Institute_Of_Fine_ArtsModel.SP_SHOW_RESULT_ALL_DATA_FROM_STAFF_Result)" />
+    <FunctionImport Name="SP_SHOW_RESULT_ALL_DATA_FROM_STUDENT_SIDE" ReturnType="Collection(DB_Institute_Of_Fine_ArtsModel.SP_SHOW_RESULT_ALL_DATA_FROM_STUDENT_SIDE_Result)" />
+    <FunctionImport Name="SP_SHOW_STAFF_ALL_DATA" ReturnType="Collection(DB_Institute_Of_Fine_ArtsModel.SP_SHOW_STAFF_ALL_DATA_Result)" />
+    <FunctionImport Name="SP_SHOW_STAFF_ALL_DATA_FROM_STAFF" ReturnType="Collection(DB_Institute_Of_Fine_ArtsModel.SP_SHOW_STAFF_ALL_DATA_FROM_STAFF_Result)" />
+    <FunctionImport Name="SP_SHOW_STUDENT_ALL_DATA_FROM_SUDENT_SIDE" ReturnType="Collection(DB_Institute_Of_Fine_ArtsModel.SP_SHOW_STUDENT_ALL_DATA_FROM_SUDENT_SIDE_Result)" />
+    <FunctionImport Name="SP_SHOW_STUDENTS_ALL_DATA" ReturnType="Collection(DB_Institute_Of_Fine_ArtsModel.SP_SHOW_STUDENTS_ALL_DATA_Result)" />
+    <FunctionImport Name="SP_SHOW_STUDENTS_ALL_DATA_FROM_STAFF" ReturnType="Collection(DB_Institute_Of_Fine_ArtsModel.SP_SHOW_STUDENTS_ALL_DATA_FROM_STAFF_Result)" />
+    <FunctionImport Name="SP_STAFF_DETAILS" ReturnType="Collection(DB_Institute_Of_Fine_ArtsModel.SP_STAFF_DETAILS_Result)" />
+    <FunctionImport Name="SP_STAFF_LOGIN" ReturnType="Collection(DB_Institute_Of_Fine_ArtsModel.SP_STAFF_LOGIN_Result)" />
+    <FunctionImport Name="SP_STUDENT_DETAILS" ReturnType="Collection(DB_Institute_Of_Fine_ArtsModel.SP_STUDENT_DETAILS_Result)" />
+    <FunctionImport Name="SP_STUDENT_LOGIN" ReturnType="Collection(DB_Institute_Of_Fine_ArtsModel.SP_STUDENT_LOGIN_Result)" />
+    <FunctionImport Name="SP_TRUNCATE_TABLES">
+      <Parameter Name="TABLE" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_UPDATE_ASSINED_AFTER_TRIGGER">
+      <Parameter Name="COURSE_ID" Mode="In" Type="String" />
+      <Parameter Name="STAFF_ID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_UPDATE_FEES">
+      <Parameter Name="ID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_UPDATE_INTO_EXIBITION_BY_MANAGER">
+      <Parameter Name="EXB_ID" Mode="In" Type="String" />
+      <Parameter Name="EXB_NAME" Mode="In" Type="String" />
+      <Parameter Name="EXB_START_DATE" Mode="In" Type="DateTime" />
+      <Parameter Name="EXB_END_DATE" Mode="In" Type="DateTime" />
+      <Parameter Name="EXB_TYPE" Mode="In" Type="String" />
+      <Parameter Name="EXB_SCR_ID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_UPDATE_PROFILE_BY_MANAGER">
+      <Parameter Name="MG_ID" Mode="In" Type="String" />
+      <Parameter Name="MG_NAME" Mode="In" Type="String" />
+      <Parameter Name="MG_PASSWORD" Mode="In" Type="String" />
+      <Parameter Name="MG_PROFILE" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_UPDATE_PROFILE_BY_STAFF">
+      <Parameter Name="STF_ID" Mode="In" Type="String" />
+      <Parameter Name="STF_NAME" Mode="In" Type="String" />
+      <Parameter Name="STF_PASSWORD" Mode="In" Type="String" />
+      <Parameter Name="STF_PROFILE" Mode="In" Type="String" />
+      <Parameter Name="STFD_EDUCATION" Mode="In" Type="String" />
+      <Parameter Name="STFD_ADDRESS" Mode="In" Type="String" />
+      <Parameter Name="STFD_EMAIL" Mode="In" Type="String" />
+      <Parameter Name="STFD_PHONE" Mode="In" Type="String" />
+      <Parameter Name="STFD_DATE_OF_BIRTH" Mode="In" Type="DateTime" />
+      <Parameter Name="STFD_SALARY" Mode="In" Type="Decimal" />
+      <Parameter Name="ASI_COURCE_NAME" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_UPDATE_PROFILE_BY_STUDENT">
+      <Parameter Name="STDL_ID" Mode="In" Type="String" />
+      <Parameter Name="STDL_NAME" Mode="In" Type="String" />
+      <Parameter Name="STDL_PASSWORD" Mode="In" Type="String" />
+      <Parameter Name="STDL_PROFILE" Mode="In" Type="String" />
+      <Parameter Name="STD_ADDRESS" Mode="In" Type="String" />
+      <Parameter Name="STD_EMAIL" Mode="In" Type="String" />
+      <Parameter Name="STD_PHONE" Mode="In" Type="String" />
+      <Parameter Name="STD_DATE_OF_BIRTH" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="SP_UPDATE_PROFILE_OF_ADMIN_BY_ADMIN">
+      <Parameter Name="AD_ID" Mode="In" Type="String" />
+      <Parameter Name="AD_NAME" Mode="In" Type="String" />
+      <Parameter Name="AD_PASSWORD" Mode="In" Type="String" />
+      <Parameter Name="AD_PROFILE" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_UPDATE_PROFILE_OF_STAFF_BY_ADMIN">
+      <Parameter Name="STF_ID" Mode="In" Type="String" />
+      <Parameter Name="STF_NAME" Mode="In" Type="String" />
+      <Parameter Name="STF_PASSWORD" Mode="In" Type="String" />
+      <Parameter Name="STF_PROFILE" Mode="In" Type="String" />
+      <Parameter Name="STFD_EDUCATION" Mode="In" Type="String" />
+      <Parameter Name="STFD_ADDRESS" Mode="In" Type="String" />
+      <Parameter Name="STFD_EMAIL" Mode="In" Type="String" />
+      <Parameter Name="STFD_PHONE" Mode="In" Type="String" />
+      <Parameter Name="STFD_DATE_OF_BIRTH" Mode="In" Type="DateTime" />
+      <Parameter Name="STFD_SALARY" Mode="In" Type="Decimal" />
+      <Parameter Name="ASI_COURCE_NAME" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_UPDATE_PROFILE_OF_STUDENT_BTY_STAFF">
+      <Parameter Name="STDL_ID" Mode="In" Type="String" />
+      <Parameter Name="STDL_NAME" Mode="In" Type="String" />
+      <Parameter Name="STDL_PASSWORD" Mode="In" Type="String" />
+      <Parameter Name="STDL_PROFILE" Mode="In" Type="String" />
+      <Parameter Name="STD_ADDRESS" Mode="In" Type="String" />
+      <Parameter Name="STD_EMAIL" Mode="In" Type="String" />
+      <Parameter Name="STD_PHONE" Mode="In" Type="String" />
+      <Parameter Name="STD_DATE_OF_BIRTH" Mode="In" Type="DateTime" />
+      <Parameter Name="REG_COURCE_NAME" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_UPDATE_PROFILE_OF_STUDENT_BY_ADMIN">
+      <Parameter Name="STDL_ID" Mode="In" Type="String" />
+      <Parameter Name="STDL_NAME" Mode="In" Type="String" />
+      <Parameter Name="STDL_PASSWORD" Mode="In" Type="String" />
+      <Parameter Name="STDL_PROFILE" Mode="In" Type="String" />
+      <Parameter Name="STD_ADDRESS" Mode="In" Type="String" />
+      <Parameter Name="STD_EMAIL" Mode="In" Type="String" />
+      <Parameter Name="STD_PHONE" Mode="In" Type="String" />
+      <Parameter Name="STD_DATE_OF_BIRTH" Mode="In" Type="DateTime" />
+      <Parameter Name="REG_COURCE_NAME" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_UPDATE_REGISTRATION_AFTER_TRIGGER">
+      <Parameter Name="COURSE_ID" Mode="In" Type="String" />
+      <Parameter Name="REGISTRATION_ID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="SP_WORK_OF_COMPITITION" ReturnType="Collection(DB_Institute_Of_Fine_ArtsModel.SP_WORK_OF_COMPITITION_Result)" />
+    <EntitySet Name="ADMINISTRATIONs" EntityType="DB_Institute_Of_Fine_ArtsModel.ADMINISTRATION" />
+  </EntityContainer>
+  <EntityType Name="ADMIN_LOGIN">
+    <Key>
+      <PropertyRef Name="AD_ID" />
+    </Key>
+    <Property Name="AD_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AD_PASSWORD" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AD_PROFILE" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AD_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_ADID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="ASSIGNED">
+    <Key>
+      <PropertyRef Name="ASI_ID" />
+    </Key>
+    <Property Name="ASI_STFL_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ASI_CR_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ASI_DATE" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ASI_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_ASIID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="COURS" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_ASSIGNED_TO_COURSES" FromRole="ASSIGNED" ToRole="COURS" />
+    <NavigationProperty Name="STAFF_LOGIN" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_ASSIGNED_TO_STAFF_LOGIN" FromRole="ASSIGNED" ToRole="STAFF_LOGIN" />
+  </EntityType>
+  <EntityType Name="ATTENDENCE">
+    <Key>
+      <PropertyRef Name="ATD_ID" />
+    </Key>
+    <Property Name="ATD_REG_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ATD_PRECENCE" Type="Boolean" Nullable="false" />
+    <Property Name="ATD_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ATD_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_ATTID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="REGISTRATION" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_ATTENDENCE_TO_REGISTRATION" FromRole="ATTENDENCE" ToRole="REGISTRATION" />
+  </EntityType>
+  <EntityType Name="COMPITITION">
+    <Key>
+      <PropertyRef Name="COM_ID" />
+    </Key>
+    <Property Name="COM_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="COM_START_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="COM_END_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="COM_STF_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="COM_AWARD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="COM_FORMAT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="COM_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_COMID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="RESULTs" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_RESULT_TO_COMPITITION" FromRole="COMPITITION" ToRole="RESULT" />
+    <NavigationProperty Name="STAFF_LOGIN" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_STAFF_LOGIN_TO_COMPITITION" FromRole="COMPITITION" ToRole="STAFF_LOGIN" />
+    <NavigationProperty Name="WORK_OF_COMPITITION" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_WORK_OF_COMPITITION_TO_COMPITITION" FromRole="COMPITITION" ToRole="WORK_OF_COMPITITION" />
+  </EntityType>
+  <EntityType Name="CONTACT">
+    <Key>
+      <PropertyRef Name="CON_ID" />
+    </Key>
+    <Property Name="CON_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CON_EMAIL" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CON_MESSAGE" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CON_REPLIED" Type="Boolean" Nullable="false" />
+    <Property Name="CON_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_CONID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="COURS">
+    <Key>
+      <PropertyRef Name="CR_ID" />
+    </Key>
+    <Property Name="CR_NAME" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CR_CREDITS" Type="Int32" Nullable="false" />
+    <Property Name="CR_PR_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CR_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_COUID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="ASSIGNEDs" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_ASSIGNED_TO_COURSES" FromRole="COURS" ToRole="ASSIGNED" />
+    <NavigationProperty Name="PROGRAM" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_COURSES_TO_PROGRAM" FromRole="COURS" ToRole="PROGRAM" />
+    <NavigationProperty Name="REGISTRATIONs" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_REGISTRATION_TO_COURSES" FromRole="COURS" ToRole="REGISTRATION" />
+  </EntityType>
+  <EntityType Name="EXIBITION">
+    <Key>
+      <PropertyRef Name="EXB_ID" />
+    </Key>
+    <Property Name="EXB_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EXB_START_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EXB_END_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EXB_TYPE" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="EXB_SCR_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="EXB_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_EXIID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="SCHOLARSHIP" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_EXIBITION_TO_SCHOLARSHIP" FromRole="EXIBITION" ToRole="SCHOLARSHIP" />
+    <NavigationProperty Name="MANAGERs" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_MANAGER_TO_EXIBITION" FromRole="EXIBITION" ToRole="MANAGER" />
+  </EntityType>
+  <EntityType Name="FAILED_PROJECTS">
+    <Key>
+      <PropertyRef Name="FP_ID" />
+    </Key>
+    <Property Name="FP_RES_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="FP_REMARK" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="FP_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_FAPID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="RESULT" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_FAILED_PROJECTS_TO_RESULT" FromRole="FAILED_PROJECTS" ToRole="RESULT" />
+  </EntityType>
+  <EntityType Name="FEEDBACK">
+    <Key>
+      <PropertyRef Name="FDB_ID" />
+    </Key>
+    <Property Name="FDB_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FDB_EMAIL" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FDB_QUESTION" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FDB_MESSAGE" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FDB_REPLIED" Type="Boolean" Nullable="false" />
+    <Property Name="FDB_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_FEDID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="MANAGERs" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_MANAGER_TO_FEEDBACK" FromRole="FEEDBACK" ToRole="MANAGER" />
+  </EntityType>
+  <EntityType Name="FEE">
+    <Key>
+      <PropertyRef Name="FS_ID" />
+    </Key>
+    <Property Name="FS_REG_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="FS_AMOUNT" Type="Decimal" Nullable="false" Precision="20" Scale="2" />
+    <Property Name="FS_PAID" Type="Boolean" Nullable="false" />
+    <Property Name="FS_LAST_DATE" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="FS_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_FEEID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="DEFAULTERs" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_DEFAULTER_TO_FEES" FromRole="FEE" ToRole="DEFAULTER" />
+    <NavigationProperty Name="REGISTRATION" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_FEES_TO_REGISTRATION" FromRole="FEE" ToRole="REGISTRATION" />
+  </EntityType>
+  <EntityType Name="MANAGER_LOGIN">
+    <Key>
+      <PropertyRef Name="MG_ID" />
+    </Key>
+    <Property Name="MG_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MG_PASSWORD" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MG_PROFILE" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MG_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_MALID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="MANAGER" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_MANAGER_TO_MANAGER_LOGIN" FromRole="MANAGER_LOGIN" ToRole="MANAGER" />
+  </EntityType>
+  <EntityType Name="PROGRAM">
+    <Key>
+      <PropertyRef Name="PR_ID" />
+    </Key>
+    <Property Name="PR_NAME" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="PR_CREDITS" Type="Int32" Nullable="false" />
+    <Property Name="PR_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_PROID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="COURSES" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_COURSES_TO_PROGRAM" FromRole="PROGRAM" ToRole="COURS" />
+  </EntityType>
+  <EntityType Name="REGISTRATION">
+    <Key>
+      <PropertyRef Name="REG_ID" />
+    </Key>
+    <Property Name="REG_STDL_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="REG_CR_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="REG_DATE" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="REG_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_RESID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="ATTENDENCEs" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_ATTENDENCE_TO_REGISTRATION" FromRole="REGISTRATION" ToRole="ATTENDENCE" />
+    <NavigationProperty Name="COURS" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_REGISTRATION_TO_COURSES" FromRole="REGISTRATION" ToRole="COURS" />
+    <NavigationProperty Name="FEES" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_FEES_TO_REGISTRATION" FromRole="REGISTRATION" ToRole="FEE" />
+    <NavigationProperty Name="STUDENT_LOGIN" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_REGISTRATION_TO_STUDENT_LOGIN" FromRole="REGISTRATION" ToRole="STUDENT_LOGIN" />
+    <NavigationProperty Name="RESULTs" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_RESULT_TO_REGISTRATION" FromRole="REGISTRATION" ToRole="RESULT" />
+    <NavigationProperty Name="WORK_OF_COMPITITION" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_WORK_OF_COMPITITION_TO_REGISTRATION" FromRole="REGISTRATION" ToRole="WORK_OF_COMPITITION" />
+  </EntityType>
+  <EntityType Name="RESULT">
+    <Key>
+      <PropertyRef Name="RES_ID" />
+    </Key>
+    <Property Name="RES_COM_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="RES_RES_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="RES_MARKS" Type="Decimal" Nullable="false" Precision="3" Scale="2" />
+    <Property Name="RES_PERCENTAGE" Type="Decimal" Nullable="false" Precision="3" Scale="2" />
+    <Property Name="RES_WORK_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="RES_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="RES_GRADE" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="RES_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_REUID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="COMPITITION" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_RESULT_TO_COMPITITION" FromRole="RESULT" ToRole="COMPITITION" />
+    <NavigationProperty Name="FAILED_PROJECTS" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_FAILED_PROJECTS_TO_RESULT" FromRole="RESULT" ToRole="FAILED_PROJECTS" />
+    <NavigationProperty Name="REGISTRATION" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_RESULT_TO_REGISTRATION" FromRole="RESULT" ToRole="REGISTRATION" />
+    <NavigationProperty Name="WORK_OF_COMPITITION" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_RESULT_TO_WORK_OF_COMPITITION" FromRole="RESULT" ToRole="WORK_OF_COMPITITION" />
+    <NavigationProperty Name="SCHOLARSHIPs" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_SCHOLARSHIP_TO_RESULT" FromRole="RESULT" ToRole="SCHOLARSHIP" />
+  </EntityType>
+  <EntityType Name="SCHOLARSHIP">
+    <Key>
+      <PropertyRef Name="SCR_ID" />
+    </Key>
+    <Property Name="SCR_RES_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="SCR_TYPE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SCR_AMMOUNT" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="SCR_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_SCOID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="EXIBITIONs" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_EXIBITION_TO_SCHOLARSHIP" FromRole="SCHOLARSHIP" ToRole="EXIBITION" />
+    <NavigationProperty Name="RESULT" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_SCHOLARSHIP_TO_RESULT" FromRole="SCHOLARSHIP" ToRole="RESULT" />
+  </EntityType>
+  <EntityType Name="STAFF_LOGIN">
+    <Key>
+      <PropertyRef Name="STF_ID" />
+    </Key>
+    <Property Name="STF_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="STF_PASSWORD" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="STF_PROFILE" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="STF_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_STDID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="ASSIGNEDs" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_ASSIGNED_TO_STAFF_LOGIN" FromRole="STAFF_LOGIN" ToRole="ASSIGNED" />
+    <NavigationProperty Name="COMPITITIONs" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_STAFF_LOGIN_TO_COMPITITION" FromRole="STAFF_LOGIN" ToRole="COMPITITION" />
+    <NavigationProperty Name="STAFF_DETAILS" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_STAFF_DETIALS_TO_STAFF_LOGIN" FromRole="STAFF_LOGIN" ToRole="STAFF_DETAILS" />
+  </EntityType>
+  <EntityType Name="STUDENT_LOGIN">
+    <Key>
+      <PropertyRef Name="STDL_ID" />
+    </Key>
+    <Property Name="STDL_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="STDL_PASSWORD" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="STDL_PROFILE" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="STDL_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_STLID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="REGISTRATIONs" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_REGISTRATION_TO_STUDENT_LOGIN" FromRole="STUDENT_LOGIN" ToRole="REGISTRATION" />
+    <NavigationProperty Name="STUDENT_DETAILS" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_STUDENT_DETIALS_TO_STUDENT_LOGIN" FromRole="STUDENT_LOGIN" ToRole="STUDENT_DETAILS" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="WORK_OF_COMPITITION">
+    <Key>
+      <PropertyRef Name="WOC_ID" />
+    </Key>
+    <Property Name="WOC_REG_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="WOC_COM_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="WOC_WORK" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="WOC_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_WORID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="COMPITITION" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_WORK_OF_COMPITITION_TO_COMPITITION" FromRole="WORK_OF_COMPITITION" ToRole="COMPITITION" />
+    <NavigationProperty Name="REGISTRATION" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_WORK_OF_COMPITITION_TO_REGISTRATION" FromRole="WORK_OF_COMPITITION" ToRole="REGISTRATION" />
+    <NavigationProperty Name="RESULTs" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_RESULT_TO_WORK_OF_COMPITITION" FromRole="WORK_OF_COMPITITION" ToRole="RESULT" />
+  </EntityType>
+  <EntityType Name="DEFAULTER">
+    <Key>
+      <PropertyRef Name="DEF_FS_ID" />
+      <PropertyRef Name="DEF_PLENTY" />
+    </Key>
+    <Property Name="DEF_FS_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DEF_PLENTY" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <NavigationProperty Name="FEE" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_DEFAULTER_TO_FEES" FromRole="DEFAULTER" ToRole="FEE" />
+  </EntityType>
+  <EntityType Name="MANAGER">
+    <Key>
+      <PropertyRef Name="MG_MGL_ID" />
+    </Key>
+    <Property Name="MG_MGL_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="MG_EXB_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="MG_FDB_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="EXIBITION" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_MANAGER_TO_EXIBITION" FromRole="MANAGER" ToRole="EXIBITION" />
+    <NavigationProperty Name="FEEDBACK" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_MANAGER_TO_FEEDBACK" FromRole="MANAGER" ToRole="FEEDBACK" />
+    <NavigationProperty Name="MANAGER_LOGIN" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_MANAGER_TO_MANAGER_LOGIN" FromRole="MANAGER" ToRole="MANAGER_LOGIN" />
+  </EntityType>
+  <EntityType Name="STAFF_DETAILS">
+    <Key>
+      <PropertyRef Name="ST_STFD_ID" />
+      <PropertyRef Name="STFD_EDUCATION" />
+      <PropertyRef Name="STFD_PHONE" />
+      <PropertyRef Name="STFD_DATE_OF_BIRTH" />
+    </Key>
+    <Property Name="ST_STFD_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="STFD_EDUCATION" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="STFD_ADDRESS" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="STFD_EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="STFD_PHONE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="STFD_DATE_OF_BIRTH" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="STFD_SALARY" Type="Decimal" Precision="10" Scale="2" />
+    <NavigationProperty Name="STAFF_LOGIN" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_STAFF_DETIALS_TO_STAFF_LOGIN" FromRole="STAFF_DETAILS" ToRole="STAFF_LOGIN" />
+  </EntityType>
+  <EntityType Name="STUDENT_DETAILS">
+    <Key>
+      <PropertyRef Name="SD_STDL_ID" />
+      <PropertyRef Name="STD_PHONE" />
+      <PropertyRef Name="STD_DATE_OF_BIRTH" />
+    </Key>
+    <Property Name="SD_STDL_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="STD_ADDRESS" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="STD_EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="STD_PHONE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="STD_DATE_OF_BIRTH" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="STUDENT_LOGIN" Relationship="DB_Institute_Of_Fine_ArtsModel.FK_STUDENT_DETIALS_TO_STUDENT_LOGIN" FromRole="STUDENT_DETAILS" ToRole="STUDENT_LOGIN" />
+  </EntityType>
+  <EntityType Name="VW_ADMIN_LOGIN">
+    <Key>
+      <PropertyRef Name="AD_NAME" />
+      <PropertyRef Name="AD_PASSWORD" />
+      <PropertyRef Name="AD_PROFILE" />
+      <PropertyRef Name="AD_ID" />
+      <PropertyRef Name="C_ADID" />
+    </Key>
+    <Property Name="AD_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AD_PASSWORD" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AD_PROFILE" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AD_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_ADID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="VW_ASSIGNED">
+    <Key>
+      <PropertyRef Name="ASI_STFL_ID" />
+      <PropertyRef Name="ASI_DATE" />
+      <PropertyRef Name="ASI_ID" />
+      <PropertyRef Name="C_ASIID" />
+    </Key>
+    <Property Name="ASI_STFL_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ASI_CR_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ASI_DATE" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ASI_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_ASIID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="VW_ATTENDENCE">
+    <Key>
+      <PropertyRef Name="ATD_REG_ID" />
+      <PropertyRef Name="ATD_PRECENCE" />
+      <PropertyRef Name="ATD_DATE" />
+      <PropertyRef Name="ATD_ID" />
+      <PropertyRef Name="C_ATTID" />
+    </Key>
+    <Property Name="ATD_REG_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ATD_PRECENCE" Type="Boolean" Nullable="false" />
+    <Property Name="ATD_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ATD_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_ATTID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="VW_COMPITITION">
+    <Key>
+      <PropertyRef Name="COM_NAME" />
+      <PropertyRef Name="COM_START_DATE" />
+      <PropertyRef Name="COM_END_DATE" />
+      <PropertyRef Name="COM_STF_ID" />
+      <PropertyRef Name="COM_ID" />
+      <PropertyRef Name="C_COMID" />
+    </Key>
+    <Property Name="COM_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="COM_START_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="COM_END_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="COM_STF_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="COM_AWARD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="COM_FORMAT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="COM_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_COMID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="VW_CONTACT">
+    <Key>
+      <PropertyRef Name="CON_NAME" />
+      <PropertyRef Name="CON_EMAIL" />
+      <PropertyRef Name="CON_MESSAGE" />
+      <PropertyRef Name="CON_REPLIED" />
+      <PropertyRef Name="CON_ID" />
+      <PropertyRef Name="C_CONID" />
+    </Key>
+    <Property Name="CON_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CON_EMAIL" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CON_MESSAGE" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CON_REPLIED" Type="Boolean" Nullable="false" />
+    <Property Name="CON_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_CONID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="VW_COURSES">
+    <Key>
+      <PropertyRef Name="CR_NAME" />
+      <PropertyRef Name="CR_CREDITS" />
+      <PropertyRef Name="CR_PR_ID" />
+      <PropertyRef Name="CR_ID" />
+      <PropertyRef Name="C_COUID" />
+    </Key>
+    <Property Name="CR_NAME" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CR_CREDITS" Type="Int32" Nullable="false" />
+    <Property Name="CR_PR_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CR_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_COUID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="VW_DEFAULTER">
+    <Key>
+      <PropertyRef Name="DEF_FS_ID" />
+      <PropertyRef Name="DEF_PLENTY" />
+    </Key>
+    <Property Name="DEF_FS_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DEF_PLENTY" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="VW_EXIBITION">
+    <Key>
+      <PropertyRef Name="EXB_NAME" />
+      <PropertyRef Name="EXB_START_DATE" />
+      <PropertyRef Name="EXB_END_DATE" />
+      <PropertyRef Name="EXB_TYPE" />
+      <PropertyRef Name="EXB_SCR_ID" />
+      <PropertyRef Name="EXB_ID" />
+      <PropertyRef Name="C_EXIID" />
+    </Key>
+    <Property Name="EXB_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EXB_START_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EXB_END_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EXB_TYPE" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="EXB_SCR_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="EXB_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_EXIID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="VW_FAILED_PROJECTS">
+    <Key>
+      <PropertyRef Name="FP_RES_ID" />
+      <PropertyRef Name="FP_REMARK" />
+      <PropertyRef Name="FP_ID" />
+      <PropertyRef Name="C_FAPID" />
+    </Key>
+    <Property Name="FP_RES_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="FP_REMARK" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="FP_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_FAPID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="VW_FEEDBACK">
+    <Key>
+      <PropertyRef Name="FDB_NAME" />
+      <PropertyRef Name="FDB_EMAIL" />
+      <PropertyRef Name="FDB_QUESTION" />
+      <PropertyRef Name="FDB_MESSAGE" />
+      <PropertyRef Name="FDB_REPLIED" />
+      <PropertyRef Name="FDB_ID" />
+      <PropertyRef Name="C_FEDID" />
+    </Key>
+    <Property Name="FDB_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FDB_EMAIL" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FDB_QUESTION" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FDB_MESSAGE" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FDB_REPLIED" Type="Boolean" Nullable="false" />
+    <Property Name="FDB_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_FEDID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="VW_FEES">
+    <Key>
+      <PropertyRef Name="FS_REG_ID" />
+      <PropertyRef Name="FS_AMOUNT" />
+      <PropertyRef Name="FS_PAID" />
+      <PropertyRef Name="FS_LAST_DATE" />
+      <PropertyRef Name="FS_ID" />
+      <PropertyRef Name="C_FEEID" />
+    </Key>
+    <Property Name="FS_REG_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="FS_AMOUNT" Type="Decimal" Nullable="false" Precision="20" Scale="2" />
+    <Property Name="FS_PAID" Type="Boolean" Nullable="false" />
+    <Property Name="FS_LAST_DATE" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="FS_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_FEEID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="VW_MANAGER">
+    <Key>
+      <PropertyRef Name="MG_MGL_ID" />
+    </Key>
+    <Property Name="MG_MGL_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="MG_EXB_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="MG_FDB_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="VW_MANAGER_LOGIN">
+    <Key>
+      <PropertyRef Name="MG_NAME" />
+      <PropertyRef Name="MG_PASSWORD" />
+      <PropertyRef Name="MG_PROFILE" />
+      <PropertyRef Name="MG_ID" />
+      <PropertyRef Name="C_MALID" />
+    </Key>
+    <Property Name="MG_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MG_PASSWORD" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MG_PROFILE" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MG_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_MALID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="VW_PROGRAM">
+    <Key>
+      <PropertyRef Name="PR_NAME" />
+      <PropertyRef Name="PR_CREDITS" />
+      <PropertyRef Name="PR_ID" />
+      <PropertyRef Name="C_PROID" />
+    </Key>
+    <Property Name="PR_NAME" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="PR_CREDITS" Type="Int32" Nullable="false" />
+    <Property Name="PR_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_PROID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="VW_REGISTRATION">
+    <Key>
+      <PropertyRef Name="REG_STDL_ID" />
+      <PropertyRef Name="REG_DATE" />
+      <PropertyRef Name="REG_ID" />
+      <PropertyRef Name="C_RESID" />
+    </Key>
+    <Property Name="REG_STDL_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="REG_CR_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="REG_DATE" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="REG_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_RESID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="VW_RESULT">
+    <Key>
+      <PropertyRef Name="RES_COM_ID" />
+      <PropertyRef Name="RES_RES_ID" />
+      <PropertyRef Name="RES_MARKS" />
+      <PropertyRef Name="RES_PERCENTAGE" />
+      <PropertyRef Name="RES_WORK_ID" />
+      <PropertyRef Name="RES_DATE" />
+      <PropertyRef Name="RES_GRADE" />
+      <PropertyRef Name="RES_ID" />
+      <PropertyRef Name="C_REUID" />
+    </Key>
+    <Property Name="RES_COM_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="RES_RES_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="RES_MARKS" Type="Decimal" Nullable="false" Precision="3" Scale="2" />
+    <Property Name="RES_PERCENTAGE" Type="Decimal" Nullable="false" Precision="3" Scale="2" />
+    <Property Name="RES_WORK_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="RES_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="RES_GRADE" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="RES_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_REUID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="VW_SCHOLARSHIP">
+    <Key>
+      <PropertyRef Name="SCR_RES_ID" />
+      <PropertyRef Name="SCR_TYPE" />
+      <PropertyRef Name="SCR_AMMOUNT" />
+      <PropertyRef Name="SCR_ID" />
+      <PropertyRef Name="C_SCOID" />
+    </Key>
+    <Property Name="SCR_RES_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="SCR_TYPE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SCR_AMMOUNT" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="SCR_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_SCOID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="VW_SHOW_COMPITION_ALL_DATA_FROM_STUDENT_SIDE">
+    <Key>
+      <PropertyRef Name="COM_NAME" />
+      <PropertyRef Name="COM_START_DATE" />
+      <PropertyRef Name="COM_END_DATE" />
+      <PropertyRef Name="COM_STF_ID" />
+      <PropertyRef Name="COM_ID" />
+      <PropertyRef Name="C_COMID" />
+      <PropertyRef Name="WOC_REG_ID" />
+      <PropertyRef Name="WOC_COM_ID" />
+      <PropertyRef Name="WOC_WORK" />
+      <PropertyRef Name="WOC_ID" />
+      <PropertyRef Name="C_WORID" />
+      <PropertyRef Name="STF_NAME" />
+      <PropertyRef Name="STF_PROFILE" />
+    </Key>
+    <Property Name="COM_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="COM_START_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="COM_END_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="COM_STF_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="COM_AWARD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="COM_FORMAT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="COM_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_COMID" Type="Int32" Nullable="false" />
+    <Property Name="WOC_REG_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="WOC_COM_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="WOC_WORK" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="WOC_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_WORID" Type="Int32" Nullable="false" />
+    <Property Name="STF_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="STF_PROFILE" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="VW_SHOW_COMPITITION_ALL_DATA">
+    <Key>
+      <PropertyRef Name="COM_NAME" />
+      <PropertyRef Name="COM_START_DATE" />
+      <PropertyRef Name="COM_END_DATE" />
+      <PropertyRef Name="COM_STF_ID" />
+      <PropertyRef Name="COM_ID" />
+      <PropertyRef Name="C_COMID" />
+      <PropertyRef Name="WOC_REG_ID" />
+      <PropertyRef Name="WOC_COM_ID" />
+      <PropertyRef Name="WOC_WORK" />
+      <PropertyRef Name="WOC_ID" />
+      <PropertyRef Name="C_WORID" />
+      <PropertyRef Name="STF_ID" />
+      <PropertyRef Name="STF_NAME" />
+      <PropertyRef Name="STF_PROFILE" />
+    </Key>
+    <Property Name="COM_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="COM_START_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="COM_END_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="COM_STF_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="COM_AWARD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="COM_FORMAT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="COM_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_COMID" Type="Int32" Nullable="false" />
+    <Property Name="WOC_REG_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="WOC_COM_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="WOC_WORK" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="WOC_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_WORID" Type="Int32" Nullable="false" />
+    <Property Name="STF_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="STF_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="STF_PROFILE" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ADMIN_COM_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="VW_SHOW_COMPITITION_ALL_DATA_FROM_STAFF">
+    <Key>
+      <PropertyRef Name="COM_NAME" />
+      <PropertyRef Name="COM_START_DATE" />
+      <PropertyRef Name="COM_END_DATE" />
+      <PropertyRef Name="COM_STF_ID" />
+      <PropertyRef Name="COM_ID" />
+      <PropertyRef Name="C_COMID" />
+      <PropertyRef Name="WOC_REG_ID" />
+      <PropertyRef Name="WOC_COM_ID" />
+      <PropertyRef Name="WOC_WORK" />
+      <PropertyRef Name="WOC_ID" />
+      <PropertyRef Name="C_WORID" />
+      <PropertyRef Name="STF_ID" />
+      <PropertyRef Name="STF_NAME" />
+      <PropertyRef Name="STF_PROFILE" />
+    </Key>
+    <Property Name="COM_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="COM_START_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="COM_END_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="COM_STF_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="COM_AWARD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="COM_FORMAT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="COM_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_COMID" Type="Int32" Nullable="false" />
+    <Property Name="WOC_REG_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="WOC_COM_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="WOC_WORK" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="WOC_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_WORID" Type="Int32" Nullable="false" />
+    <Property Name="STF_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="STF_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="STF_PROFILE" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="VW_SHOW_CONTACT_ALL_DATA">
+    <Key>
+      <PropertyRef Name="CON_NAME" />
+      <PropertyRef Name="CON_EMAIL" />
+      <PropertyRef Name="CON_MESSAGE" />
+      <PropertyRef Name="CON_REPLIED" />
+      <PropertyRef Name="CON_ID" />
+      <PropertyRef Name="C_CONID" />
+    </Key>
+    <Property Name="ADMIN_CON_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CON_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CON_EMAIL" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CON_MESSAGE" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CON_REPLIED" Type="Boolean" Nullable="false" />
+    <Property Name="CON_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_CONID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VW_SHOW_EXIBITION_ALL_DATA_FROM_MANAGER_SIDE">
+    <Key>
+      <PropertyRef Name="EXB_NAME" />
+      <PropertyRef Name="EXB_START_DATE" />
+      <PropertyRef Name="EXB_END_DATE" />
+      <PropertyRef Name="EXB_TYPE" />
+      <PropertyRef Name="EXB_SCR_ID" />
+      <PropertyRef Name="EXB_ID" />
+      <PropertyRef Name="C_EXIID" />
+      <PropertyRef Name="STDL_ID" />
+      <PropertyRef Name="STDL_NAME" />
+      <PropertyRef Name="COM_ID" />
+      <PropertyRef Name="COM_NAME" />
+      <PropertyRef Name="WOC_REG_ID" />
+      <PropertyRef Name="WOC_COM_ID" />
+      <PropertyRef Name="WOC_WORK" />
+      <PropertyRef Name="WOC_ID" />
+      <PropertyRef Name="C_WORID" />
+      <PropertyRef Name="ATD_REG_ID" />
+      <PropertyRef Name="ATD_PRECENCE" />
+      <PropertyRef Name="ATD_DATE" />
+      <PropertyRef Name="ATD_ID" />
+      <PropertyRef Name="C_ATTID" />
+      <PropertyRef Name="SCR_RES_ID" />
+      <PropertyRef Name="SCR_TYPE" />
+      <PropertyRef Name="SCR_AMMOUNT" />
+      <PropertyRef Name="SCR_ID" />
+      <PropertyRef Name="C_SCOID" />
+    </Key>
+    <Property Name="EXB_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EXB_START_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EXB_END_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EXB_TYPE" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="EXB_SCR_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="EXB_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_EXIID" Type="Int32" Nullable="false" />
+    <Property Name="STDL_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="STDL_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="COM_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="COM_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="COM_AWARD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="COM_FORMAT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WOC_REG_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="WOC_COM_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="WOC_WORK" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="WOC_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_WORID" Type="Int32" Nullable="false" />
+    <Property Name="ATD_REG_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ATD_PRECENCE" Type="Boolean" Nullable="false" />
+    <Property Name="ATD_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ATD_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_ATTID" Type="Int32" Nullable="false" />
+    <Property Name="SCR_RES_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="SCR_TYPE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SCR_AMMOUNT" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="SCR_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_SCOID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VW_SHOW_EXIBITION_ALL_DATA_FROM_STUDENT_SIDE">
+    <Key>
+      <PropertyRef Name="EXB_NAME" />
+      <PropertyRef Name="EXB_START_DATE" />
+      <PropertyRef Name="EXB_END_DATE" />
+      <PropertyRef Name="EXB_TYPE" />
+      <PropertyRef Name="EXB_SCR_ID" />
+      <PropertyRef Name="EXB_ID" />
+      <PropertyRef Name="C_EXIID" />
+      <PropertyRef Name="STDL_ID" />
+      <PropertyRef Name="STDL_NAME" />
+      <PropertyRef Name="COM_ID" />
+      <PropertyRef Name="COM_NAME" />
+      <PropertyRef Name="WOC_REG_ID" />
+      <PropertyRef Name="WOC_COM_ID" />
+      <PropertyRef Name="WOC_WORK" />
+      <PropertyRef Name="WOC_ID" />
+      <PropertyRef Name="C_WORID" />
+      <PropertyRef Name="ATD_REG_ID" />
+      <PropertyRef Name="ATD_PRECENCE" />
+      <PropertyRef Name="ATD_DATE" />
+      <PropertyRef Name="ATD_ID" />
+      <PropertyRef Name="C_ATTID" />
+      <PropertyRef Name="SCR_RES_ID" />
+      <PropertyRef Name="SCR_TYPE" />
+      <PropertyRef Name="SCR_AMMOUNT" />
+      <PropertyRef Name="SCR_ID" />
+      <PropertyRef Name="C_SCOID" />
+    </Key>
+    <Property Name="EXB_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EXB_START_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EXB_END_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EXB_TYPE" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="EXB_SCR_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="EXB_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_EXIID" Type="Int32" Nullable="false" />
+    <Property Name="STDL_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="STDL_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="COM_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="COM_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="COM_AWARD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="COM_FORMAT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WOC_REG_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="WOC_COM_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="WOC_WORK" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="WOC_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_WORID" Type="Int32" Nullable="false" />
+    <Property Name="ATD_REG_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ATD_PRECENCE" Type="Boolean" Nullable="false" />
+    <Property Name="ATD_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ATD_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_ATTID" Type="Int32" Nullable="false" />
+    <Property Name="SCR_RES_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="SCR_TYPE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SCR_AMMOUNT" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="SCR_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_SCOID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VW_SHOW_FEEDBACK_ALL_DATA">
+    <Key>
+      <PropertyRef Name="FDB_NAME" />
+      <PropertyRef Name="FDB_EMAIL" />
+      <PropertyRef Name="FDB_QUESTION" />
+      <PropertyRef Name="FDB_MESSAGE" />
+      <PropertyRef Name="FDB_REPLIED" />
+      <PropertyRef Name="FDB_ID" />
+      <PropertyRef Name="C_FEDID" />
+    </Key>
+    <Property Name="FDB_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FDB_EMAIL" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FDB_QUESTION" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FDB_MESSAGE" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FDB_REPLIED" Type="Boolean" Nullable="false" />
+    <Property Name="FDB_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_FEDID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VW_SHOW_FEES_ALL_DATA">
+    <Key>
+      <PropertyRef Name="FS_REG_ID" />
+      <PropertyRef Name="FS_AMOUNT" />
+      <PropertyRef Name="FS_PAID" />
+      <PropertyRef Name="FS_LAST_DATE" />
+      <PropertyRef Name="FS_ID" />
+      <PropertyRef Name="C_FEEID" />
+      <PropertyRef Name="STDL_ID" />
+      <PropertyRef Name="STDL_NAME" />
+      <PropertyRef Name="STDL_PROFILE" />
+      <PropertyRef Name="REG_STDL_ID" />
+      <PropertyRef Name="REG_DATE" />
+      <PropertyRef Name="REG_ID" />
+      <PropertyRef Name="C_RESID" />
+    </Key>
+    <Property Name="FS_REG_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="FS_AMOUNT" Type="Decimal" Nullable="false" Precision="20" Scale="2" />
+    <Property Name="FS_PAID" Type="Boolean" Nullable="false" />
+    <Property Name="FS_LAST_DATE" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="FS_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_FEEID" Type="Int32" Nullable="false" />
+    <Property Name="STDL_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="STDL_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="STDL_PROFILE" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="REG_STDL_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="REG_CR_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="REG_DATE" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="REG_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_RESID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VW_SHOW_FEES_ALL_DATA_STUDENT_SIDE">
+    <Key>
+      <PropertyRef Name="FS_REG_ID" />
+      <PropertyRef Name="FS_AMOUNT" />
+      <PropertyRef Name="FS_PAID" />
+      <PropertyRef Name="FS_LAST_DATE" />
+      <PropertyRef Name="FS_ID" />
+      <PropertyRef Name="C_FEEID" />
+      <PropertyRef Name="STDL_ID" />
+      <PropertyRef Name="STDL_NAME" />
+      <PropertyRef Name="STDL_PROFILE" />
+    </Key>
+    <Property Name="FS_REG_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="FS_AMOUNT" Type="Decimal" Nullable="false" Precision="20" Scale="2" />
+    <Property Name="FS_PAID" Type="Boolean" Nullable="false" />
+    <Property Name="FS_LAST_DATE" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="FS_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_FEEID" Type="Int32" Nullable="false" />
+    <Property Name="STDL_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="STDL_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="STDL_PROFILE" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="VW_SHOW_FEES_DEFAULTER_ALL_DATA">
+    <Key>
+      <PropertyRef Name="DEF_FS_ID" />
+      <PropertyRef Name="DEF_PLENTY" />
+      <PropertyRef Name="REG_STDL_ID" />
+      <PropertyRef Name="REG_DATE" />
+      <PropertyRef Name="REG_ID" />
+      <PropertyRef Name="C_RESID" />
+      <PropertyRef Name="STDL_NAME" />
+      <PropertyRef Name="STDL_PASSWORD" />
+      <PropertyRef Name="STDL_PROFILE" />
+      <PropertyRef Name="STDL_ID" />
+      <PropertyRef Name="C_STLID" />
+      <PropertyRef Name="SD_STDL_ID" />
+      <PropertyRef Name="STD_PHONE" />
+      <PropertyRef Name="STD_DATE_OF_BIRTH" />
+    </Key>
+    <Property Name="DEF_FS_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DEF_PLENTY" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="REG_STDL_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="REG_CR_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="REG_DATE" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="REG_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_RESID" Type="Int32" Nullable="false" />
+    <Property Name="STDL_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="STDL_PASSWORD" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="STDL_PROFILE" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="STDL_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_STLID" Type="Int32" Nullable="false" />
+    <Property Name="SD_STDL_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="STD_ADDRESS" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="STD_EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="STD_PHONE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="STD_DATE_OF_BIRTH" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="VW_SHOW_RESULT_ALL_DATA">
+    <Key>
+      <PropertyRef Name="STDL_ID" />
+      <PropertyRef Name="STDL_NAME" />
+      <PropertyRef Name="COM_NAME" />
+      <PropertyRef Name="WOC_WORK" />
+      <PropertyRef Name="RES_COM_ID" />
+      <PropertyRef Name="RES_RES_ID" />
+      <PropertyRef Name="RES_MARKS" />
+      <PropertyRef Name="RES_PERCENTAGE" />
+      <PropertyRef Name="RES_WORK_ID" />
+      <PropertyRef Name="RES_DATE" />
+      <PropertyRef Name="RES_GRADE" />
+      <PropertyRef Name="RES_ID" />
+      <PropertyRef Name="C_REUID" />
+    </Key>
+    <Property Name="STDL_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="STDL_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="COM_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WOC_WORK" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RES_COM_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="RES_RES_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="RES_MARKS" Type="Decimal" Nullable="false" Precision="3" Scale="2" />
+    <Property Name="RES_PERCENTAGE" Type="Decimal" Nullable="false" Precision="3" Scale="2" />
+    <Property Name="RES_WORK_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="RES_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="RES_GRADE" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="RES_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_REUID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VW_SHOW_RESULT_ALL_DATA_FROM_STAFF">
+    <Key>
+      <PropertyRef Name="STDL_ID" />
+      <PropertyRef Name="STDL_NAME" />
+      <PropertyRef Name="COM_NAME" />
+      <PropertyRef Name="WOC_WORK" />
+      <PropertyRef Name="RES_COM_ID" />
+      <PropertyRef Name="RES_RES_ID" />
+      <PropertyRef Name="RES_MARKS" />
+      <PropertyRef Name="RES_PERCENTAGE" />
+      <PropertyRef Name="RES_WORK_ID" />
+      <PropertyRef Name="RES_DATE" />
+      <PropertyRef Name="RES_GRADE" />
+      <PropertyRef Name="RES_ID" />
+      <PropertyRef Name="C_REUID" />
+      <PropertyRef Name="CR_NAME" />
+      <PropertyRef Name="CR_CREDITS" />
+      <PropertyRef Name="CR_PR_ID" />
+      <PropertyRef Name="CR_ID" />
+      <PropertyRef Name="C_COUID" />
+    </Key>
+    <Property Name="STDL_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="STDL_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="COM_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WOC_WORK" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RES_COM_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="RES_RES_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="RES_MARKS" Type="Decimal" Nullable="false" Precision="3" Scale="2" />
+    <Property Name="RES_PERCENTAGE" Type="Decimal" Nullable="false" Precision="3" Scale="2" />
+    <Property Name="RES_WORK_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="RES_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="RES_GRADE" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="RES_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_REUID" Type="Int32" Nullable="false" />
+    <Property Name="CR_NAME" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CR_CREDITS" Type="Int32" Nullable="false" />
+    <Property Name="CR_PR_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CR_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_COUID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VW_SHOW_RESULT_ALL_DATA_FROM_STUDENT_SIDE">
+    <Key>
+      <PropertyRef Name="STDL_ID" />
+      <PropertyRef Name="STDL_NAME" />
+      <PropertyRef Name="COM_NAME" />
+      <PropertyRef Name="WOC_WORK" />
+      <PropertyRef Name="RES_COM_ID" />
+      <PropertyRef Name="RES_RES_ID" />
+      <PropertyRef Name="RES_MARKS" />
+      <PropertyRef Name="RES_PERCENTAGE" />
+      <PropertyRef Name="RES_WORK_ID" />
+      <PropertyRef Name="RES_DATE" />
+      <PropertyRef Name="RES_GRADE" />
+      <PropertyRef Name="RES_ID" />
+      <PropertyRef Name="C_REUID" />
+    </Key>
+    <Property Name="STDL_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="STDL_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="COM_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WOC_WORK" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RES_COM_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="RES_RES_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="RES_MARKS" Type="Decimal" Nullable="false" Precision="3" Scale="2" />
+    <Property Name="RES_PERCENTAGE" Type="Decimal" Nullable="false" Precision="3" Scale="2" />
+    <Property Name="RES_WORK_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="RES_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="RES_GRADE" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="RES_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_REUID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VW_SHOW_STAFF_ALL_DATA">
+    <Key>
+      <PropertyRef Name="STF_NAME" />
+      <PropertyRef Name="STF_PASSWORD" />
+      <PropertyRef Name="STF_PROFILE" />
+      <PropertyRef Name="STF_ID" />
+      <PropertyRef Name="C_STDID" />
+      <PropertyRef Name="ST_STFD_ID" />
+      <PropertyRef Name="STFD_EDUCATION" />
+      <PropertyRef Name="STFD_PHONE" />
+      <PropertyRef Name="STFD_DATE_OF_BIRTH" />
+      <PropertyRef Name="ASI_STFL_ID" />
+      <PropertyRef Name="ASI_DATE" />
+      <PropertyRef Name="ASI_ID" />
+      <PropertyRef Name="C_ASIID" />
+    </Key>
+    <Property Name="STF_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="STF_PASSWORD" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="STF_PROFILE" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="STF_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_STDID" Type="Int32" Nullable="false" />
+    <Property Name="ST_STFD_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="STFD_EDUCATION" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="STFD_ADDRESS" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="STFD_EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="STFD_PHONE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="STFD_DATE_OF_BIRTH" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="STFD_SALARY" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="ASI_STFL_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ASI_CR_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ASI_DATE" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ASI_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_ASIID" Type="Int32" Nullable="false" />
+    <Property Name="ADMIN_ASI_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="VW_SHOW_STAFF_ALL_DATA_FROM_STAFF">
+    <Key>
+      <PropertyRef Name="STF_NAME" />
+      <PropertyRef Name="STF_PASSWORD" />
+      <PropertyRef Name="STF_PROFILE" />
+      <PropertyRef Name="STF_ID" />
+      <PropertyRef Name="C_STDID" />
+      <PropertyRef Name="ST_STFD_ID" />
+      <PropertyRef Name="STFD_EDUCATION" />
+      <PropertyRef Name="STFD_PHONE" />
+      <PropertyRef Name="STFD_DATE_OF_BIRTH" />
+      <PropertyRef Name="ASI_STFL_ID" />
+      <PropertyRef Name="ASI_DATE" />
+      <PropertyRef Name="ASI_ID" />
+      <PropertyRef Name="C_ASIID" />
+    </Key>
+    <Property Name="STF_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="STF_PASSWORD" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="STF_PROFILE" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="STF_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_STDID" Type="Int32" Nullable="false" />
+    <Property Name="ST_STFD_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="STFD_EDUCATION" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="STFD_ADDRESS" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="STFD_EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="STFD_PHONE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="STFD_DATE_OF_BIRTH" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="STFD_SALARY" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="ASI_STFL_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ASI_CR_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ASI_DATE" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ASI_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_ASIID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VW_SHOW_STUDENT_ALL_DATA_FROM_SUDENT_SIDE">
+    <Key>
+      <PropertyRef Name="STDL_NAME" />
+      <PropertyRef Name="STDL_PASSWORD" />
+      <PropertyRef Name="STDL_PROFILE" />
+      <PropertyRef Name="STDL_ID" />
+      <PropertyRef Name="C_STLID" />
+      <PropertyRef Name="SD_STDL_ID" />
+      <PropertyRef Name="STD_PHONE" />
+      <PropertyRef Name="STD_DATE_OF_BIRTH" />
+      <PropertyRef Name="REG_STDL_ID" />
+      <PropertyRef Name="REG_DATE" />
+      <PropertyRef Name="REG_ID" />
+      <PropertyRef Name="C_RESID" />
+    </Key>
+    <Property Name="STDL_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="STDL_PASSWORD" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="STDL_PROFILE" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="STDL_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_STLID" Type="Int32" Nullable="false" />
+    <Property Name="SD_STDL_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="STD_ADDRESS" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="STD_EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="STD_PHONE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="STD_DATE_OF_BIRTH" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="REG_STDL_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="REG_CR_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="REG_DATE" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="REG_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_RESID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VW_SHOW_STUDENTS_ALL_DATA">
+    <Key>
+      <PropertyRef Name="STDL_NAME" />
+      <PropertyRef Name="STDL_PASSWORD" />
+      <PropertyRef Name="STDL_PROFILE" />
+      <PropertyRef Name="STDL_ID" />
+      <PropertyRef Name="C_STLID" />
+      <PropertyRef Name="SD_STDL_ID" />
+      <PropertyRef Name="STD_PHONE" />
+      <PropertyRef Name="STD_DATE_OF_BIRTH" />
+      <PropertyRef Name="REG_STDL_ID" />
+      <PropertyRef Name="REG_DATE" />
+      <PropertyRef Name="REG_ID" />
+      <PropertyRef Name="C_RESID" />
+    </Key>
+    <Property Name="STDL_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="STDL_PASSWORD" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="STDL_PROFILE" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="STDL_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_STLID" Type="Int32" Nullable="false" />
+    <Property Name="SD_STDL_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="STD_ADDRESS" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="STD_EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="STD_PHONE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="STD_DATE_OF_BIRTH" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="REG_STDL_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="REG_CR_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="REG_DATE" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="REG_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_RESID" Type="Int32" Nullable="false" />
+    <Property Name="ADMIN_REG_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="VW_SHOW_STUDENTS_ALL_DATA_FROM_STAFF">
+    <Key>
+      <PropertyRef Name="STDL_NAME" />
+      <PropertyRef Name="STDL_PASSWORD" />
+      <PropertyRef Name="STDL_PROFILE" />
+      <PropertyRef Name="STDL_ID" />
+      <PropertyRef Name="C_STLID" />
+      <PropertyRef Name="SD_STDL_ID" />
+      <PropertyRef Name="STD_PHONE" />
+      <PropertyRef Name="STD_DATE_OF_BIRTH" />
+      <PropertyRef Name="REG_STDL_ID" />
+      <PropertyRef Name="REG_DATE" />
+      <PropertyRef Name="REG_ID" />
+      <PropertyRef Name="C_RESID" />
+      <PropertyRef Name="CR_NAME" />
+      <PropertyRef Name="CR_CREDITS" />
+      <PropertyRef Name="CR_PR_ID" />
+      <PropertyRef Name="CR_ID" />
+      <PropertyRef Name="C_COUID" />
+    </Key>
+    <Property Name="STDL_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="STDL_PASSWORD" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="STDL_PROFILE" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="STDL_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_STLID" Type="Int32" Nullable="false" />
+    <Property Name="SD_STDL_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="STD_ADDRESS" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="STD_EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="STD_PHONE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="STD_DATE_OF_BIRTH" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="REG_STDL_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="REG_CR_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="REG_DATE" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="REG_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_RESID" Type="Int32" Nullable="false" />
+    <Property Name="CR_NAME" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CR_CREDITS" Type="Int32" Nullable="false" />
+    <Property Name="CR_PR_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CR_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_COUID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VW_STAFF_DETAILS">
+    <Key>
+      <PropertyRef Name="ST_STFD_ID" />
+      <PropertyRef Name="STFD_EDUCATION" />
+      <PropertyRef Name="STFD_PHONE" />
+      <PropertyRef Name="STFD_DATE_OF_BIRTH" />
+    </Key>
+    <Property Name="ST_STFD_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="STFD_EDUCATION" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="STFD_ADDRESS" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="STFD_EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="STFD_PHONE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="STFD_DATE_OF_BIRTH" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="STFD_SALARY" Type="Decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="VW_STAFF_LOGIN">
+    <Key>
+      <PropertyRef Name="STF_NAME" />
+      <PropertyRef Name="STF_PASSWORD" />
+      <PropertyRef Name="STF_PROFILE" />
+      <PropertyRef Name="STF_ID" />
+      <PropertyRef Name="C_STDID" />
+    </Key>
+    <Property Name="STF_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="STF_PASSWORD" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="STF_PROFILE" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="STF_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_STDID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="VW_STUDENT_DETAILS">
+    <Key>
+      <PropertyRef Name="SD_STDL_ID" />
+      <PropertyRef Name="STD_PHONE" />
+      <PropertyRef Name="STD_DATE_OF_BIRTH" />
+    </Key>
+    <Property Name="SD_STDL_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="STD_ADDRESS" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="STD_EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="STD_PHONE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="STD_DATE_OF_BIRTH" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="VW_STUDENT_LOGIN">
+    <Key>
+      <PropertyRef Name="STDL_NAME" />
+      <PropertyRef Name="STDL_PASSWORD" />
+      <PropertyRef Name="STDL_PROFILE" />
+      <PropertyRef Name="STDL_ID" />
+      <PropertyRef Name="C_STLID" />
+    </Key>
+    <Property Name="STDL_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="STDL_PASSWORD" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="STDL_PROFILE" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="STDL_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_STLID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="VW_WORK_OF_COMPITITION">
+    <Key>
+      <PropertyRef Name="WOC_REG_ID" />
+      <PropertyRef Name="WOC_COM_ID" />
+      <PropertyRef Name="WOC_WORK" />
+      <PropertyRef Name="WOC_ID" />
+      <PropertyRef Name="C_WORID" />
+    </Key>
+    <Property Name="WOC_REG_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="WOC_COM_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="WOC_WORK" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="WOC_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="C_WORID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <Association Name="FK_ASSIGNED_TO_COURSES">
+    <End Type="DB_Institute_Of_Fine_ArtsModel.COURS" Role="COURS" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="DB_Institute_Of_Fine_ArtsModel.ASSIGNED" Role="ASSIGNED" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COURS">
+        <PropertyRef Name="CR_ID" />
+      </Principal>
+      <Dependent Role="ASSIGNED">
+        <PropertyRef Name="ASI_CR_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ASSIGNED_TO_STAFF_LOGIN">
+    <End Type="DB_Institute_Of_Fine_ArtsModel.STAFF_LOGIN" Role="STAFF_LOGIN" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="DB_Institute_Of_Fine_ArtsModel.ASSIGNED" Role="ASSIGNED" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="STAFF_LOGIN">
+        <PropertyRef Name="STF_ID" />
+      </Principal>
+      <Dependent Role="ASSIGNED">
+        <PropertyRef Name="ASI_STFL_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ATTENDENCE_TO_REGISTRATION">
+    <End Type="DB_Institute_Of_Fine_ArtsModel.REGISTRATION" Role="REGISTRATION" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="DB_Institute_Of_Fine_ArtsModel.ATTENDENCE" Role="ATTENDENCE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REGISTRATION">
+        <PropertyRef Name="REG_ID" />
+      </Principal>
+      <Dependent Role="ATTENDENCE">
+        <PropertyRef Name="ATD_REG_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RESULT_TO_COMPITITION">
+    <End Type="DB_Institute_Of_Fine_ArtsModel.COMPITITION" Role="COMPITITION" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="DB_Institute_Of_Fine_ArtsModel.RESULT" Role="RESULT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COMPITITION">
+        <PropertyRef Name="COM_ID" />
+      </Principal>
+      <Dependent Role="RESULT">
+        <PropertyRef Name="RES_COM_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STAFF_LOGIN_TO_COMPITITION">
+    <End Type="DB_Institute_Of_Fine_ArtsModel.STAFF_LOGIN" Role="STAFF_LOGIN" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="DB_Institute_Of_Fine_ArtsModel.COMPITITION" Role="COMPITITION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="STAFF_LOGIN">
+        <PropertyRef Name="STF_ID" />
+      </Principal>
+      <Dependent Role="COMPITITION">
+        <PropertyRef Name="COM_STF_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WORK_OF_COMPITITION_TO_COMPITITION">
+    <End Type="DB_Institute_Of_Fine_ArtsModel.COMPITITION" Role="COMPITITION" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="DB_Institute_Of_Fine_ArtsModel.WORK_OF_COMPITITION" Role="WORK_OF_COMPITITION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COMPITITION">
+        <PropertyRef Name="COM_ID" />
+      </Principal>
+      <Dependent Role="WORK_OF_COMPITITION">
+        <PropertyRef Name="WOC_COM_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COURSES_TO_PROGRAM">
+    <End Type="DB_Institute_Of_Fine_ArtsModel.PROGRAM" Role="PROGRAM" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="DB_Institute_Of_Fine_ArtsModel.COURS" Role="COURS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROGRAM">
+        <PropertyRef Name="PR_ID" />
+      </Principal>
+      <Dependent Role="COURS">
+        <PropertyRef Name="CR_PR_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_REGISTRATION_TO_COURSES">
+    <End Type="DB_Institute_Of_Fine_ArtsModel.COURS" Role="COURS" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="DB_Institute_Of_Fine_ArtsModel.REGISTRATION" Role="REGISTRATION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COURS">
+        <PropertyRef Name="CR_ID" />
+      </Principal>
+      <Dependent Role="REGISTRATION">
+        <PropertyRef Name="REG_CR_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EXIBITION_TO_SCHOLARSHIP">
+    <End Type="DB_Institute_Of_Fine_ArtsModel.SCHOLARSHIP" Role="SCHOLARSHIP" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="DB_Institute_Of_Fine_ArtsModel.EXIBITION" Role="EXIBITION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SCHOLARSHIP">
+        <PropertyRef Name="SCR_ID" />
+      </Principal>
+      <Dependent Role="EXIBITION">
+        <PropertyRef Name="EXB_SCR_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MANAGER_TO_EXIBITION">
+    <End Type="DB_Institute_Of_Fine_ArtsModel.EXIBITION" Role="EXIBITION" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="DB_Institute_Of_Fine_ArtsModel.MANAGER" Role="MANAGER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EXIBITION">
+        <PropertyRef Name="EXB_ID" />
+      </Principal>
+      <Dependent Role="MANAGER">
+        <PropertyRef Name="MG_EXB_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FAILED_PROJECTS_TO_RESULT">
+    <End Type="DB_Institute_Of_Fine_ArtsModel.RESULT" Role="RESULT" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="DB_Institute_Of_Fine_ArtsModel.FAILED_PROJECTS" Role="FAILED_PROJECTS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RESULT">
+        <PropertyRef Name="RES_ID" />
+      </Principal>
+      <Dependent Role="FAILED_PROJECTS">
+        <PropertyRef Name="FP_RES_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MANAGER_TO_FEEDBACK">
+    <End Type="DB_Institute_Of_Fine_ArtsModel.FEEDBACK" Role="FEEDBACK" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="DB_Institute_Of_Fine_ArtsModel.MANAGER" Role="MANAGER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FEEDBACK">
+        <PropertyRef Name="FDB_ID" />
+      </Principal>
+      <Dependent Role="MANAGER">
+        <PropertyRef Name="MG_FDB_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DEFAULTER_TO_FEES">
+    <End Type="DB_Institute_Of_Fine_ArtsModel.FEE" Role="FEE" Multiplicity="1" />
+    <End Type="DB_Institute_Of_Fine_ArtsModel.DEFAULTER" Role="DEFAULTER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FEE">
+        <PropertyRef Name="FS_ID" />
+      </Principal>
+      <Dependent Role="DEFAULTER">
+        <PropertyRef Name="DEF_FS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FEES_TO_REGISTRATION">
+    <End Type="DB_Institute_Of_Fine_ArtsModel.REGISTRATION" Role="REGISTRATION" Multiplicity="1" />
+    <End Type="DB_Institute_Of_Fine_ArtsModel.FEE" Role="FEE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REGISTRATION">
+        <PropertyRef Name="REG_ID" />
+      </Principal>
+      <Dependent Role="FEE">
+        <PropertyRef Name="FS_REG_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MANAGER_TO_MANAGER_LOGIN">
+    <End Type="DB_Institute_Of_Fine_ArtsModel.MANAGER_LOGIN" Role="MANAGER_LOGIN" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="DB_Institute_Of_Fine_ArtsModel.MANAGER" Role="MANAGER" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="MANAGER_LOGIN">
+        <PropertyRef Name="MG_ID" />
+      </Principal>
+      <Dependent Role="MANAGER">
+        <PropertyRef Name="MG_MGL_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_REGISTRATION_TO_STUDENT_LOGIN">
+    <End Type="DB_Institute_Of_Fine_ArtsModel.STUDENT_LOGIN" Role="STUDENT_LOGIN" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="DB_Institute_Of_Fine_ArtsModel.REGISTRATION" Role="REGISTRATION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="STUDENT_LOGIN">
+        <PropertyRef Name="STDL_ID" />
+      </Principal>
+      <Dependent Role="REGISTRATION">
+        <PropertyRef Name="REG_STDL_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RESULT_TO_REGISTRATION">
+    <End Type="DB_Institute_Of_Fine_ArtsModel.REGISTRATION" Role="REGISTRATION" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="DB_Institute_Of_Fine_ArtsModel.RESULT" Role="RESULT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REGISTRATION">
+        <PropertyRef Name="REG_ID" />
+      </Principal>
+      <Dependent Role="RESULT">
+        <PropertyRef Name="RES_RES_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WORK_OF_COMPITITION_TO_REGISTRATION">
+    <End Type="DB_Institute_Of_Fine_ArtsModel.REGISTRATION" Role="REGISTRATION" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="DB_Institute_Of_Fine_ArtsModel.WORK_OF_COMPITITION" Role="WORK_OF_COMPITITION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REGISTRATION">
+        <PropertyRef Name="REG_ID" />
+      </Principal>
+      <Dependent Role="WORK_OF_COMPITITION">
+        <PropertyRef Name="WOC_REG_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RESULT_TO_WORK_OF_COMPITITION">
+    <End Type="DB_Institute_Of_Fine_ArtsModel.WORK_OF_COMPITITION" Role="WORK_OF_COMPITITION" Multiplicity="1" />
+    <End Type="DB_Institute_Of_Fine_ArtsModel.RESULT" Role="RESULT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WORK_OF_COMPITITION">
+        <PropertyRef Name="WOC_ID" />
+      </Principal>
+      <Dependent Role="RESULT">
+        <PropertyRef Name="RES_WORK_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SCHOLARSHIP_TO_RESULT">
+    <End Type="DB_Institute_Of_Fine_ArtsModel.RESULT" Role="RESULT" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="DB_Institute_Of_Fine_ArtsModel.SCHOLARSHIP" Role="SCHOLARSHIP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RESULT">
+        <PropertyRef Name="RES_ID" />
+      </Principal>
+      <Dependent Role="SCHOLARSHIP">
+        <PropertyRef Name="SCR_RES_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STAFF_DETIALS_TO_STAFF_LOGIN">
+    <End Type="DB_Institute_Of_Fine_ArtsModel.STAFF_LOGIN" Role="STAFF_LOGIN" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="DB_Institute_Of_Fine_ArtsModel.STAFF_DETAILS" Role="STAFF_DETAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="STAFF_LOGIN">
+        <PropertyRef Name="STF_ID" />
+      </Principal>
+      <Dependent Role="STAFF_DETAILS">
+        <PropertyRef Name="ST_STFD_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STUDENT_DETIALS_TO_STUDENT_LOGIN">
+    <End Type="DB_Institute_Of_Fine_ArtsModel.STUDENT_LOGIN" Role="STUDENT_LOGIN" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="DB_Institute_Of_Fine_ArtsModel.STUDENT_DETAILS" Role="STUDENT_DETAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="STUDENT_LOGIN">
+        <PropertyRef Name="STDL_ID" />
+      </Principal>
+      <Dependent Role="STUDENT_DETAILS">
+        <PropertyRef Name="SD_STDL_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="SP_ADMIN_LOGIN_Result">
+    <Property Type="String" Name="AD_NAME" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="AD_PASSWORD" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="AD_PROFILE" Nullable="false" />
+    <Property Type="String" Name="AD_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_ADID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_ADMINISTRATION_Result">
+    <Property Type="String" Name="ADMIN_AD_ID" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="ADMIN_REG_ID" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="ADMIN_ASI_ID" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="ADMIN_COM_ID" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="ADMIN_CON_ID" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="SP_ASSIGNED_Result">
+    <Property Type="String" Name="ASI_STFL_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="ASI_CR_ID" Nullable="true" MaxLength="20" />
+    <Property Type="DateTime" Name="ASI_DATE" Nullable="false" />
+    <Property Type="String" Name="ASI_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_ASIID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_ATTENDENCE_Result">
+    <Property Type="String" Name="ATD_REG_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Boolean" Name="ATD_PRECENCE" Nullable="false" />
+    <Property Type="DateTime" Name="ATD_DATE" Nullable="false" Precision="23" />
+    <Property Type="String" Name="ATD_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_ATTID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_COMPITITION_Result">
+    <Property Type="String" Name="COM_NAME" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="COM_START_DATE" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="COM_END_DATE" Nullable="false" Precision="23" />
+    <Property Type="String" Name="COM_STF_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="COM_AWARD" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="COM_FORMAT" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="COM_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_COMID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_CONTACT_Result">
+    <Property Type="String" Name="CON_NAME" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="CON_EMAIL" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="CON_MESSAGE" Nullable="false" MaxLength="100" />
+    <Property Type="Boolean" Name="CON_REPLIED" Nullable="false" />
+    <Property Type="String" Name="CON_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_CONID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_COURSES_Result">
+    <Property Type="String" Name="CR_NAME" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="CR_CREDITS" Nullable="false" />
+    <Property Type="String" Name="CR_PR_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="CR_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_COUID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_DEFAULTER_Result">
+    <Property Type="String" Name="DEF_FS_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Decimal" Name="DEF_PLENTY" Nullable="false" Precision="10" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="SP_EXIBITION_Result">
+    <Property Type="String" Name="EXB_NAME" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="EXB_START_DATE" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="EXB_END_DATE" Nullable="false" Precision="23" />
+    <Property Type="String" Name="EXB_TYPE" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="EXB_SCR_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="EXB_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_EXIID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_FAILED_PROJECTS_Result">
+    <Property Type="String" Name="FP_RES_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="FP_REMARK" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="FP_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_FAPID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_FEEDBACK_Result">
+    <Property Type="String" Name="FDB_NAME" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="FDB_EMAIL" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="FDB_QUESTION" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="FDB_MESSAGE" Nullable="false" MaxLength="100" />
+    <Property Type="Boolean" Name="FDB_REPLIED" Nullable="false" />
+    <Property Type="String" Name="FDB_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_FEDID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_FEES_Result">
+    <Property Type="String" Name="FS_REG_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Decimal" Name="FS_AMOUNT" Nullable="false" Precision="20" Scale="2" />
+    <Property Type="Boolean" Name="FS_PAID" Nullable="false" />
+    <Property Type="DateTime" Name="FS_LAST_DATE" Nullable="false" />
+    <Property Type="String" Name="FS_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_FEEID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_MANAGER_Result">
+    <Property Type="String" Name="MG_MGL_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="MG_EXB_ID" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="MG_FDB_ID" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="SP_MANAGER_LOGIN_Result">
+    <Property Type="String" Name="MG_NAME" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="MG_PASSWORD" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="MG_PROFILE" Nullable="false" />
+    <Property Type="String" Name="MG_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_MALID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_PROGRAM_Result">
+    <Property Type="String" Name="PR_NAME" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="PR_CREDITS" Nullable="false" />
+    <Property Type="String" Name="PR_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_PROID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_REGISTRATION_Result">
+    <Property Type="String" Name="REG_STDL_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="REG_CR_ID" Nullable="true" MaxLength="20" />
+    <Property Type="DateTime" Name="REG_DATE" Nullable="false" />
+    <Property Type="String" Name="REG_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_RESID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_RESULT_Result">
+    <Property Type="String" Name="RES_COM_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="RES_RES_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Decimal" Name="RES_MARKS" Nullable="false" Precision="3" Scale="2" />
+    <Property Type="Decimal" Name="RES_PERCENTAGE" Nullable="false" Precision="3" Scale="2" />
+    <Property Type="String" Name="RES_WORK_ID" Nullable="false" MaxLength="20" />
+    <Property Type="DateTime" Name="RES_DATE" Nullable="false" Precision="23" />
+    <Property Type="String" Name="RES_GRADE" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="RES_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_REUID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_SCHOLARSHIP_Result">
+    <Property Type="String" Name="SCR_RES_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="SCR_TYPE" Nullable="false" MaxLength="50" />
+    <Property Type="Decimal" Name="SCR_AMMOUNT" Nullable="false" Precision="10" Scale="2" />
+    <Property Type="String" Name="SCR_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_SCOID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_SHOW_COMPITION_ALL_DATA_FROM_STUDENT_SIDE_Result">
+    <Property Type="String" Name="COM_NAME" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="COM_START_DATE" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="COM_END_DATE" Nullable="false" Precision="23" />
+    <Property Type="String" Name="COM_STF_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="COM_AWARD" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="COM_FORMAT" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="COM_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_COMID" Nullable="false" />
+    <Property Type="String" Name="WOC_REG_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="WOC_COM_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="WOC_WORK" Nullable="false" />
+    <Property Type="String" Name="WOC_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_WORID" Nullable="false" />
+    <Property Type="String" Name="STF_NAME" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="STF_PROFILE" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_SHOW_COMPITITION_ALL_DATA_Result">
+    <Property Type="String" Name="COM_NAME" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="COM_START_DATE" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="COM_END_DATE" Nullable="false" Precision="23" />
+    <Property Type="String" Name="COM_STF_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="COM_AWARD" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="COM_FORMAT" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="COM_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_COMID" Nullable="false" />
+    <Property Type="String" Name="WOC_REG_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="WOC_COM_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="WOC_WORK" Nullable="false" />
+    <Property Type="String" Name="WOC_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_WORID" Nullable="false" />
+    <Property Type="String" Name="STF_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="STF_NAME" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="STF_PROFILE" Nullable="false" />
+    <Property Type="String" Name="ADMIN_COM_ID" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="SP_SHOW_COMPITITION_ALL_DATA_FROM_STAFF_Result">
+    <Property Type="String" Name="COM_NAME" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="COM_START_DATE" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="COM_END_DATE" Nullable="false" Precision="23" />
+    <Property Type="String" Name="COM_STF_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="COM_AWARD" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="COM_FORMAT" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="COM_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_COMID" Nullable="false" />
+    <Property Type="String" Name="WOC_REG_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="WOC_COM_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="WOC_WORK" Nullable="false" />
+    <Property Type="String" Name="WOC_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_WORID" Nullable="false" />
+    <Property Type="String" Name="STF_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="STF_NAME" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="STF_PROFILE" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_SHOW_CONTACT_ALL_DATA_Result">
+    <Property Type="String" Name="ADMIN_CON_ID" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="CON_NAME" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="CON_EMAIL" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="CON_MESSAGE" Nullable="false" MaxLength="100" />
+    <Property Type="Boolean" Name="CON_REPLIED" Nullable="false" />
+    <Property Type="String" Name="CON_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_CONID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_SHOW_EXIBITION_ALL_DATA_FROM_MANAGER_SIDE_Result">
+    <Property Type="String" Name="EXB_NAME" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="EXB_START_DATE" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="EXB_END_DATE" Nullable="false" Precision="23" />
+    <Property Type="String" Name="EXB_TYPE" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="EXB_SCR_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="EXB_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_EXIID" Nullable="false" />
+    <Property Type="String" Name="STDL_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="STDL_NAME" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="COM_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="COM_NAME" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="COM_AWARD" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="COM_FORMAT" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="WOC_REG_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="WOC_COM_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="WOC_WORK" Nullable="false" />
+    <Property Type="String" Name="WOC_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_WORID" Nullable="false" />
+    <Property Type="String" Name="ATD_REG_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Boolean" Name="ATD_PRECENCE" Nullable="false" />
+    <Property Type="DateTime" Name="ATD_DATE" Nullable="false" Precision="23" />
+    <Property Type="String" Name="ATD_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_ATTID" Nullable="false" />
+    <Property Type="String" Name="SCR_RES_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="SCR_TYPE" Nullable="false" MaxLength="50" />
+    <Property Type="Decimal" Name="SCR_AMMOUNT" Nullable="false" Precision="10" Scale="2" />
+    <Property Type="String" Name="SCR_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_SCOID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_SHOW_EXIBITION_ALL_DATA_FROM_STUDENT_SIDE_Result">
+    <Property Type="String" Name="EXB_NAME" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="EXB_START_DATE" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="EXB_END_DATE" Nullable="false" Precision="23" />
+    <Property Type="String" Name="EXB_TYPE" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="EXB_SCR_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="EXB_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_EXIID" Nullable="false" />
+    <Property Type="String" Name="STDL_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="STDL_NAME" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="COM_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="COM_NAME" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="COM_AWARD" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="COM_FORMAT" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="WOC_REG_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="WOC_COM_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="WOC_WORK" Nullable="false" />
+    <Property Type="String" Name="WOC_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_WORID" Nullable="false" />
+    <Property Type="String" Name="ATD_REG_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Boolean" Name="ATD_PRECENCE" Nullable="false" />
+    <Property Type="DateTime" Name="ATD_DATE" Nullable="false" Precision="23" />
+    <Property Type="String" Name="ATD_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_ATTID" Nullable="false" />
+    <Property Type="String" Name="SCR_RES_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="SCR_TYPE" Nullable="false" MaxLength="50" />
+    <Property Type="Decimal" Name="SCR_AMMOUNT" Nullable="false" Precision="10" Scale="2" />
+    <Property Type="String" Name="SCR_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_SCOID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_SHOW_FEEDBACK_ALL_DATA_Result">
+    <Property Type="String" Name="FDB_NAME" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="FDB_EMAIL" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="FDB_QUESTION" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="FDB_MESSAGE" Nullable="false" MaxLength="100" />
+    <Property Type="Boolean" Name="FDB_REPLIED" Nullable="false" />
+    <Property Type="String" Name="FDB_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_FEDID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_SHOW_FEES_ALL_DATA_Result">
+    <Property Type="String" Name="FS_REG_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Decimal" Name="FS_AMOUNT" Nullable="false" Precision="20" Scale="2" />
+    <Property Type="Boolean" Name="FS_PAID" Nullable="false" />
+    <Property Type="DateTime" Name="FS_LAST_DATE" Nullable="false" />
+    <Property Type="String" Name="FS_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_FEEID" Nullable="false" />
+    <Property Type="String" Name="STDL_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="STDL_NAME" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="STDL_PROFILE" Nullable="false" />
+    <Property Type="String" Name="REG_STDL_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="REG_CR_ID" Nullable="true" MaxLength="20" />
+    <Property Type="DateTime" Name="REG_DATE" Nullable="false" />
+    <Property Type="String" Name="REG_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_RESID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_SHOW_FEES_ALL_DATA_STUDENT_SIDE_Result">
+    <Property Type="String" Name="FS_REG_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Decimal" Name="FS_AMOUNT" Nullable="false" Precision="20" Scale="2" />
+    <Property Type="Boolean" Name="FS_PAID" Nullable="false" />
+    <Property Type="DateTime" Name="FS_LAST_DATE" Nullable="false" />
+    <Property Type="String" Name="FS_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_FEEID" Nullable="false" />
+    <Property Type="String" Name="STDL_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="STDL_NAME" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="STDL_PROFILE" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_SHOW_RESULT_ALL_DATA_Result">
+    <Property Type="String" Name="STDL_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="STDL_NAME" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="COM_NAME" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="WOC_WORK" Nullable="false" />
+    <Property Type="String" Name="RES_COM_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="RES_RES_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Decimal" Name="RES_MARKS" Nullable="false" Precision="3" Scale="2" />
+    <Property Type="Decimal" Name="RES_PERCENTAGE" Nullable="false" Precision="3" Scale="2" />
+    <Property Type="String" Name="RES_WORK_ID" Nullable="false" MaxLength="20" />
+    <Property Type="DateTime" Name="RES_DATE" Nullable="false" Precision="23" />
+    <Property Type="String" Name="RES_GRADE" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="RES_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_REUID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_SHOW_RESULT_ALL_DATA_FROM_STAFF_Result">
+    <Property Type="String" Name="STDL_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="STDL_NAME" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="COM_NAME" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="WOC_WORK" Nullable="false" />
+    <Property Type="String" Name="RES_COM_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="RES_RES_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Decimal" Name="RES_MARKS" Nullable="false" Precision="3" Scale="2" />
+    <Property Type="Decimal" Name="RES_PERCENTAGE" Nullable="false" Precision="3" Scale="2" />
+    <Property Type="String" Name="RES_WORK_ID" Nullable="false" MaxLength="20" />
+    <Property Type="DateTime" Name="RES_DATE" Nullable="false" Precision="23" />
+    <Property Type="String" Name="RES_GRADE" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="RES_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_REUID" Nullable="false" />
+    <Property Type="String" Name="CR_NAME" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="CR_CREDITS" Nullable="false" />
+    <Property Type="String" Name="CR_PR_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="CR_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_COUID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_SHOW_RESULT_ALL_DATA_FROM_STUDENT_SIDE_Result">
+    <Property Type="String" Name="STDL_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="STDL_NAME" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="COM_NAME" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="WOC_WORK" Nullable="false" />
+    <Property Type="String" Name="RES_COM_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="RES_RES_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Decimal" Name="RES_MARKS" Nullable="false" Precision="3" Scale="2" />
+    <Property Type="Decimal" Name="RES_PERCENTAGE" Nullable="false" Precision="3" Scale="2" />
+    <Property Type="String" Name="RES_WORK_ID" Nullable="false" MaxLength="20" />
+    <Property Type="DateTime" Name="RES_DATE" Nullable="false" Precision="23" />
+    <Property Type="String" Name="RES_GRADE" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="RES_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_REUID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_SHOW_STAFF_ALL_DATA_Result">
+    <Property Type="String" Name="STF_NAME" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="STF_PASSWORD" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="STF_PROFILE" Nullable="false" />
+    <Property Type="String" Name="STF_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_STDID" Nullable="false" />
+    <Property Type="String" Name="ST_STFD_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="STFD_EDUCATION" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="STFD_ADDRESS" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="STFD_EMAIL" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="STFD_PHONE" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="STFD_DATE_OF_BIRTH" Nullable="false" />
+    <Property Type="Decimal" Name="STFD_SALARY" Nullable="true" Precision="10" Scale="2" />
+    <Property Type="String" Name="ASI_STFL_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="ASI_CR_ID" Nullable="true" MaxLength="20" />
+    <Property Type="DateTime" Name="ASI_DATE" Nullable="false" />
+    <Property Type="String" Name="ASI_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_ASIID" Nullable="false" />
+    <Property Type="String" Name="ADMIN_ASI_ID" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="SP_SHOW_STAFF_ALL_DATA_FROM_STAFF_Result">
+    <Property Type="String" Name="STF_NAME" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="STF_PASSWORD" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="STF_PROFILE" Nullable="false" />
+    <Property Type="String" Name="STF_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_STDID" Nullable="false" />
+    <Property Type="String" Name="ST_STFD_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="STFD_EDUCATION" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="STFD_ADDRESS" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="STFD_EMAIL" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="STFD_PHONE" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="STFD_DATE_OF_BIRTH" Nullable="false" />
+    <Property Type="Decimal" Name="STFD_SALARY" Nullable="true" Precision="10" Scale="2" />
+    <Property Type="String" Name="ASI_STFL_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="ASI_CR_ID" Nullable="true" MaxLength="20" />
+    <Property Type="DateTime" Name="ASI_DATE" Nullable="false" />
+    <Property Type="String" Name="ASI_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_ASIID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_SHOW_STUDENT_ALL_DATA_FROM_SUDENT_SIDE_Result">
+    <Property Type="String" Name="STDL_NAME" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="STDL_PASSWORD" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="STDL_PROFILE" Nullable="false" />
+    <Property Type="String" Name="STDL_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_STLID" Nullable="false" />
+    <Property Type="String" Name="SD_STDL_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="STD_ADDRESS" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="STD_EMAIL" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="STD_PHONE" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="STD_DATE_OF_BIRTH" Nullable="false" />
+    <Property Type="String" Name="REG_STDL_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="REG_CR_ID" Nullable="true" MaxLength="20" />
+    <Property Type="DateTime" Name="REG_DATE" Nullable="false" />
+    <Property Type="String" Name="REG_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_RESID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_SHOW_STUDENTS_ALL_DATA_Result">
+    <Property Type="String" Name="STDL_NAME" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="STDL_PASSWORD" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="STDL_PROFILE" Nullable="false" />
+    <Property Type="String" Name="STDL_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_STLID" Nullable="false" />
+    <Property Type="String" Name="SD_STDL_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="STD_ADDRESS" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="STD_EMAIL" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="STD_PHONE" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="STD_DATE_OF_BIRTH" Nullable="false" />
+    <Property Type="String" Name="REG_STDL_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="REG_CR_ID" Nullable="true" MaxLength="20" />
+    <Property Type="DateTime" Name="REG_DATE" Nullable="false" />
+    <Property Type="String" Name="REG_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_RESID" Nullable="false" />
+    <Property Type="String" Name="ADMIN_REG_ID" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="SP_SHOW_STUDENTS_ALL_DATA_FROM_STAFF_Result">
+    <Property Type="String" Name="STDL_NAME" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="STDL_PASSWORD" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="STDL_PROFILE" Nullable="false" />
+    <Property Type="String" Name="STDL_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_STLID" Nullable="false" />
+    <Property Type="String" Name="SD_STDL_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="STD_ADDRESS" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="STD_EMAIL" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="STD_PHONE" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="STD_DATE_OF_BIRTH" Nullable="false" />
+    <Property Type="String" Name="REG_STDL_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="REG_CR_ID" Nullable="true" MaxLength="20" />
+    <Property Type="DateTime" Name="REG_DATE" Nullable="false" />
+    <Property Type="String" Name="REG_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_RESID" Nullable="false" />
+    <Property Type="String" Name="CR_NAME" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="CR_CREDITS" Nullable="false" />
+    <Property Type="String" Name="CR_PR_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="CR_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_COUID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_STAFF_DETAILS_Result">
+    <Property Type="String" Name="ST_STFD_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="STFD_EDUCATION" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="STFD_ADDRESS" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="STFD_EMAIL" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="STFD_PHONE" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="STFD_DATE_OF_BIRTH" Nullable="false" />
+    <Property Type="Decimal" Name="STFD_SALARY" Nullable="true" Precision="10" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="SP_STAFF_LOGIN_Result">
+    <Property Type="String" Name="STF_NAME" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="STF_PASSWORD" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="STF_PROFILE" Nullable="false" />
+    <Property Type="String" Name="STF_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_STDID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_STUDENT_DETAILS_Result">
+    <Property Type="String" Name="SD_STDL_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="STD_ADDRESS" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="STD_EMAIL" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="STD_PHONE" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="STD_DATE_OF_BIRTH" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_STUDENT_LOGIN_Result">
+    <Property Type="String" Name="STDL_NAME" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="STDL_PASSWORD" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="STDL_PROFILE" Nullable="false" />
+    <Property Type="String" Name="STDL_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_STLID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_WORK_OF_COMPITITION_Result">
+    <Property Type="String" Name="WOC_REG_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="WOC_COM_ID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="WOC_WORK" Nullable="false" />
+    <Property Type="String" Name="WOC_ID" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="C_WORID" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="ADMINISTRATION">
+    <Key>
+      <PropertyRef Name="ADMINSTRAION_ID" />
+    </Key>
+    <Property Name="ADMIN_AD_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ADMIN_REG_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ADMIN_ASI_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ADMIN_COM_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ADMIN_CON_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ADMINSTRAION_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+</Schema>

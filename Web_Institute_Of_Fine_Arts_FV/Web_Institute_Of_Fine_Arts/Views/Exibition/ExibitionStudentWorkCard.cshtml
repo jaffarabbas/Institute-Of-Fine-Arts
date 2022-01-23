@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Web_Institute_Of_Fine_Arts_Database_Models.VW_SHOW_ALL_EXIBITION_DATA_MODEL>
+
+@foreach (var item in Model)
+{
+    <div class="exeCardBody col-lg-4 col-md-4 col-sm-6 col-12">
+        <a href="" style="text-decoration:none" class="cardAnchor">
+            <div class="Course_cards">
+                <div class="exeCard_header">
+                    <a type="button" data-toggle="modal" data-target="#exampleModal">
+                        <img class="exeHeaderImg" src="@Url.Content(item.STDL_PROFILE)" height="30" width="30px" alt="Not found" />
+                    </a>
+                    <p class="exeCardCompitionName">@Html.DisplayFor(modelItem => item.STDL_NAME)</p>
+                </div>
+                <div class="exeCardCompition">
+                    <div class="card-body">
+                        <div>
+                            <a type="button" data-toggle="modal" data-target="#exampleModal">
+                                <img src="@Url.Content(item.WOC_WORK)" height="200px" width="320px" alt="Not found" />
+                            </a>
+                            <p class="exeCardCompitionDeitals">Exibition : @Html.DisplayFor(modelItem => item.EXB_NAME)</p>
+                            <p class="exeCardCompitionDeitals">Student Email : @Html.DisplayFor(modelItem => item.STD_EMAIL)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="exeCard_Footer">
+                    <p class="exeFooterItem">@Html.DisplayFor(modelItem => item.PRICE) RS</p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+
+    <!--Bootstrap modal -->
+    <div class="modal fade"
+         id="exampleModal"
+         tabindex="-1"
+         role="dialog"
+         aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+
+        <div class="modal-dialog"
+             role="document">
+            <div class="modal-content">
+                <!-- Modal heading -->
+                <div class="modal-header">
+                    <h5 class="modal-title"
+                        id="exampleModalLabel">
+                        Exibition Work
+                    </h5>
+                    <button type="button"
+                            class="close"
+                            data-dismiss="modal"
+                            aria-label="Close">
+                        <span aria-hidden="true">
+                            ×
+                        </span>
+                    </button>
+                </div>
+
+                <!-- Modal body with image -->
+                <div class="modal-body text-center">
+                    <img src="@Url.Content(item.WOC_WORK)" height="500px" width="500px" alt="Not found" />
+                </div>
+            </div>
+        </div>
+    </div>
+}

@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "30e4aa3c-25cf-4b6f-8918-879829c911c3": {
+      "ProjectGuid": "30e4aa3c-25cf-4b6f-8918-879829c911c3",
+      "DisplayName": "Web_Institute_Of_Fine_Arts",
+      "ColorIndex": 0
+    },
+    "b7d318e3-35e7-4932-af01-f497bdf022a5": {
+      "ProjectGuid": "b7d318e3-35e7-4932-af01-f497bdf022a5",
+      "DisplayName": "Web_Institute_Of_Fine_Arts_Database_Layer",
+      "ColorIndex": 1
+    },
+    "eaa0654f-b572-4bab-a762-33b0d1423bfe": {
+      "ProjectGuid": "eaa0654f-b572-4bab-a762-33b0d1423bfe",
+      "DisplayName": "Web_Institute_Of_Fine_Arts_Database_Models",
+      "ColorIndex": 2
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 3
+}

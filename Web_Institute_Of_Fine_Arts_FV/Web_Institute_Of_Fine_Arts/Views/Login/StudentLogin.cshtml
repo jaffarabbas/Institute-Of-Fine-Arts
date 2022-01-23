@@ -1,0 +1,23 @@
+﻿@model Web_Institute_Of_Fine_Arts_Database_Models.STUDENT_LOGIN_MODEL
+
+
+@using (Html.BeginForm("StudentLogin", "Login", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <table class="form-login">
+
+        <tr><div id="cros3" onclick="mypop3()"><i class="fa fa-close"></i></div></tr>
+        <tr><h4 class="text-center" id="man3"><b>Student Login</b></h4></tr>
+        <tr>
+            @Html.TextBoxFor(model => model.STDL_NAME, new { @class = "form-control", id = "login-name3" })
+            @Html.ValidationMessageFor(model => model.STDL_NAME, "", new { @class = "text-danger" })
+        </tr>
+
+        <tr>
+            @Html.EditorFor(model => model.STDL_PASSWORD, new { htmlAttributes = new { @class = "form-control", id = "login-pass3" } })
+            @Html.ValidationMessageFor(model => model.STDL_PASSWORD, "", new { @class = "text-danger" })
+        </tr>
+        <tr><input type="submit" value="Submit" id="login-btn3" class="form-control" /></tr>
+    </table>
+}

@@ -1,0 +1,97 @@
+﻿@model IEnumerable<Web_Institute_Of_Fine_Arts_Database_Models.VW_SHOW_COMPITITION_ALL_DATA_MODEL>
+
+@{
+    ViewBag.Title = "WorkCompititonChecking";
+    Layout = "~/Views/Shared/Staff_Master_Layout/Staff_Master.cshtml";
+}
+
+<h2 class="text-center">Work Compititon Checking</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.COM_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COM_NAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COM_START_DATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COM_END_DATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WOC_REG_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WOC_WORK)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.COM_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.COM_NAME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.COM_START_DATE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.COM_END_DATE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WOC_REG_ID)
+            </td>
+            <td>
+                <a type="button" data-toggle="modal" data-target="#exampleModal">
+                    <img src="@Url.Content(item.WOC_WORK)" height="80px" width="80px" alt="Not found" />
+                </a>
+            </td>
+            <td>
+                @Html.ActionLink("Give Results","StudentResult", new { id = item.WOC_ID , comId = item.COM_ID } , new { @class = "btn btn-warning" })
+            </td>
+        </tr>
+
+        <!--Bootstrap modal -->
+        <div class="modal fade"
+             id="exampleModal"
+             tabindex="-1"
+             role="dialog"
+             aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
+
+            <div class="modal-dialog"
+                 role="document">
+                <div class="modal-content">
+                    <!-- Modal heading -->
+                    <div class="modal-header">
+                        <h5 class="modal-title"
+                            id="exampleModalLabel">
+                            Display Compitition Submission
+                        </h5>
+                        <button type="button"
+                                class="close"
+                                data-dismiss="modal"
+                                aria-label="Close">
+                            <span aria-hidden="true">
+                                ×
+                            </span>
+                        </button>
+                    </div>
+
+                    <!-- Modal body with image -->
+                    <div class="modal-body text-center">
+                        <img src="@Url.Content(item.WOC_WORK)" height="500px" width="500px" alt="Not found" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+</table>
+

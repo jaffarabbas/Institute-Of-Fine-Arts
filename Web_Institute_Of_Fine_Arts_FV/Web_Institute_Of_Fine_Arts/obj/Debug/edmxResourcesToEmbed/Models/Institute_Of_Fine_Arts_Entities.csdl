@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_Institute_Of_Fine_ArtsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ASSIGNED">
+    <Key>
+      <PropertyRef Name="ASI_ID" />
+    </Key>
+    <Property Name="ASI_STFL_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ASI_CR_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ASI_DATE" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ASI_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="C_ASIID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="COMPITITION">
+    <Key>
+      <PropertyRef Name="COM_ID" />
+    </Key>
+    <Property Name="COM_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="COM_START_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="COM_END_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="COM_STF_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="COM_AWARD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="COM_FORMAT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="COM_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="C_COMID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="CONTACT">
+    <Key>
+      <PropertyRef Name="CON_ID" />
+    </Key>
+    <Property Name="CON_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CON_EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CON_MESSAGE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CON_REPLIED" Type="Boolean" Nullable="false" />
+    <Property Name="CON_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="C_CONID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="REGISTRATION">
+    <Key>
+      <PropertyRef Name="REG_ID" />
+    </Key>
+    <Property Name="REG_STDL_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="REG_CR_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="REG_DATE" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="REG_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="C_RESID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityContainer Name="DB_Institute_Of_Fine_ArtsEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ASSIGNEDs" EntityType="Self.ASSIGNED" />
+    <EntitySet Name="COMPITITIONs" EntityType="Self.COMPITITION" />
+    <EntitySet Name="CONTACTs" EntityType="Self.CONTACT" />
+    <EntitySet Name="REGISTRATIONs" EntityType="Self.REGISTRATION" />
+  </EntityContainer>
+</Schema>

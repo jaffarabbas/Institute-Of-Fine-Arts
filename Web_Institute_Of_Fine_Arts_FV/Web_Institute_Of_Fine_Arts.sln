@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web_Institute_Of_Fine_Arts", "Web_Institute_Of_Fine_Arts\Web_Institute_Of_Fine_Arts.csproj", "{30E4AA3C-25CF-4B6F-8918-879829C911C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web_Institute_Of_Fine_Arts_Database_Layer", "Web_Institute_Of_Fine_Arts_Database_Layer\Web_Institute_Of_Fine_Arts_Database_Layer.csproj", "{B7D318E3-35E7-4932-AF01-F497BDF022A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web_Institute_Of_Fine_Arts_Database_Models", "Web_Institute_Of_Fine_Arts_Database_Models\Web_Institute_Of_Fine_Arts_Database_Models.csproj", "{EAA0654F-B572-4BAB-A762-33B0D1423BFE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30E4AA3C-25CF-4B6F-8918-879829C911C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30E4AA3C-25CF-4B6F-8918-879829C911C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30E4AA3C-25CF-4B6F-8918-879829C911C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30E4AA3C-25CF-4B6F-8918-879829C911C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7D318E3-35E7-4932-AF01-F497BDF022A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7D318E3-35E7-4932-AF01-F497BDF022A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7D318E3-35E7-4932-AF01-F497BDF022A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7D318E3-35E7-4932-AF01-F497BDF022A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAA0654F-B572-4BAB-A762-33B0D1423BFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAA0654F-B572-4BAB-A762-33B0D1423BFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAA0654F-B572-4BAB-A762-33B0D1423BFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAA0654F-B572-4BAB-A762-33B0D1423BFE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {207EF09D-E00C-4763-A29B-8E4B37E324F7}
+	EndGlobalSection
+EndGlobal

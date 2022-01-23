@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Web_Institute_Of_Fine_Arts_Database_Models.EXIBITION_MODEL>
+
+@foreach (var item in Model)
+{
+    <div class="exeCardBody col-lg-4 col-md-4 col-sm-6 col-12">
+        <a href="@Url.Action("ExibitionStudentWorkList", "Exibition", new { id = item.EXB_ID })" style="text-decoration:none" class="cardAnchor">
+            <div class="Course_cards" style="margin-bottom: 10px;">
+                @*<img id="instructor_course_image" src="~/Content/assets/img/c1.png" width="100%">*@
+                <div class="exeCard_header">
+                    <p class="exeCardCompitionName">@Html.DisplayFor(modelItem => item.EXB_NAME)</p>
+                    <i class="exeCardIcon fa fa-arrow-right"></i>
+                </div>
+                <div class="exeCardCompition">
+                    <div class="card-body">
+                        <div>
+                            <p class="exeCardCompitionDeitals">Exibition ID : @Html.DisplayFor(modelItem => item.EXB_ID)</p>
+                            <p class="exeCardCompitionDeitals">Start Date : @Html.DisplayFor(modelItem => item.EXB_START_DATE)</p>
+                            <p class="exeCardCompitionDeitals">End Date : @Html.DisplayFor(modelItem => item.EXB_END_DATE)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+}

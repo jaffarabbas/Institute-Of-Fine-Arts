@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_INSTITUTE_OF_FINE_ARTSModelStoreContainer" CdmEntityContainer="DB_INSTITUTE_OF_FINE_ARTSEntities">
+    <EntitySetMapping Name="ADMIN_LOGIN">
+      <EntityTypeMapping TypeName="DB_INSTITUTE_OF_FINE_ARTSModel.ADMIN_LOGIN">
+        <MappingFragment StoreEntitySet="ADMIN_LOGIN">
+          <ScalarProperty Name="AD_ID" ColumnName="AD_ID" />
+          <ScalarProperty Name="AD_NAME" ColumnName="AD_NAME" />
+          <ScalarProperty Name="AD_PASSWORD" ColumnName="AD_PASSWORD" />
+          <ScalarProperty Name="AD_PROFILE" ColumnName="AD_PROFILE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ASSIGNEDs">
+      <EntityTypeMapping TypeName="DB_INSTITUTE_OF_FINE_ARTSModel.ASSIGNED">
+        <MappingFragment StoreEntitySet="ASSIGNED">
+          <ScalarProperty Name="ASI_ID" ColumnName="ASI_ID" />
+          <ScalarProperty Name="ASI_STFL_ID" ColumnName="ASI_STFL_ID" />
+          <ScalarProperty Name="ASI_CR_ID" ColumnName="ASI_CR_ID" />
+          <ScalarProperty Name="ASI_DATE" ColumnName="ASI_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMPITITIONs">
+      <EntityTypeMapping TypeName="DB_INSTITUTE_OF_FINE_ARTSModel.COMPITITION">
+        <MappingFragment StoreEntitySet="COMPITITION">
+          <ScalarProperty Name="COM_ID" ColumnName="COM_ID" />
+          <ScalarProperty Name="COM_NAME" ColumnName="COM_NAME" />
+          <ScalarProperty Name="COM_START_DATE" ColumnName="COM_START_DATE" />
+          <ScalarProperty Name="COM_END_DATE" ColumnName="COM_END_DATE" />
+          <ScalarProperty Name="COM_STF_ID" ColumnName="COM_STF_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COURSES">
+      <EntityTypeMapping TypeName="DB_INSTITUTE_OF_FINE_ARTSModel.COURS">
+        <MappingFragment StoreEntitySet="COURSES">
+          <ScalarProperty Name="CR_ID" ColumnName="CR_ID" />
+          <ScalarProperty Name="CR_NAME" ColumnName="CR_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EXIBITIONs">
+      <EntityTypeMapping TypeName="DB_INSTITUTE_OF_FINE_ARTSModel.EXIBITION">
+        <MappingFragment StoreEntitySet="EXIBITION">
+          <ScalarProperty Name="EXB_ID" ColumnName="EXB_ID" />
+          <ScalarProperty Name="EXB_NAME" ColumnName="EXB_NAME" />
+          <ScalarProperty Name="EXB_START_DATE" ColumnName="EXB_START_DATE" />
+          <ScalarProperty Name="EXB_END_DATE" ColumnName="EXB_END_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REGISTRATIONs">
+      <EntityTypeMapping TypeName="DB_INSTITUTE_OF_FINE_ARTSModel.REGISTRATION">
+        <MappingFragment StoreEntitySet="REGISTRATION">
+          <ScalarProperty Name="REG_ID" ColumnName="REG_ID" />
+          <ScalarProperty Name="REG_STDL_ID" ColumnName="REG_STDL_ID" />
+          <ScalarProperty Name="REG_CR_ID" ColumnName="REG_CR_ID" />
+          <ScalarProperty Name="REG_DATE" ColumnName="REG_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RESULTs">
+      <EntityTypeMapping TypeName="DB_INSTITUTE_OF_FINE_ARTSModel.RESULT">
+        <MappingFragment StoreEntitySet="RESULT">
+          <ScalarProperty Name="RES_ID" ColumnName="RES_ID" />
+          <ScalarProperty Name="RES_COM_ID" ColumnName="RES_COM_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STAFF_LOGIN">
+      <EntityTypeMapping TypeName="DB_INSTITUTE_OF_FINE_ARTSModel.STAFF_LOGIN">
+        <MappingFragment StoreEntitySet="STAFF_LOGIN">
+          <ScalarProperty Name="STF_ID" ColumnName="STF_ID" />
+          <ScalarProperty Name="STF_NAME" ColumnName="STF_NAME" />
+          <ScalarProperty Name="STF_PASSWORD" ColumnName="STF_PASSWORD" />
+          <ScalarProperty Name="STF_PROFILE" ColumnName="STF_PROFILE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STUDENT_LOGIN">
+      <EntityTypeMapping TypeName="DB_INSTITUTE_OF_FINE_ARTSModel.STUDENT_LOGIN">
+        <MappingFragment StoreEntitySet="STUDENT_LOGIN">
+          <ScalarProperty Name="STDL_ID" ColumnName="STDL_ID" />
+          <ScalarProperty Name="STDL_NAME" ColumnName="STDL_NAME" />
+          <ScalarProperty Name="STDL_PASSWORD" ColumnName="STDL_PASSWORD" />
+          <ScalarProperty Name="STDL_PROFILE" ColumnName="STDL_PROFILE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WORK_OF_COMPITITION">
+      <EntityTypeMapping TypeName="DB_INSTITUTE_OF_FINE_ARTSModel.WORK_OF_COMPITITION">
+        <MappingFragment StoreEntitySet="WORK_OF_COMPITITION">
+          <ScalarProperty Name="WOC_ID" ColumnName="WOC_ID" />
+          <ScalarProperty Name="WOC_REG_ID" ColumnName="WOC_REG_ID" />
+          <ScalarProperty Name="WOC_COM_ID" ColumnName="WOC_COM_ID" />
+          <ScalarProperty Name="WOC_WORK" ColumnName="WOC_WORK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EXIBITION_ENTRIES">
+      <EntityTypeMapping TypeName="DB_INSTITUTE_OF_FINE_ARTSModel.EXIBITION_ENTRIES">
+        <MappingFragment StoreEntitySet="EXIBITION_ENTRIES">
+          <ScalarProperty Name="EXB_EN_EXB_ID" ColumnName="EXB_EN_EXB_ID" />
+          <ScalarProperty Name="EXB_EN_RES_ID" ColumnName="EXB_EN_RES_ID" />
+          <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RESULT_ENTRIES">
+      <EntityTypeMapping TypeName="DB_INSTITUTE_OF_FINE_ARTSModel.RESULT_ENTRIES">
+        <MappingFragment StoreEntitySet="RESULT_ENTRIES">
+          <ScalarProperty Name="RES_ID" ColumnName="RES_ID" />
+          <ScalarProperty Name="RES_WORK_ID" ColumnName="RES_WORK_ID" />
+          <ScalarProperty Name="RES_MARKS" ColumnName="RES_MARKS" />
+          <ScalarProperty Name="RES_DATE" ColumnName="RES_DATE" />
+          <ScalarProperty Name="RES_GRADE" ColumnName="RES_GRADE" />
+          <ScalarProperty Name="RES_IS_ELIGIBLE" ColumnName="RES_IS_ELIGIBLE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STAFF_DETAILS">
+      <EntityTypeMapping TypeName="DB_INSTITUTE_OF_FINE_ARTSModel.STAFF_DETAILS">
+        <MappingFragment StoreEntitySet="STAFF_DETAILS">
+          <ScalarProperty Name="STFD_ID" ColumnName="STFD_ID" />
+          <ScalarProperty Name="STFD_EDUCATION" ColumnName="STFD_EDUCATION" />
+          <ScalarProperty Name="STFD_ADDRESS" ColumnName="STFD_ADDRESS" />
+          <ScalarProperty Name="STFD_EMAIL" ColumnName="STFD_EMAIL" />
+          <ScalarProperty Name="STFD_PHONE" ColumnName="STFD_PHONE" />
+          <ScalarProperty Name="STFD_DATE_OF_BIRTH" ColumnName="STFD_DATE_OF_BIRTH" />
+          <ScalarProperty Name="STFD_SALARY" ColumnName="STFD_SALARY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STUDENT_DETAILS">
+      <EntityTypeMapping TypeName="DB_INSTITUTE_OF_FINE_ARTSModel.STUDENT_DETAILS">
+        <MappingFragment StoreEntitySet="STUDENT_DETAILS">
+          <ScalarProperty Name="SD_STDL_ID" ColumnName="SD_STDL_ID" />
+          <ScalarProperty Name="STD_ADDRESS" ColumnName="STD_ADDRESS" />
+          <ScalarProperty Name="STD_EMAIL" ColumnName="STD_EMAIL" />
+          <ScalarProperty Name="STD_PHONE" ColumnName="STD_PHONE" />
+          <ScalarProperty Name="STD_DATE_OF_BIRTH" ColumnName="STD_DATE_OF_BIRTH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_SHOW_COMPITITION_ALL_DATA">
+      <EntityTypeMapping TypeName="DB_INSTITUTE_OF_FINE_ARTSModel.VW_SHOW_COMPITITION_ALL_DATA">
+        <MappingFragment StoreEntitySet="VW_SHOW_COMPITITION_ALL_DATA">
+          <ScalarProperty Name="COM_ID" ColumnName="COM_ID" />
+          <ScalarProperty Name="COM_NAME" ColumnName="COM_NAME" />
+          <ScalarProperty Name="COM_START_DATE" ColumnName="COM_START_DATE" />
+          <ScalarProperty Name="COM_END_DATE" ColumnName="COM_END_DATE" />
+          <ScalarProperty Name="COM_STF_ID" ColumnName="COM_STF_ID" />
+          <ScalarProperty Name="WOC_ID" ColumnName="WOC_ID" />
+          <ScalarProperty Name="WOC_REG_ID" ColumnName="WOC_REG_ID" />
+          <ScalarProperty Name="WOC_COM_ID" ColumnName="WOC_COM_ID" />
+          <ScalarProperty Name="WOC_WORK" ColumnName="WOC_WORK" />
+          <ScalarProperty Name="STF_ID" ColumnName="STF_ID" />
+          <ScalarProperty Name="STF_NAME" ColumnName="STF_NAME" />
+          <ScalarProperty Name="STF_PROFILE" ColumnName="STF_PROFILE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_SHOW_COMPITITION_DETAILS_TO_STUDENTS">
+      <EntityTypeMapping TypeName="DB_INSTITUTE_OF_FINE_ARTSModel.VW_SHOW_COMPITITION_DETAILS_TO_STUDENTS">
+        <MappingFragment StoreEntitySet="VW_SHOW_COMPITITION_DETAILS_TO_STUDENTS">
+          <ScalarProperty Name="COM_ID" ColumnName="COM_ID" />
+          <ScalarProperty Name="COM_NAME" ColumnName="COM_NAME" />
+          <ScalarProperty Name="COM_START_DATE" ColumnName="COM_START_DATE" />
+          <ScalarProperty Name="COM_END_DATE" ColumnName="COM_END_DATE" />
+          <ScalarProperty Name="COM_STF_ID" ColumnName="COM_STF_ID" />
+          <ScalarProperty Name="STF_NAME" ColumnName="STF_NAME" />
+          <ScalarProperty Name="CR_ID" ColumnName="CR_ID" />
+          <ScalarProperty Name="CR_NAME" ColumnName="CR_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_SHOW_RESULT_ALL_DATA">
+      <EntityTypeMapping TypeName="DB_INSTITUTE_OF_FINE_ARTSModel.VW_SHOW_RESULT_ALL_DATA">
+        <MappingFragment StoreEntitySet="VW_SHOW_RESULT_ALL_DATA">
+          <ScalarProperty Name="STDL_ID" ColumnName="STDL_ID" />
+          <ScalarProperty Name="STDL_NAME" ColumnName="STDL_NAME" />
+          <ScalarProperty Name="COM_NAME" ColumnName="COM_NAME" />
+          <ScalarProperty Name="WOC_WORK" ColumnName="WOC_WORK" />
+          <ScalarProperty Name="RES_ID" ColumnName="RES_ID" />
+          <ScalarProperty Name="RES_WORK_ID" ColumnName="RES_WORK_ID" />
+          <ScalarProperty Name="RES_MARKS" ColumnName="RES_MARKS" />
+          <ScalarProperty Name="RES_DATE" ColumnName="RES_DATE" />
+          <ScalarProperty Name="RES_GRADE" ColumnName="RES_GRADE" />
+          <ScalarProperty Name="RES_IS_ELIGIBLE" ColumnName="RES_IS_ELIGIBLE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_SHOW_RESULT_CARD_DETIALS">
+      <EntityTypeMapping TypeName="DB_INSTITUTE_OF_FINE_ARTSModel.VW_SHOW_RESULT_CARD_DETIALS">
+        <MappingFragment StoreEntitySet="VW_SHOW_RESULT_CARD_DETIALS">
+          <ScalarProperty Name="RES_ID" ColumnName="RES_ID" />
+          <ScalarProperty Name="COM_ID" ColumnName="COM_ID" />
+          <ScalarProperty Name="COM_NAME" ColumnName="COM_NAME" />
+          <ScalarProperty Name="COM_START_DATE" ColumnName="COM_START_DATE" />
+          <ScalarProperty Name="COM_END_DATE" ColumnName="COM_END_DATE" />
+          <ScalarProperty Name="COM_STF_ID" ColumnName="COM_STF_ID" />
+          <ScalarProperty Name="STF_NAME" ColumnName="STF_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_SHOW_STAFF_ALL_DATA">
+      <EntityTypeMapping TypeName="DB_INSTITUTE_OF_FINE_ARTSModel.VW_SHOW_STAFF_ALL_DATA">
+        <MappingFragment StoreEntitySet="VW_SHOW_STAFF_ALL_DATA">
+          <ScalarProperty Name="STF_ID" ColumnName="STF_ID" />
+          <ScalarProperty Name="STF_NAME" ColumnName="STF_NAME" />
+          <ScalarProperty Name="STF_PASSWORD" ColumnName="STF_PASSWORD" />
+          <ScalarProperty Name="STF_PROFILE" ColumnName="STF_PROFILE" />
+          <ScalarProperty Name="STFD_ID" ColumnName="STFD_ID" />
+          <ScalarProperty Name="STFD_EDUCATION" ColumnName="STFD_EDUCATION" />
+          <ScalarProperty Name="STFD_ADDRESS" ColumnName="STFD_ADDRESS" />
+          <ScalarProperty Name="STFD_EMAIL" ColumnName="STFD_EMAIL" />
+          <ScalarProperty Name="STFD_PHONE" ColumnName="STFD_PHONE" />
+          <ScalarProperty Name="STFD_DATE_OF_BIRTH" ColumnName="STFD_DATE_OF_BIRTH" />
+          <ScalarProperty Name="STFD_SALARY" ColumnName="STFD_SALARY" />
+          <ScalarProperty Name="ASI_ID" ColumnName="ASI_ID" />
+          <ScalarProperty Name="ASI_STFL_ID" ColumnName="ASI_STFL_ID" />
+          <ScalarProperty Name="ASI_CR_ID" ColumnName="ASI_CR_ID" />
+          <ScalarProperty Name="ASI_DATE" ColumnName="ASI_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_SHOW_STAFF_ALL_DETIALS">
+      <EntityTypeMapping TypeName="DB_INSTITUTE_OF_FINE_ARTSModel.VW_SHOW_STAFF_ALL_DETIALS">
+        <MappingFragment StoreEntitySet="VW_SHOW_STAFF_ALL_DETIALS">
+          <ScalarProperty Name="STF_ID" ColumnName="STF_ID" />
+          <ScalarProperty Name="STF_NAME" ColumnName="STF_NAME" />
+          <ScalarProperty Name="STF_PASSWORD" ColumnName="STF_PASSWORD" />
+          <ScalarProperty Name="STF_PROFILE" ColumnName="STF_PROFILE" />
+          <ScalarProperty Name="STFD_ID" ColumnName="STFD_ID" />
+          <ScalarProperty Name="STFD_EDUCATION" ColumnName="STFD_EDUCATION" />
+          <ScalarProperty Name="STFD_ADDRESS" ColumnName="STFD_ADDRESS" />
+          <ScalarProperty Name="STFD_EMAIL" ColumnName="STFD_EMAIL" />
+          <ScalarProperty Name="STFD_PHONE" ColumnName="STFD_PHONE" />
+          <ScalarProperty Name="STFD_DATE_OF_BIRTH" ColumnName="STFD_DATE_OF_BIRTH" />
+          <ScalarProperty Name="STFD_SALARY" ColumnName="STFD_SALARY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_SHOW_STUDENT_ALL_DATA_FROM_SUDENT_SIDE">
+      <EntityTypeMapping TypeName="DB_INSTITUTE_OF_FINE_ARTSModel.VW_SHOW_STUDENT_ALL_DATA_FROM_SUDENT_SIDE">
+        <MappingFragment StoreEntitySet="VW_SHOW_STUDENT_ALL_DATA_FROM_SUDENT_SIDE">
+          <ScalarProperty Name="STDL_ID" ColumnName="STDL_ID" />
+          <ScalarProperty Name="STDL_NAME" ColumnName="STDL_NAME" />
+          <ScalarProperty Name="STDL_PASSWORD" ColumnName="STDL_PASSWORD" />
+          <ScalarProperty Name="STDL_PROFILE" ColumnName="STDL_PROFILE" />
+          <ScalarProperty Name="SD_STDL_ID" ColumnName="SD_STDL_ID" />
+          <ScalarProperty Name="STD_ADDRESS" ColumnName="STD_ADDRESS" />
+          <ScalarProperty Name="STD_EMAIL" ColumnName="STD_EMAIL" />
+          <ScalarProperty Name="STD_PHONE" ColumnName="STD_PHONE" />
+          <ScalarProperty Name="STD_DATE_OF_BIRTH" ColumnName="STD_DATE_OF_BIRTH" />
+          <ScalarProperty Name="REG_ID" ColumnName="REG_ID" />
+          <ScalarProperty Name="REG_STDL_ID" ColumnName="REG_STDL_ID" />
+          <ScalarProperty Name="REG_CR_ID" ColumnName="REG_CR_ID" />
+          <ScalarProperty Name="REG_DATE" ColumnName="REG_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_SHOW_STUDENTS_ALL_DATA">
+      <EntityTypeMapping TypeName="DB_INSTITUTE_OF_FINE_ARTSModel.VW_SHOW_STUDENTS_ALL_DATA">
+        <MappingFragment StoreEntitySet="VW_SHOW_STUDENTS_ALL_DATA">
+          <ScalarProperty Name="STDL_ID" ColumnName="STDL_ID" />
+          <ScalarProperty Name="STDL_NAME" ColumnName="STDL_NAME" />
+          <ScalarProperty Name="STDL_PASSWORD" ColumnName="STDL_PASSWORD" />
+          <ScalarProperty Name="STDL_PROFILE" ColumnName="STDL_PROFILE" />
+          <ScalarProperty Name="SD_STDL_ID" ColumnName="SD_STDL_ID" />
+          <ScalarProperty Name="STD_ADDRESS" ColumnName="STD_ADDRESS" />
+          <ScalarProperty Name="STD_EMAIL" ColumnName="STD_EMAIL" />
+          <ScalarProperty Name="STD_PHONE" ColumnName="STD_PHONE" />
+          <ScalarProperty Name="STD_DATE_OF_BIRTH" ColumnName="STD_DATE_OF_BIRTH" />
+          <ScalarProperty Name="REG_ID" ColumnName="REG_ID" />
+          <ScalarProperty Name="REG_STDL_ID" ColumnName="REG_STDL_ID" />
+          <ScalarProperty Name="REG_CR_ID" ColumnName="REG_CR_ID" />
+          <ScalarProperty Name="REG_DATE" ColumnName="REG_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_SHOW_STUDENTS_ALL_DETIALS">
+      <EntityTypeMapping TypeName="DB_INSTITUTE_OF_FINE_ARTSModel.VW_SHOW_STUDENTS_ALL_DETIALS">
+        <MappingFragment StoreEntitySet="VW_SHOW_STUDENTS_ALL_DETIALS">
+          <ScalarProperty Name="STDL_ID" ColumnName="STDL_ID" />
+          <ScalarProperty Name="STDL_NAME" ColumnName="STDL_NAME" />
+          <ScalarProperty Name="STDL_PASSWORD" ColumnName="STDL_PASSWORD" />
+          <ScalarProperty Name="STDL_PROFILE" ColumnName="STDL_PROFILE" />
+          <ScalarProperty Name="SD_STDL_ID" ColumnName="SD_STDL_ID" />
+          <ScalarProperty Name="STD_ADDRESS" ColumnName="STD_ADDRESS" />
+          <ScalarProperty Name="STD_EMAIL" ColumnName="STD_EMAIL" />
+          <ScalarProperty Name="STD_PHONE" ColumnName="STD_PHONE" />
+          <ScalarProperty Name="STD_DATE_OF_BIRTH" ColumnName="STD_DATE_OF_BIRTH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_SHOW_ALL_EXIBITION_DATA">
+      <EntityTypeMapping TypeName="DB_INSTITUTE_OF_FINE_ARTSModel.VW_SHOW_ALL_EXIBITION_DATA">
+        <MappingFragment StoreEntitySet="VW_SHOW_ALL_EXIBITION_DATA">
+          <ScalarProperty Name="STD_EMAIL" ColumnName="STD_EMAIL" />
+          <ScalarProperty Name="STDL_PROFILE" ColumnName="STDL_PROFILE" />
+          <ScalarProperty Name="STDL_NAME" ColumnName="STDL_NAME" />
+          <ScalarProperty Name="WOC_WORK" ColumnName="WOC_WORK" />
+          <ScalarProperty Name="EXB_END_DATE" ColumnName="EXB_END_DATE" />
+          <ScalarProperty Name="EXB_START_DATE" ColumnName="EXB_START_DATE" />
+          <ScalarProperty Name="EXB_NAME" ColumnName="EXB_NAME" />
+          <ScalarProperty Name="EXB_ID" ColumnName="EXB_ID" />
+          <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+          <ScalarProperty Name="EXB_EN_RES_ID" ColumnName="EXB_EN_RES_ID" />
+          <ScalarProperty Name="EXB_EN_EXB_ID" ColumnName="EXB_EN_EXB_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

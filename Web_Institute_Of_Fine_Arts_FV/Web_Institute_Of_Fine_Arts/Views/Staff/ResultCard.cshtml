@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Web_Institute_Of_Fine_Arts_Database_Models.VW_SHOW_RESULT_CARD_DETIALS_MODEL>
+
+@foreach (var item in Model)
+{
+    <div class="cardBody col-lg-4 col-md-4 col-sm-6 col-12">
+        <a href="@Url.Action("WorkCompititonChecking", "Staff", new {id = item.COM_ID})" style="text-decoration:none" class="cardAnchor">
+            <div class="Course_cards" style="margin-bottom: 10px;">
+                @*<img id="instructor_course_image" src="~/Content/assets/img/c1.png" width="100%">*@
+                <div class="card_header">
+                    <p class="cardCompitionName">@Html.DisplayFor(modelItem => item.COM_NAME)</p>
+                    <i class="cardIcon fa fa-arrow-right"></i>
+                </div>
+                <div class="cardCompition">
+                    <div class="card-body">
+                        <div>
+                            <p class="cardCompitionDeitals">Compition ID : @Html.DisplayFor(modelItem => item.COM_ID)</p>
+                            <p class="cardCompitionDeitals">Start Date : @Html.DisplayFor(modelItem => item.COM_START_DATE)</p>
+                            <p class="cardCompitionDeitals">End Date : @Html.DisplayFor(modelItem => item.COM_END_DATE)</p>
+                            <p class="cardCompitionDeitals">Compition Staff Name : @Html.DisplayFor(modelItem => item.STF_NAME)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+}
+

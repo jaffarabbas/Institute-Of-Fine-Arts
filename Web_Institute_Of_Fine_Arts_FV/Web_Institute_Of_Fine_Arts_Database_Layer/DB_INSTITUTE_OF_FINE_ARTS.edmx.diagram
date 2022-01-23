@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e69b5247977c41c9a41d962f0f32b8d3" Name="Diagram1" ZoomLevel="62">
+        <EntityTypeShape EntityType="DB_INSTITUTE_OF_FINE_ARTSModel.ADMIN_LOGIN" Width="1.5" PointX="10.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_INSTITUTE_OF_FINE_ARTSModel.ASSIGNED" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_INSTITUTE_OF_FINE_ARTSModel.COMPITITION" Width="1.5" PointX="6" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_INSTITUTE_OF_FINE_ARTSModel.COURS" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_INSTITUTE_OF_FINE_ARTSModel.EXIBITION" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_INSTITUTE_OF_FINE_ARTSModel.REGISTRATION" Width="1.5" PointX="6" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_INSTITUTE_OF_FINE_ARTSModel.RESULT" Width="1.5" PointX="8.25" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_INSTITUTE_OF_FINE_ARTSModel.STAFF_LOGIN" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_INSTITUTE_OF_FINE_ARTSModel.STUDENT_LOGIN" Width="1.5" PointX="3.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_INSTITUTE_OF_FINE_ARTSModel.WORK_OF_COMPITITION" Width="1.5" PointX="8.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_INSTITUTE_OF_FINE_ARTSModel.EXIBITION_ENTRIES" Width="1.5" PointX="8.25" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_INSTITUTE_OF_FINE_ARTSModel.RESULT_ENTRIES" Width="1.5" PointX="10.5" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_INSTITUTE_OF_FINE_ARTSModel.STAFF_DETAILS" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_INSTITUTE_OF_FINE_ARTSModel.STUDENT_DETAILS" Width="1.5" PointX="6" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_INSTITUTE_OF_FINE_ARTSModel.VW_SHOW_COMPITITION_ALL_DATA" Width="1.5" PointX="10.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_INSTITUTE_OF_FINE_ARTSModel.VW_SHOW_COMPITITION_DETAILS_TO_STUDENTS" Width="1.5" PointX="0.75" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_INSTITUTE_OF_FINE_ARTSModel.VW_SHOW_RESULT_ALL_DATA" Width="1.5" PointX="2.75" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_INSTITUTE_OF_FINE_ARTSModel.VW_SHOW_RESULT_CARD_DETIALS" Width="1.5" PointX="12.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_INSTITUTE_OF_FINE_ARTSModel.VW_SHOW_STAFF_ALL_DATA" Width="1.5" PointX="12.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_INSTITUTE_OF_FINE_ARTSModel.VW_SHOW_STAFF_ALL_DETIALS" Width="1.5" PointX="8.75" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_INSTITUTE_OF_FINE_ARTSModel.VW_SHOW_STUDENT_ALL_DATA_FROM_SUDENT_SIDE" Width="1.5" PointX="12.75" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_INSTITUTE_OF_FINE_ARTSModel.VW_SHOW_STUDENTS_ALL_DATA" Width="1.5" PointX="14.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_INSTITUTE_OF_FINE_ARTSModel.VW_SHOW_STUDENTS_ALL_DETIALS" Width="1.5" PointX="14.75" PointY="6.125" IsExpanded="true" />
+        <AssociationConnector Association="DB_INSTITUTE_OF_FINE_ARTSModel.FK_ASSIGNED_TO_COURSES" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_INSTITUTE_OF_FINE_ARTSModel.FK_ASSIGNED_TO_STAFF_LOGIN" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_INSTITUTE_OF_FINE_ARTSModel.FK_RESULT_TO_COMPITITION" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_INSTITUTE_OF_FINE_ARTSModel.FK_STAFF_LOGIN_TO_COMPITITION" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_INSTITUTE_OF_FINE_ARTSModel.FK_WORK_OF_COMPITITION_TO_COMPITITION" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_INSTITUTE_OF_FINE_ARTSModel.FK_REGISTRATION_TO_COURSES" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_INSTITUTE_OF_FINE_ARTSModel.FK_EXIBITION_TO_EXIBITION" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_INSTITUTE_OF_FINE_ARTSModel.FK_EXIBITION_TO_REGISTRATION" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_INSTITUTE_OF_FINE_ARTSModel.FK_REGISTRATION_TO_STUDENT_LOGIN" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_INSTITUTE_OF_FINE_ARTSModel.FK_WORK_OF_COMPITITION_TO_REGISTRATION" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_INSTITUTE_OF_FINE_ARTSModel.FK_RESULT_ENTRIES_TO_RESULT" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_INSTITUTE_OF_FINE_ARTSModel.FK_STAFF_DETIALS_TO_STAFF_LOGIN" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_INSTITUTE_OF_FINE_ARTSModel.FK_STUDENT_DETIALS_TO_STUDENT_LOGIN" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_INSTITUTE_OF_FINE_ARTSModel.FK_RESULT_TO_WORK_OF_COMPITITION" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DB_INSTITUTE_OF_FINE_ARTSModel.VW_SHOW_ALL_EXIBITION_DATA" Width="2.625" PointX="11.375" PointY="14.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

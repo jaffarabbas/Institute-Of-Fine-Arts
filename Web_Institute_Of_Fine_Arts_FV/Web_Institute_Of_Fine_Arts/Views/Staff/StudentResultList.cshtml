@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "StudentResultList";
+    Layout = "~/Views/Shared/Staff_Master_Layout/Staff_Master.cshtml";
+}
+
+<h2>StudentResultList</h2>
+
+<div class="container">
+    <div class="compCardRow row">
+        @{
+            Html.RenderAction("ResultCard", "Staff");
+        }
+    </div>
+</div>

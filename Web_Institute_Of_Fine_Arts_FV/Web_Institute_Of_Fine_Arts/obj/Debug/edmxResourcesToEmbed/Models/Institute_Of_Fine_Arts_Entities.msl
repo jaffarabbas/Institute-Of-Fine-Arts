@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_Institute_Of_Fine_ArtsModelStoreContainer" CdmEntityContainer="DB_Institute_Of_Fine_ArtsEntities2">
+    <EntitySetMapping Name="ASSIGNEDs">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.ASSIGNED">
+        <MappingFragment StoreEntitySet="ASSIGNED">
+          <ScalarProperty Name="ASI_STFL_ID" ColumnName="ASI_STFL_ID" />
+          <ScalarProperty Name="ASI_CR_ID" ColumnName="ASI_CR_ID" />
+          <ScalarProperty Name="ASI_DATE" ColumnName="ASI_DATE" />
+          <ScalarProperty Name="ASI_ID" ColumnName="ASI_ID" />
+          <ScalarProperty Name="C_ASIID" ColumnName="_ASIID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMPITITIONs">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.COMPITITION">
+        <MappingFragment StoreEntitySet="COMPITITION">
+          <ScalarProperty Name="COM_NAME" ColumnName="COM_NAME" />
+          <ScalarProperty Name="COM_START_DATE" ColumnName="COM_START_DATE" />
+          <ScalarProperty Name="COM_END_DATE" ColumnName="COM_END_DATE" />
+          <ScalarProperty Name="COM_STF_ID" ColumnName="COM_STF_ID" />
+          <ScalarProperty Name="COM_AWARD" ColumnName="COM_AWARD" />
+          <ScalarProperty Name="COM_FORMAT" ColumnName="COM_FORMAT" />
+          <ScalarProperty Name="COM_ID" ColumnName="COM_ID" />
+          <ScalarProperty Name="C_COMID" ColumnName="_COMID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONTACTs">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.CONTACT">
+        <MappingFragment StoreEntitySet="CONTACT">
+          <ScalarProperty Name="CON_NAME" ColumnName="CON_NAME" />
+          <ScalarProperty Name="CON_EMAIL" ColumnName="CON_EMAIL" />
+          <ScalarProperty Name="CON_MESSAGE" ColumnName="CON_MESSAGE" />
+          <ScalarProperty Name="CON_REPLIED" ColumnName="CON_REPLIED" />
+          <ScalarProperty Name="CON_ID" ColumnName="CON_ID" />
+          <ScalarProperty Name="C_CONID" ColumnName="_CONID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REGISTRATIONs">
+      <EntityTypeMapping TypeName="DB_Institute_Of_Fine_ArtsModel.REGISTRATION">
+        <MappingFragment StoreEntitySet="REGISTRATION">
+          <ScalarProperty Name="REG_STDL_ID" ColumnName="REG_STDL_ID" />
+          <ScalarProperty Name="REG_CR_ID" ColumnName="REG_CR_ID" />
+          <ScalarProperty Name="REG_DATE" ColumnName="REG_DATE" />
+          <ScalarProperty Name="REG_ID" ColumnName="REG_ID" />
+          <ScalarProperty Name="C_RESID" ColumnName="_RESID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

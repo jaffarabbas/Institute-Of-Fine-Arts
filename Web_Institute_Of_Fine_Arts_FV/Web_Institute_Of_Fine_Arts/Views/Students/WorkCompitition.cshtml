@@ -1,0 +1,43 @@
+﻿@model Web_Institute_Of_Fine_Arts.Models.WORK_OF_COMPITITION
+
+@{
+    ViewBag.Title = "WorkCompitition";
+    Layout = "~/Views/Shared/Student_Master_Layout/Students_Master.cshtml";
+}
+
+@Html.Raw(TempData["datamessage"])
+@Html.Raw(TempData["dtemessage"])
+@Html.Raw(TempData["lengthmessage"])
+@Html.Raw(TempData["errorMessage"])
+
+<h2>WorkCompitition</h2>
+
+@using (Html.BeginForm("WorkCompitition", "Students", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.WOC_ID)
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.WOC_WORK, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            <input type="file" name="ImageFile" required />
+        </div>
+    </div>
+
+    @Html.HiddenFor(model => model.WOC_ID)
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
